@@ -1,0 +1,1596 @@
+<6>[    0.000000] Initializing cgroup subsys cpu
+<5>[    0.000000] Linux version 3.0.31-g9f818de (android-build@vpbs1.mtv.corp.google.com) (gcc version 4.6.x-google 20120106 (prerelease) (GCC) ) #1 SMP PREEMPT Wed Nov 28 11:20:29 PST 2012
+<4>[    0.000000] CPU: ARMv7 Processor [412fc09a] revision 10 (ARMv7), cr=10c5387d
+<4>[    0.000000] CPU: VIPT nonaliasing data cache, VIPT aliasing instruction cache
+<4>[    0.000000] Machine: Tuna
+<6>[    0.000000] Reserving 16777216 bytes SDRAM for VRAM
+<4>[    0.000000] Memory policy: ECC disabled, Data cache writealloc
+<6>[    0.000000] OMAP4460 ES1.1
+<6>[    0.000000] SRAM: Mapped pa 0x4030d000 to va 0xfe40d000 size: 0x1000
+<6>[    0.000000] SMC: Allocated workspace of 0x300000 Bytes at (0xbfd00000)
+<7>[    0.000000] On node 0 totalpages: 182272
+<7>[    0.000000] free_area_init_node: node 0, pgdat c084d8a0, node_mem_map c09fa000
+<7>[    0.000000]   Normal zone: 256 pages used for memmap
+<7>[    0.000000]   Normal zone: 0 pages reserved
+<7>[    0.000000]   Normal zone: 32512 pages, LIFO batch:7
+<7>[    0.000000]   HighMem zone: 1792 pages used for memmap
+<7>[    0.000000]   HighMem zone: 147712 pages, LIFO batch:31
+<6>[    0.000000] PERCPU: Embedded 7 pages/cpu @c1201000 s7424 r8192 d13056 u32768
+<7>[    0.000000] pcpu-alloc: s7424 r8192 d13056 u32768 alloc=8*4096
+<7>[    0.000000] pcpu-alloc: [0] 0 [0] 1 
+<4>[    0.000000] Built 1 zonelists in Zone order, mobility grouping on.  Total pages: 180224
+<5>[    0.000000] Kernel command line: console=ttyFIQ0 androidboot.console=ttyFIQ0 mem=1G vmalloc=768M omap_wdt.timer_margin=30 no_console_suspend androidboot.serialno=0149C7530300C01E androidboot.bootloader=PRIMELC03 androidboot.baseband=I9250XXLJ1 lcd_bootfb=0xbea70000 mms_ts.panel_id=18 androidboot.macaddr=
+<6>[    0.000000] PID hash table entries: 512 (order: -1, 2048 bytes)
+<6>[    0.000000] Dentry cache hash table entries: 16384 (order: 4, 65536 bytes)
+<6>[    0.000000] Inode-cache hash table entries: 8192 (order: 3, 32768 bytes)
+<6>[    0.000000] Memory: 512MB 200MB = 712MB total
+<5>[    0.000000] Memory: 710144k/710144k available, 338432k reserved, 598016K highmem
+<5>[    0.000000] Virtual kernel memory layout:
+<5>[    0.000000]     vector  : 0xffff0000 - 0xffff1000   (   4 kB)
+<5>[    0.000000]     fixmap  : 0xfff00000 - 0xfffe0000   ( 896 kB)
+<5>[    0.000000]     DMA     : 0xff000000 - 0xffe00000   (  14 MB)
+<5>[    0.000000]     vmalloc : 0xc8800000 - 0xf8000000   ( 760 MB)
+<5>[    0.000000]     lowmem  : 0xc0000000 - 0xc8000000   ( 128 MB)
+<5>[    0.000000]     pkmap   : 0xbfe00000 - 0xc0000000   (   2 MB)
+<5>[    0.000000]     modules : 0xbf000000 - 0xbfe00000   (  14 MB)
+<5>[    0.000000]       .init : 0xc0008000 - 0xc0050000   ( 288 kB)
+<5>[    0.000000]       .text : 0xc0050000 - 0xc07ee000   (7800 kB)
+<5>[    0.000000]       .data : 0xc07ee000 - 0xc084f660   ( 390 kB)
+<5>[    0.000000]        .bss : 0xc084f684 - 0xc09f9570   (1704 kB)
+<6>[    0.000000] SLUB: Genslabs=13, HWalign=32, Order=0-3, MinObjects=0, CPUs=2, Nodes=1
+<6>[    0.000000] Preemptible hierarchical RCU implementation.
+<6>[    0.000000] NR_IRQS:410
+<4>[    0.000000] omap_hwmod: dpll_mpu_m2_ck: missing clockdomain for dpll_mpu_m2_ck.
+<6>[    0.000000] OMAP clockevent source: GPTIMER1 at 32768 Hz
+<6>[    0.000000] sched_clock: 32 bits at 32kHz, resolution 30517ns, wraps every 131071999ms
+<6>[    0.000061] Calibrating delay loop... 1194.24 BogoMIPS (lpj=4665344)
+<6>[    0.070404] pid_max: default: 32768 minimum: 301
+<6>[    0.070404] Mount-cache hash table entries: 512
+<6>[    0.070404] Initializing cgroup subsys debug
+<6>[    0.071685] Initializing cgroup subsys cpuacct
+<6>[    0.071685] Initializing cgroup subsys freezer
+<6>[    0.071807] CPU: Testing write buffer coherency: ok
+<6>[    0.071960] hw perfevents: enabled with ARMv7 Cortex-A9 PMU driver, 7 counters available
+<6>[    0.072113] L310 cache controller enabled
+<6>[    0.072204] l2x0: 16 ways, CACHE_ID 0x410000c7, AUX_CTRL 0x5e470000, Cache size: 1048576 B
+<4>[    0.150268] CPU1: Booted secondary processor
+<6>[    0.181457] Brought up 2 CPUs
+<6>[    0.181518] SMP: Total of 2 processors activated (2388.48 BogoMIPS).
+<4>[    0.181793] omap_hwmod: _populate_mpu_rt_base found no _mpu_rt_va for emif_fw
+<4>[    0.181793] omap_hwmod: _populate_mpu_rt_base found no _mpu_rt_va for l3_instr
+<4>[    0.185607] omap_hwmod: _populate_mpu_rt_base found no _mpu_rt_va for l3_main_1
+<4>[    0.185607] omap_hwmod: _populate_mpu_rt_base found no _mpu_rt_va for l3_main_2
+<4>[    0.185638] omap_hwmod: _populate_mpu_rt_base found no _mpu_rt_va for l4_abe
+<4>[    0.185638] omap_hwmod: _populate_mpu_rt_base found no _mpu_rt_va for l4_cfg
+<4>[    0.185668] omap_hwmod: _populate_mpu_rt_base found no _mpu_rt_va for l4_per
+<4>[    0.185668] omap_hwmod: _populate_mpu_rt_base found no _mpu_rt_va for l4_wkup
+<4>[    0.185699] omap_hwmod: _populate_mpu_rt_base found no _mpu_rt_va for mpu_private
+<4>[    0.185699] omap_hwmod: _populate_mpu_rt_base found no _mpu_rt_va for sl2if
+<4>[    0.185699] omap_hwmod: _populate_mpu_rt_base found no _mpu_rt_va for thermal_sensor
+<4>[    0.185852] omap_hwmod: _populate_mpu_rt_base found no _mpu_rt_va for usbhs_ehci
+<4>[    0.186096] omap_hwmod: l3_div_ck: missing clockdomain for l3_div_ck.
+<4>[    0.186096] omap_hwmod: l4_div_ck: missing clockdomain for l4_div_ck.
+<4>[    0.194030] omap_hwmod: mcpdm: cannot be enabled (3)
+<6>[    0.196289] print_constraints: dummy: 
+<6>[    0.196289] NET: Registered protocol family 16
+<6>[    0.197113] GPMC revision 6.0
+<6>[    0.197113] EMIF0 is enabled with IRQ142
+<6>[    0.198394] EMIF1 is enabled with IRQ143
+<6>[    0.198394] Last reset was warm software reset (PRM_RSTST=0x2)
+<6>[    0.198394] 
+<6>[    0.198577] HSI: device registered as omap_hwmod: hsi
+<6>[    0.198883] OMAP GPIO hardware version 0.1
+<6>[    0.200286] omap_mux_init: Add partition: #1: core, flags: 2
+<6>[    0.200286] omap_mux_init: Add partition: #2: wkup, flags: 2
+<6>[    0.201812] Tuna HW revision: 09 (Maguro 8th Sample), cpu OMAP4460 ES1.1 
+<6>[    0.203674] ram_console: got buffer at a0000000, size 200000
+<6>[    0.203674] ram_console: found existing buffer, size 309164, start 309164
+<6>[    0.975463] console [ram-1] enabled
+<6>[    0.975524] Using tuna_oled_factory_info_6500k
+<6>[    0.979217] _omap_mux_init_gpio: Multiple gpio paths (2) for gpio102
+<3>[    0.979217] omap_mux_init_gpio: Could not set gpio102
+<6>[    0.979919] _omap_mux_init_gpio: Multiple gpio paths (2) for gpio101
+<3>[    0.979949] omap_mux_init_gpio: Could not set gpio101
+<6>[    1.179840] _omap_mux_init_gpio: Multiple gpio paths (2) for gpio100
+<3>[    1.179840] omap_mux_init_gpio: Could not set gpio100
+<6>[    1.179962] hw-breakpoint: found 6 breakpoint and 1 watchpoint registers.
+<6>[    1.179962] hw-breakpoint: 1 breakpoint(s) reserved for watchpoint single-step.
+<6>[    1.181060] hw-breakpoint: maximum watchpoint size is 4 bytes.
+<6>[    1.185546] OMAP DMA hardware revision 0.0
+<4>[    1.185821] omap_rproc_get_pool: carveout memory is unavailable: 0x0, 0x0
+<6>[    1.194732] bio: create slab <bio-0> at 0
+<6>[    1.195556] print_constraints: vwl1271: 2000 mV 
+<5>[    1.195556] SCSI subsystem initialized
+<6>[    1.197631] usbcore: registered new interface driver usbfs
+<6>[    1.197631] usbcore: registered new interface driver hub
+<6>[    1.198181] usbcore: registered new device driver usb
+<6>[    1.198181] i2c-gpio i2c-gpio.5: using pins 98 (SDA) and 99 (SCL)
+<6>[    1.212738] omap_i2c omap_i2c.1: bus 1 rev4.0 at 400 kHz
+<4>[    1.212738] Skipping twl internal clock init and using bootloader value (unknown osc rate)
+<6>[    1.216308] twl6030: PIH (irq 39) chaining IRQs 368..387
+<6>[    1.218688] print_constraints: VUSB: 3300 mV normal standby
+<6>[    1.219268] print_constraints: VMMC: 1800 mV normal standby
+<6>[    1.220275] print_constraints: VPP: 1800 <--> 2500 mV at 1900 mV normal standby
+<6>[    1.220550] print_constraints: VUSIM: 2200 mV normal standby
+<6>[    1.220550] print_constraints: VCXIO: 1800 mV normal standby
+<6>[    1.220550] print_constraints: VDAC: 1800 mV normal standby
+<6>[    1.222442] print_constraints: VAUX1_6030: 3000 mV normal standby
+<6>[    1.223388] print_constraints: VAUX2_6030: 1200 <--> 2800 mV at 1800 mV normal standby
+<6>[    1.223937] print_constraints: VAUX3_6030: 3100 mV normal standby
+<6>[    1.225036] print_constraints: CLK32KG: 
+<6>[    1.225921] print_constraints: CLK32KAUDIO: 
+<6>[    1.226806] print_constraints: VDD3: 
+<6>[    1.227539] print_constraints: VMEM: at 1250 mV 
+<6>[    1.228454] print_constraints: V2V1: 2100 mV normal standby
+<6>[    1.229370] print_constraints: VANA: 2100 mV normal standby
+<6>[    1.243988] omap_i2c omap_i2c.2: bus 2 rev4.0 at 400 kHz
+<6>[    1.259613] omap_i2c omap_i2c.3: bus 3 rev4.0 at 400 kHz
+<6>[    1.275238] omap_i2c omap_i2c.4: bus 4 rev4.0 at 400 kHz
+<6>[    1.276275] omap-rproc omap-rproc.0: dsp is available
+<6>[    1.276275] omap-rproc omap-rproc.1: ipu is available
+<6>[    1.277160] Advanced Linux Sound Architecture Driver Version 1.0.24.
+<6>[    1.277923] Bluetooth: Core ver 2.16
+<6>[    1.277923] NET: Registered protocol family 31
+<6>[    1.277923] Bluetooth: HCI device and connection manager initialized
+<6>[    1.278289] Bluetooth: HCI socket layer initialized
+<6>[    1.278289] Bluetooth: L2CAP socket layer initialized
+<6>[    1.278594] Bluetooth: SCO socket layer initialized
+<6>[    1.279327] cfg80211: Calling CRDA to update world regulatory domain
+<6>[    1.279571] Switching to clocksource 32k_counter
+<6>[    1.283050] Switched to NOHz mode on CPU #0
+<6>[    1.283081] Switched to NOHz mode on CPU #1
+<6>[    1.292572] musb-hdrc: version 6.0, musb-dma, otg (peripheral+host)
+<7>[    1.295349] musb-hdrc: ConfigData=0xde (UTMI-8, dyn FIFOs, bulk combine, bulk split, HB-ISO Rx, HB-ISO Tx, SoftConn)
+<7>[    1.295715] musb-hdrc: MHDRC RTL version 2.0 
+<7>[    1.295715] musb-hdrc: setup fifo_mode 4
+<7>[    1.295715] musb-hdrc: 28/31 max ep, 16384/16384 memory
+<6>[    1.296020] musb-hdrc musb-hdrc: USB OTG mode controller at fc0ab000 using DMA, IRQ 124
+<6>[    1.296936] NET: Registered protocol family 2
+<6>[    1.296966] IP route cache hash table entries: 4096 (order: 2, 16384 bytes)
+<6>[    1.296966] TCP established hash table entries: 16384 (order: 5, 131072 bytes)
+<6>[    1.298950] TCP bind hash table entries: 16384 (order: 5, 196608 bytes)
+<6>[    1.298950] TCP: Hash tables configured (established 16384 bind 16384)
+<6>[    1.298950] TCP reno registered
+<6>[    1.299774] UDP hash table entries: 128 (order: 0, 4096 bytes)
+<6>[    1.299774] UDP-Lite hash table entries: 128 (order: 0, 4096 bytes)
+<6>[    1.299774] NET: Registered protocol family 1
+<6>[    1.299774] Trying to unpack rootfs image as initramfs...
+<6>[    1.326904] Freeing initrd memory: 344K
+<6>[    2.413818] PHOENIX_LAST_TURNOFF_STS: 0x01
+<6>[    2.414520] console [ttyFIQ0] enabled
+<6>[    2.418579] Registered FIQ tty driver c78c6b40
+<6>[    2.418914] omap-iommu omap-iommu.0: ducati registered
+<6>[    2.418914] omap-iommu omap-iommu.1: tesla registered
+<4>[    2.428192] highmem bounce pool size: 64 pages
+<6>[    2.428192] ashmem: initialized
+<6>[    2.438415] fuse init (API version 7.16)
+<6>[    2.438415] msgmni has been set to 219
+<6>[    2.438415] Registering char device tf_driver (122:0)
+<6>[    2.441406] io scheduler noop registered
+<6>[    2.441558] io scheduler deadline registered
+<6>[    2.441558] io scheduler cfq registered (default)
+<6>[    2.442779] OMAP DSS rev 4.0
+<6>[    2.445983] dsscomp: initializing.
+<7>[    2.445983] misc dsscomp: display0=s6e8aa0
+<7>[    2.446289] misc dsscomp: display1=hdmi_panel
+<6>[    2.446411] misc dsscomp: found 2 displays and 4 overlays
+<3>[    2.446868] could not allocate slot
+<6>[    2.447875] omap-rproc omap-rproc.1: powering up ipu
+<6>[    2.448272] virtio_rpmsg_bus virtio0: rpmsg backend virtproc probed successfully
+<6>[    2.448455] virtio_rpmsg_bus virtio1: rpmsg backend virtproc probed successfully
+<6>[    2.448455] omap_uart.0: ttyO0 at MMIO 0x4806a000 (irq = 104) is a OMAP UART0
+<6>[    2.475402] omap_uart.1: ttyO1 at MMIO 0x4806c000 (irq = 105) is a OMAP UART1
+<6>[    2.499053] omap_uart.3: ttyO3 at MMIO 0x4806e000 (irq = 102) is a OMAP UART3
+<6>[    2.577331] omap_ion_probe: adding heap secure_input of type 2 with ba300000@5a00000
+<6>[    2.577484] omap_ion_probe: adding heap tiler of type 4 with ae900000@5100000
+<6>[    2.577484] omap_ion_probe: adding heap nonsecure_tiler of type 4 with ada00000@f00000
+<6>[    2.578674] brd: module loaded
+<6>[    2.585998] loop: module loaded
+<6>[    2.590362] input: barometer as /devices/virtual/input/input0
+<6>[    2.590911] sec_jack_probe : Registering jack driver
+<6>[    2.591613] i2c i2c-4: mpu_probe: 0
+<6>[    2.602203] i2c i2c-4: Installing irq using 205
+<6>[    2.602447] i2c i2c-4: Module Param interface = mpuirq
+<4>[    2.602447] i2c-core: driver [mpu3050] using legacy suspend method
+<4>[    2.602966] i2c-core: driver [mpu3050] using legacy resume method
+<6>[    2.602966] mpu_init: Probe name mpu3050
+<6>[    2.602966] i2c i2c-4: bma250_mod_probe: bma250
+<6>[    2.602966] i2c i2c-4: Installing Accel irq using 282
+<6>[    2.622650] i2c i2c-4: mpu3050: +bma250
+<6>[    2.622833] bma250_mod_init: Probe name bma250_mod
+<6>[    2.622833] i2c i2c-4: yas530_mod_probe: yas530
+<6>[    2.622833] i2c i2c-4: Installing Compass irq using 336
+<6>[    2.646636] i2c i2c-4: mpu3050: +yas530
+<6>[    2.646636] yas530_mod_init: Probe name yas530_mod
+<6>[    2.653350] omap_temp_sensor omap_temp_sensor.0: omap_temp_sensor probed
+<6>[    2.657897] m25p80 spi3.0: w25q80 (1024 Kbytes)
+<6>[    2.658630] PPP generic driver version 2.4.2
+<6>[    2.658630] PPP Deflate Compression module registered
+<6>[    2.658630] PPP BSD Compression module registered
+<6>[    2.660491] PPP MPPE Compression module registered
+<6>[    2.660705] NET: Registered protocol family 24
+<6>[    2.660705] tun: Universal TUN/TAP device driver, 1.6
+<6>[    2.662963] tun: (C) 1999-2004 Max Krasnyansky <maxk@qualcomm.com>
+<6>[    2.663269] usbcore: registered new interface driver asix
+<6>[    2.663269] usbcore: registered new interface driver cdc_ether
+<6>[    2.663513] usbcore: registered new interface driver net1080
+<6>[    2.663513] usbcore: registered new interface driver cdc_subset
+<6>[    2.663513] usbcore: registered new interface driver zaurus
+<6>[    2.664245] cdc_ncm: 04-Aug-2011
+<6>[    2.664428] usbcore: registered new interface driver cdc_ncm
+<6>[    2.664428] ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+<6>[    2.664550] usbcore: registered new interface driver cdc_acm
+<6>[    2.665069] cdc_acm: USB Abstract Control Model driver for USB modems and ISDN adapters
+<6>[    2.665069] Initializing USB Mass Storage driver...
+<6>[    2.665527] usbcore: registered new interface driver usb-storage
+<6>[    2.665649] USB Mass Storage support registered.
+<6>[    2.665649] usbcore: registered new interface driver usbserial
+<6>[    2.666015] usbserial: USB Serial Driver core
+<6>[    2.867675] android_usb gadget: Mass Storage Function, version: 2009/09/11
+<6>[    2.867675] android_usb gadget: Number of LUNs=1
+<6>[    2.867980]  lun0: LUN: removable file: (no medium)
+<6>[    2.868194] android_usb gadget: android_usb ready
+<6>[    2.868194] musb-hdrc musb-hdrc: MUSB HDRC host driver
+<6>[    2.868194] musb-hdrc musb-hdrc: new USB bus registered, assigned bus number 1
+<6>[    2.868194] usb usb1: New USB device found, idVendor=1d6b, idProduct=0002
+<6>[    2.869171] usb usb1: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+<6>[    2.869171] usb usb1: Product: MUSB HDRC host driver
+<6>[    2.869659] usb usb1: Manufacturer: Linux 3.0.31-g9f818de musb-hcd
+<6>[    2.869659] usb usb1: SerialNumber: musb-hdrc
+<6>[    2.869659] hub 1-0:1.0: USB hub found
+<6>[    2.869659] hub 1-0:1.0: 1 port detected
+<6>[    2.870574] usbcore: registered new interface driver xpad
+<6>[    2.870574] usbcore: registered new interface driver usb_acecad
+<6>[    2.870574] acecad: v3.2:USB Acecad Flair tablet driver
+<6>[    2.870574] usbcore: registered new interface driver aiptek
+<6>[    2.870574] aiptek: v2.3 (May 2, 2007):Aiptek HyperPen USB Tablet Driver (Linux 2.6.x)
+<6>[    2.872253] aiptek: Bryan W. Headley/Chris Atenasio/Cedric Brun/Rene van Paassen
+<6>[    2.872253] usbcore: registered new interface driver gtco
+<4>[    2.872497] GTCO usb driver version: 2.00.0006
+<6>[    2.872497] usbcore: registered new interface driver hanwang
+<6>[    2.873077] usbcore: registered new interface driver kbtab
+<6>[    2.873077] kbtab: v0.0.2:USB KB Gear JamStudio Tablet driver
+<6>[    2.873077] usbcore: registered new interface driver wacom
+<6>[    2.873077] wacom: v1.52:USB Wacom tablet driver
+<6>[    2.873779] input: Melfas MMSxxx Touchscreen as /devices/platform/omap/omap_i2c.3/i2c-3/3-0048/input/input1
+<6>[    3.327178] GPIO Input Driver: Start gpio inputs for tuna-gpio-keypad in interrupt mode
+<6>[    3.327697] GPIO Input Driver: Start gpio inputs for tuna-gpio-keypad in interrupt mode
+<6>[    3.327911] input: tuna-gpio-keypad as /devices/virtual/input/input2
+<6>[    3.329010] input: proximity as /devices/virtual/input/input3
+<6>[    3.329650] input: lightsensor-level as /devices/virtual/input/input4
+<6>[    3.333007] using rtc device, twl_rtc, for alarms
+<6>[    3.333587] twl_rtc twl_rtc: rtc core: registered twl_rtc as rtc0
+<6>[    3.333953] i2c /dev entries driver
+<6>[    3.334716] dmm: probe base: fd300000, irq 145
+<6>[    3.338195] max17040 4-0036: MAX17040 Fuel-Gauge Ver 3
+<6>[    3.340698] OMAP Watchdog Timer Rev 0x01: initial timeout 30 sec
+<6>[    3.343536] device-mapper: uevent: version 1.0.3
+<6>[    3.344024] device-mapper: ioctl: 4.20.0-ioctl (2011-02-02) initialised: dm-devel@redhat.com
+<6>[    3.344268] Bluetooth: HCI UART driver ver 2.2
+<6>[    3.344360] Bluetooth: HCI H4 protocol initialized
+<6>[    3.344665] cpuidle: using governor ladder
+<6>[    3.344787] cpuidle: using governor menu
+<6>[    3.352966] usbcore: registered new interface driver usbhid
+<6>[    3.353149] usbhid: USB HID core driver
+<6>[    3.353637] logger: created 256K log 'log_main'
+<6>[    3.353942] logger: created 256K log 'log_events'
+<6>[    3.354125] logger: created 256K log 'log_radio'
+<6>[    3.354614] logger: created 256K log 'log_system'
+<6>[    3.356292] OMAP HSI: HSI driver version 0.4.2
+<6>[    3.356597] omap_hsi omap_hsi.0: Registering IRQ mpu_p1 (99)
+<6>[    3.356811] omap_hsi omap_hsi.0: HSI port 1 initialized
+<6>[    3.356903] omap_hsi omap_hsi.0: Registering IRQ mpu_dma (103)
+<6>[    3.357238] omap_hsi omap_hsi.0: HSI Hardware REVISION 0x50043101
+<4>[    3.359649] omap_hsi omap_hsi.0: Cannot set HSI FClk to default value: 96000000. Will retry on next open
+<6>[    3.363800] SDP4430 SoC init
+<6>[    3.375946] max17040 4-0036: online = 1 vcell = 4127500 soc = 95 status = 3 health = 1 temp = 340 charger status = 0
+<6>[    3.398223] asoc: null-codec-dai <-> MultiMedia1 mapping ok
+<6>[    3.399688] asoc: null-codec-dai <-> MultiMedia2 mapping ok
+<6>[    3.401580] asoc: null-codec-dai <-> Voice mapping ok
+<6>[    3.403198] asoc: null-codec-dai <-> Tones mapping ok
+<6>[    3.404724] asoc: null-codec-dai <-> Vibra mapping ok
+<6>[    3.405822] asoc: null-codec-dai <-> MODEM mapping ok
+<6>[    3.406738] asoc: null-codec-dai <-> MultiMedia1 LP mapping ok
+<6>[    3.408599] asoc: FM Digital <-> omap-mcbsp-dai.1 mapping ok
+<6>[    3.409973] asoc: twl6040-dl1 <-> mcpdm-dl mapping ok
+<6>[    3.411376] asoc: dit-hifi <-> omap-mcasp-dai mapping ok
+<4>[    3.413665] twl6040-codec twl6040-codec: ASoC: Failed to create Aux/FM Stereo In debugfs file
+<6>[    3.414855] asoc: twl6040-dl1 <-> mcpdm-dl1 mapping ok
+<6>[    3.415771] asoc: twl6040-ul <-> mcpdm-ul1 mapping ok
+<6>[    3.416809] asoc: twl6040-dl2 <-> mcpdm-dl2 mapping ok
+<6>[    3.417785] asoc: twl6040-vib <-> mcpdm-vib mapping ok
+<6>[    3.418884] asoc: Bluetooth <-> omap-mcbsp-dai.0 mapping ok
+<6>[    3.419860] asoc: Bluetooth <-> omap-mcbsp-dai.0 mapping ok
+<6>[    3.420959] asoc: FM Digital <-> omap-mcbsp-dai.1 mapping ok
+<6>[    3.421936] asoc: MODEM <-> omap-mcbsp-dai.1 mapping ok
+<6>[    3.423919] input: Tuna Headset Jack as /devices/platform/soc-audio/sound/card0/input5
+<6>[    3.426971] asoc: hdmi-audio-codec <-> hdmi-audio-dai mapping ok
+<6>[    3.427703] ALSA device list:
+<6>[    3.427795]   #0: TI OMAP4 Board
+<6>[    3.427917]   #1: OMAP4HDMI
+<6>[    3.428222] GACT probability NOT on
+<6>[    3.428314] Mirror/redirect action on
+<6>[    3.428466] u32 classifier
+<6>[    3.428558]     Actions configured
+<6>[    3.428741] Netfilter messages via NETLINK v0.30.
+<6>[    3.428924] nf_conntrack version 0.5.0 (11101 buckets, 44404 max)
+<6>[    3.430328] ctnetlink v0.93: registering with nfnetlink.
+<6>[    3.430480] NF_TPROXY: Transparent proxy support initialized, version 4.1.0
+<6>[    3.430664] NF_TPROXY: Copyright (c) 2006-2007 BalaBit IT Ltd.
+<6>[    3.431243] xt_time: kernel timezone is -0000
+<6>[    3.433807] ip_tables: (C) 2000-2006 Netfilter Core Team
+<6>[    3.434143] arp_tables: (C) 2002 David S. Miller
+<6>[    3.434417] TCP cubic registered
+<6>[    3.434509] Initializing XFRM netlink socket
+<6>[    3.435668] NET: Registered protocol family 10
+<6>[    3.442199] Mobile IPv6
+<6>[    3.442352] ip6_tables: (C) 2000-2006 Netfilter Core Team
+<6>[    3.442840] IPv6 over IPv4 tunneling driver
+<6>[    3.449493] NET: Registered protocol family 17
+<6>[    3.449615] NET: Registered protocol family 15
+<6>[    3.449981] Bluetooth: RFCOMM TTY layer initialized
+<6>[    3.450195] Bluetooth: RFCOMM socket layer initialized
+<6>[    3.450286] Bluetooth: RFCOMM ver 1.11
+<6>[    3.450469] Bluetooth: BNEP (Ethernet Emulation) ver 1.3
+<6>[    3.450592] Bluetooth: HIDP (Human Interface Emulation) ver 1.2
+<6>[    3.450927] NET: Registered protocol family 35
+<6>[    3.451385] VFP support v0.3: implementor 41 architecture 3 part 30 variant 9 rev 4
+<6>[    3.451690] ThumbEE CPU extension supported.
+<5>[    3.451812] Registering SWP/SWPB emulation handler
+<6>[    3.453247] mmc0: new high speed MMC card at address 0001
+<6>[    3.453857] mmcblk0: mmc0:0001 VYL00M 14.6 GiB 
+<6>[    3.454162] mmcblk0boot0: mmc0:0001 VYL00M partition 1 512 KiB
+<6>[    3.454528] mmcblk0boot1: mmc0:0001 VYL00M partition 2 512 KiB
+<6>[    3.460479] Reprogramming LPDDR2 timings to 400000000 Hz
+<6>[    3.461029]  mmcblk0: p1 p2 p3 p4 p5 p6 p7 p8 p9 p10 p11 p12 p13
+<6>[    3.463714] cpufreq_interactive_input_connect: connect to Melfas MMSxxx Touchscreen
+<6>[    3.463989]  mmcblk0boot1: unknown partition table
+<3>[    3.464355] Power Management for TI OMAP4.
+<6>[    3.464569] OMAP4 PM: Static dependency added between MPUSS and DUCATI <-> L4_PER/CFG and L3_1.
+<6>[    3.465332]  mmcblk0boot0: unknown partition table
+<4>[    3.465515] sr_init: No PMIC hook to init smartreflex
+<6>[    3.465850] smartreflex smartreflex.0: omap_sr_probe: SmartReflex driver initialized
+<6>[    3.466094] smartreflex smartreflex.1: omap_sr_probe: SmartReflex driver initialized
+<6>[    3.466400] smartreflex smartreflex.2: omap_sr_probe: SmartReflex driver initialized
+<6>[    3.466827] SmartReflex class 1.5 driver: initialized (86400000ms)
+<6>[    3.467773] dmtimer id 10 at 48086000...
+<6>[    3.467864] OMAP_TIMER_OCP_CFG_REG: 0x000015
+<6>[    3.468017] OMAP_TIMER_SYS_STAT_REG: 0x000001
+<6>[    3.468109] OMAP_TIMER_STAT_REG: 0x000000
+<6>[    3.468261] OMAP_TIMER_INT_EN_REG: 0x000000
+<6>[    3.468353] OMAP_TIMER_WAKEUP_EN_REG: 0x000000
+<6>[    3.468444] OMAP_TIMER_CTRL_REG: 0x000000
+<6>[    3.468627] OMAP_TIMER_COUNTER_REG: 0x000000
+<6>[    3.468688] OMAP_TIMER_LOAD_REG: 0x000000
+<6>[    3.468811] OMAP_TIMER_MATCH_REG: 0x000000
+<6>[    3.468963] OMAP_TIMER_IF_CTRL_REG: 0x000004
+<6>[    3.469635] dmtimer id 10 at 48086000...
+<6>[    3.469726] OMAP_TIMER_OCP_CFG_REG: 0x000015
+<6>[    3.469879] OMAP_TIMER_SYS_STAT_REG: 0x000001
+<6>[    3.469970] OMAP_TIMER_STAT_REG: 0x000000
+<6>[    3.470153] OMAP_TIMER_INT_EN_REG: 0x000000
+<6>[    3.470245] OMAP_TIMER_WAKEUP_EN_REG: 0x000000
+<6>[    3.470306] OMAP_TIMER_CTRL_REG: 0x001842
+<6>[    3.470489] OMAP_TIMER_COUNTER_REG: 0xfffffffe
+<6>[    3.470581] OMAP_TIMER_LOAD_REG: 0xfffffa56
+<6>[    3.470672] OMAP_TIMER_MATCH_REG: 0xfffffa60
+<6>[    3.470825] OMAP_TIMER_IF_CTRL_REG: 0x000004
+<6>[    3.471710] HSI DRIVER BUS : hsi_bus_match SUCCESS : ctrl:0 (mask:ffffffff), port:0, ch:0 (mask:ff)
+<6>[    3.471984] HSI DRIVER BUS : hsi_bus_match SUCCESS : ctrl:0 (mask:ffffffff), port:0, ch:1 (mask:ff)
+<6>[    3.472290] HSI DRIVER BUS : hsi_bus_match SUCCESS : ctrl:0 (mask:ffffffff), port:0, ch:2 (mask:ff)
+<6>[    3.472534] HSI DRIVER BUS : hsi_bus_match SUCCESS : ctrl:0 (mask:ffffffff), port:0, ch:3 (mask:ff)
+<6>[    3.472747] HSI DRIVER BUS : hsi_bus_match SUCCESS : ctrl:0 (mask:ffffffff), port:0, ch:4 (mask:ff)
+<6>[    3.473022] HSI DRIVER BUS : hsi_bus_match SUCCESS : ctrl:0 (mask:ffffffff), port:0, ch:5 (mask:ff)
+<6>[    3.473297] HSI DRIVER BUS : hsi_bus_match SUCCESS : ctrl:0 (mask:ffffffff), port:0, ch:6 (mask:ff)
+<6>[    3.473541] HSI DRIVER BUS : hsi_bus_match SUCCESS : ctrl:0 (mask:ffffffff), port:0, ch:7 (mask:ff)
+<6>[    3.491058] sr_class1p5_calib_work: mpu: Calibration complete: Voltage:Nominal=1203000,Calib=1000000,margin=0
+<6>[    3.491241] sr_class1p5_calib_work: iva: Calibration complete: Voltage:Nominal=1140000,Calib=974860,margin=0
+<6>[    3.491455] sr_class1p5_calib_work: core: Calibration complete: Voltage:Nominal=1127000,Calib=1000180,margin=13000
+<6>[    3.491851] clock: disabling unused clocks to save power
+<6>[    3.666564] cannot apply mgr(lcd) on inactive device
+<4>[    3.666748] omapfb omapfb: failed to apply dispc config
+<6>[    3.666931] cannot apply mgr(tv) on inactive device
+<4>[    3.667083] omapfb omapfb: failed to apply dispc config
+<6>[    3.667266] cannot apply mgr(lcd2) on inactive device
+<4>[    3.667419] omapfb omapfb: failed to apply dispc config
+<6>[    3.670837] regulator_init_complete: VDAC: disabling
+<6>[    3.672149] regulator_init_complete: VUSB: disabling
+<7>[    3.672698] omaplfb OMAPLFBInitFBDev: Device 0: Requesting 4 TILER 2D framebuffers
+<4>[    3.673522] ## wifi_probe
+<4>[    3.673614] wifi_set_power = 1
+<4>[    4.194091] wifi_set_carddetect = 1
+<4>[    4.194488] 
+<4>[    4.194488] Dongle Host Driver, version 5.90.195.104
+<4>[    4.194488] Compiled in drivers/net/wireless/bcmdhd on Nov 28 2012 at 11:20:06
+<6>[    4.248779] sr_class1p5_calib_work: mpu: Calibration complete: Voltage:Nominal=1380000,Calib=1190000,margin=0
+<4>[    4.310180] mmc1: queuing unknown CIS tuple 0x80 (7 bytes)
+<4>[    4.355163] mmc1: queuing unknown CIS tuple 0x80 (3 bytes)
+<6>[    4.367095] mmc1: new high speed SDIO card at address 0001
+<4>[    4.367767] F1 signature read @0x18000000=0x16844330
+<4>[    4.371063] DHD: dongle ram size is set to 294912(orig 294912)
+<4>[    4.371612] wl_create_event_handler thr:5e started
+<4>[    4.374084] p2p0: P2P Interface Registered
+<4>[    4.374206] dhd_attach thr:5f started
+<4>[    4.374328] dhd_attach thr:60 started
+<4>[    4.374481] dhd_attach thr:61 started
+<4>[    4.376892] Broadcom Dongle Host Driver: register interface [wlan0] MAC: 00:90:4c:11:22:33
+<4>[    4.377014] wifi_set_power = 0
+<4>[    4.897644] =========== WLAN placed in RESET ========
+<6>[    4.898834] fsa9480 4-0025: cable detect change, from 'unknown/none' to 'usb-peripheral'
+<6>[    4.900512] twl_rtc twl_rtc: setting system clock to 2013-06-27 21:28:46 UTC (1372368526)
+<6>[    4.900970] Freeing init memory: 288K
+<4>[    4.904327] init (1): /proc/1/oom_adj is deprecated, please use /proc/1/oom_score_adj instead.
+<6>[    4.929046] max17040 4-0036: online = 1 vcell = 4147500 soc = 95 status = 3 health = 1 temp = 340 charger status = 0
+<6>[    4.975433] keychord: using input dev tuna-gpio-keypad for fevent
+<6>[    5.070159] EXT4-fs (mmcblk0p10): mounted filesystem with ordered data mode. Opts: (null)
+<6>[    5.076690] EXT4-fs (mmcblk0p3): mounted filesystem with ordered data mode. Opts: (null)
+<7>[    5.086822] EXT4-fs (mmcblk0p11): ext4_orphan_cleanup: deleting unreferenced inode 19
+<7>[    5.087005] EXT4-fs (mmcblk0p11): ext4_orphan_cleanup: deleting unreferenced inode 12
+<6>[    5.087127] EXT4-fs (mmcblk0p11): 2 orphan inodes deleted
+<6>[    5.087249] EXT4-fs (mmcblk0p11): recovery complete
+<6>[    5.123962] EXT4-fs (mmcblk0p11): mounted filesystem with ordered data mode. Opts: nomblk_io_submit,errors=remount-ro
+<6>[    5.147430] mms_ts 3-0048: fw version 0x65 already present
+<6>[    5.147705] mms_ts 3-0048: Melfas MMS-series touch controller initialized
+<6>[    5.170776] fs_mgr: Running /system/bin/e2fsck on /dev/block/platform/omap/omap_hsmmc.0/by-name/cache
+<6>[    5.201080] HDCP: loaded keys
+<6>[    5.333404] omap-rproc omap-rproc.1: Loaded BIOS image ducati-m3.bin, size 4515844
+<6>[    5.333557] omap-rproc omap-rproc.1: BIOS image version is 2
+<6>[    5.343933] omap-iommu omap-iommu.0: iommu_get: ducati qos_request
+<4>[    5.358032] omap_hwmod: ipu: failed to hardreset
+<6>[    5.358276] sr_class1p5_calib_work: mpu: Calibration complete: Voltage:Nominal=1317000,Calib=1090000,margin=0
+<6>[    5.358367] omap-iommu omap-iommu.0: ducati: version 2.1
+<6>[    5.365142] omap-rproc omap-rproc.1: remote processor ipu is now up
+<6>[    5.377197] EXT4-fs (mmcblk0p11): mounted filesystem with ordered data mode. Opts: nomblk_io_submit,errors=panic
+<6>[    5.378479] omap_rpmsg_mbox_callback: received echo reply from ipu !
+<6>[    5.378601] omap_rpmsg_mbox_callback: received echo reply from ipu !
+<6>[    5.378662] omap_rpmsg_mbox_callback: received echo reply from ipu !
+<6>[    5.378784] omap_rpmsg_mbox_callback: received echo reply from ipu !
+<6>[    5.378906] virtio_rpmsg_bus virtio0: creating channel rpmsg-client-sample addr 0x32
+<6>[    5.379180] virtio_rpmsg_bus virtio0: creating channel rpmsg-client-sample addr 0x33
+<6>[    5.379455] virtio_rpmsg_bus virtio0: creating channel rpmsg-omx addr 0x3c
+<6>[    5.379730] rpmsg_omx rpmsg-omx0: new OMX connection srv channel: 1024 -> 60!
+<7>[    5.393554] EXT4-fs (mmcblk0p12): ext4_orphan_cleanup: deleting unreferenced inode 579979
+<7>[    5.399566] EXT4-fs (mmcblk0p12): ext4_orphan_cleanup: deleting unreferenced inode 578778
+<7>[    5.405426] EXT4-fs (mmcblk0p12): ext4_orphan_cleanup: deleting unreferenced inode 48888
+<7>[    5.405578] EXT4-fs (mmcblk0p12): ext4_orphan_cleanup: deleting unreferenced inode 48876
+<6>[    5.405792] EXT4-fs (mmcblk0p12): 4 orphan inodes deleted
+<6>[    5.405914] EXT4-fs (mmcblk0p12): recovery complete
+<6>[    5.462310] EXT4-fs (mmcblk0p12): mounted filesystem with ordered data mode. Opts: nomblk_io_submit,errors=remount-ro
+<6>[    5.498870] fs_mgr: Running /system/bin/e2fsck on /dev/block/platform/omap/omap_hsmmc.0/by-name/userdata
+<6>[    5.543426] EXT4-fs (mmcblk0p12): mounted filesystem with ordered data mode. Opts: nomblk_io_submit,errors=panic
+<3>[    5.664794] init: cannot execve('/system/etc/install-recovery.sh'): Permission denied
+<3>[    5.726531] android_usb: already disabled
+<3>[    5.726806] android_usb: already disabled
+<6>[    5.778015] warning: `adbd' uses 32-bit capabilities (legacy support in use)
+<6>[    5.780975] adb_open
+<6>[    5.781097] mtp_bind_config
+<6>[    5.781219] adb_bind_config
+<6>[    5.945251] max17040 4-0036: online = 1 vcell = 4152500 soc = 95 status = 1 health = 1 temp = 340 charger status = 0
+<6>[    5.983428] android_work: sent uevent USB_STATE=CONNECTED
+<6>[    5.985778] android_work: sent uevent USB_STATE=DISCONNECTED
+<6>[    6.022521] SMC: SecureCRC=0xBC7458DC
+<6>[    6.063903] android_work: sent uevent USB_STATE=CONNECTED
+<6>[    6.090484] virtio_rpmsg_bus virtio1: creating channel rpmsg-omx addr 0x3c
+<6>[    6.090850] rpmsg_omx rpmsg-omx1: new OMX connection srv channel: 1024 -> 60!
+<3>[    6.158081] init: sys_prop: permission denied uid:1001  name:net.rmnet1.dns1
+<3>[    6.158325] init: sys_prop: permission denied uid:1001  name:net.rmnet1.dns2
+<3>[    6.158538] init: sys_prop: permission denied uid:1001  name:net.rmnet1.gw
+<3>[    6.158782] init: sys_prop: permission denied uid:1001  name:net.rmnet2.dns1
+<3>[    6.158996] init: sys_prop: permission denied uid:1001  name:net.rmnet2.dns2
+<3>[    6.159149] init: sys_prop: permission denied uid:1001  name:net.rmnet2.gw
+<6>[    6.266265] [MODEM_IF] misc_open : umts_boot0
+<6>[    6.266357] omap_hsi omap_hsi.0: HSI clock is now 96000000
+<6>[    6.266876] omap_hsi omap_hsi.0: Entering RX wakeup in 3 wires mode (no CAWAKE)
+<6>[    6.267028] [MODEM_IF] xmm6260_off()
+<6>[    6.267120] [MODEM_IF] xmm6260_on()
+<6>[    6.272949] SMC PA: INFO 00000001 00:00:00.000 ------ ------  --------------- Booting... (t=21:28:47.867) SMCXG01.04p11.32196     /Widevine Integration
+<6>[    6.274475] SMC PA: INFO 00000002 00:00:00.002 ------ ------  --------------- Booted
+<6>[    6.355590] android_work: sent uevent USB_STATE=DISCONNECTED
+<6>[    6.393035] android_work: sent uevent USB_STATE=CONNECTED
+<6>[    6.398498] android_work: sent uevent USB_STATE=DISCONNECTED
+<6>[    6.476074] android_work: sent uevent USB_STATE=CONNECTED
+<6>[    6.483367] android_usb gadget: high speed config #1: android
+<6>[    6.483581] android_work: sent uevent USB_STATE=CONFIGURED
+<4>[    6.503479] misc dsscomp: [c71af800] ignoring set failure -22
+<6>[    6.587554] [MODEM_IF] misc_release : umts_boot0
+<3>[    6.587585] omap_hsi omap_hsi.0: hsi_write_cancel ch 0
+<3>[    6.587585] omap_hsi omap_hsi.0: __hsi_write_cancel : -125
+<3>[    6.587615] omap_hsi omap_hsi.0: hsi_read_cancel ch 0
+<3>[    6.587615] omap_hsi omap_hsi.0: __hsi_read_cancel : -125
+<3>[    6.587646] omap_hsi omap_hsi.0: __hsi_write_cancel : -61
+<3>[    6.587646] omap_hsi omap_hsi.0: __hsi_read_cancel : -61
+<6>[    6.587677] [MODEM_IF] misc_open : umts_boot1
+<6>[    6.587707] omap_hsi omap_hsi.0: Entering RX wakeup in 4 wires mode
+<6>[    6.741363] s6e8aa: d/b 1, p 1, b-01390ffb
+<6>[    6.741363] s6e8aa: c0, 1, b-0023a1e1, got v 3482461, factory wants 3476801
+<6>[    6.741394] s6e8aa: c1, 1, b-00766152, got v 3701822, factory wants 3692888
+<6>[    6.741394] s6e8aa: c2, 1, b-001f1f04, got v 3448038, factory wants 3442652
+<6>[    6.741394] s6e8aa: d/b 1, p 2, b-044d7cf9
+<6>[    6.741424] s6e8aa: c0, 2, b-00c2a9f4, got v 3333696, factory wants 3326604
+<6>[    6.741424] s6e8aa: c1, 2, b-016eb0aa, got v 3554331, factory wants 3545032
+<6>[    6.741424] s6e8aa: c2, 2, b-00a9d2cb, got v 3292242, factory wants 3284463
+<6>[    6.741455] s6e8aa: d/b 1, p 3, b-0b323808
+<6>[    6.741455] s6e8aa: c0, 3, b-0257476d, got v 3206066, factory wants 3197333
+<6>[    6.741455] s6e8aa: c1, 3, b-036b78e4, got v 3424762, factory wants 3413933
+<6>[    6.741485] s6e8aa: c2, 3, b-0225cbd6, got v 3147161, factory wants 3137194
+<6>[    6.741485] s6e8aa: d/b 1, p 4, b-186611f4
+<6>[    6.741485] s6e8aa: c0, 4, b-05e34b7d, got v 3072984, factory wants 3061732
+<6>[    6.741516] s6e8aa: c1, 4, b-0747ae64, got v 3293866, factory wants 3280492
+<6>[    6.741516] s6e8aa: c2, 4, b-0554ec44, got v 3002325, factory wants 2989463
+<6>[    6.741516] s6e8aa: d/b 1, p 5, b-6840e4ff
+<6>[    6.741516] s6e8aa: c0, 5, b-1f90b19a, got v 2710536, factory wants 2690761
+<6>[    6.741546] s6e8aa: c1, 5, b-244a1b61, got v 2912348, factory wants 2890717
+<6>[    6.741546] s6e8aa: c2, 5, b-1c7b7eae, got v 2604278, factory wants 2582133
+<6>[    6.741546] s6e8aa: d/b 1, p 6, b-ffffffff
+<6>[    6.741577] s6e8aa: c0, 6, b-52cc8746, got v 2363103, factory wants 2330667
+<6>[    6.741577] s6e8aa: c1, 6, b-5f69a882, got v 2541595, factory wants 2507000
+<6>[    6.741577] s6e8aa: c2, 6, b-4cb3bbc1, got v 2211618, factory wants 2177333
+<4>[    7.366058] sr_class1p5_calib_work: core Stop sampling: Voltage Nominal=962000 samples=11
+<6>[    7.366577] sr_class1p5_calib_work: core: Calibration complete: Voltage:Nominal=962000,Calib=886240,margin=38000
+<4>[    7.366943] sr_class1p5_calib_work: mpu Stop sampling: Voltage Nominal=1025000 samples=13
+<6>[    7.367218] sr_class1p5_calib_work: mpu: Calibration complete: Voltage:Nominal=1025000,Calib=840000,margin=10000
+<6>[    9.854400] [MODEM_IF] misc_release : umts_boot1
+<3>[    9.854522] omap_hsi omap_hsi.0: hsi_write_cancel ch 0
+<3>[    9.854583] omap_hsi omap_hsi.0: __hsi_write_cancel : -61
+<3>[    9.854675] omap_hsi omap_hsi.0: hsi_read_cancel ch 0
+<3>[    9.854736] omap_hsi omap_hsi.0: __hsi_read_cancel : -125
+<3>[    9.854827] omap_hsi omap_hsi.0: __hsi_write_cancel : -61
+<3>[    9.854919] omap_hsi omap_hsi.0: __hsi_read_cancel : -61
+<6>[    9.855285] [MODEM_IF] misc_open : umts_ipc0
+<6>[    9.855468] omap_hsi omap_hsi.0: Entering RX wakeup in 4 wires mode
+<6>[    9.855560] [MODEM_IF] misc_open : umts_rfs0
+<6>[    9.956481] [MODEM_IF] PA EVENT : reset =1, pa=1, cp_dump=0
+<6>[    9.956573] [MODEM_IF] umts_ipc0 state changed: ONLINE
+<3>[   11.859954] drivers/misc/inv_mpu/mldl_cfg.c|inv_mpu_get_slave_config|1792 returning 4
+<6>[   25.731079] request_suspend_state: wakeup (3->0) at 25724517826 (2013-06-27 21:29:07.325714112 UTC)
+<6>[   26.903625] acc_open
+<6>[   26.903717] acc_release
+<4>[   27.325561] 
+<4>[   27.325561] Dongle Host Driver, version 5.90.195.104
+<4>[   27.325561] Compiled in drivers/net/wireless/bcmdhd on Nov 28 2012 at 11:20:06
+<4>[   27.325775] wl_android_wifi_on in
+<4>[   27.325836] wifi_set_power = 1
+<4>[   27.850372] =========== WLAN going back to live  ========
+<4>[   27.850494] sdio_reset_comm():
+<4>[   27.888854] dhdsdio_write_vars: Download, Upload and compare of NVRAM succeeded.
+<4>[   28.066589] Firmware up: op_mode=4, Broadcom Dongle Host Driver mac=a0:0b:ba:e3:5b:25
+<4>[   28.074737] Firmware version = wl0: Sep 14 2012 13:34:30 version 5.90.195.107 FWID 01-986c802e
+<4>[   28.075836] p2p0: p2p_dev_addr=a2:0b:ba:e3:5b:25
+<4>[   28.148376] dhd_rx_frame: net device is NOT registered yet. drop packet
+<4>[   28.148559] dhd_rx_frame: net device is NOT registered yet. drop packet
+<6>[   28.968505] mtp_open
+<4>[   29.286499] wl_bss_connect_done succeeded with 00:0f:66:ae:1f:f2
+<4>[   29.306915] wl_bss_connect_done succeeded with 00:0f:66:ae:1f:f2
+<6>[   29.427001] nfc_power_apply ON
+<6>[   29.452056] nfc_power_apply OFF
+<6>[   29.522491] nfc_power_apply ON
+<3>[   32.986724] init: sys_prop: permission denied uid:1003  name:service.bootanim.exit
+<6>[   37.201232] rpmsg_omx rpmsg-omx1: local addr assigned: 0x401
+<6>[   37.201385] omap-iommu omap-iommu.0: iommu_get: ducati qos_request
+<4>[   37.215454] omap_hwmod: ipu: failed to hardreset
+<6>[   37.246734] omap-iommu omap-iommu.0: ducati: version 2.1
+<6>[   37.361328] rpmsg_omx rpmsg6: conn rsp: status 0 addr 101
+<6>[   37.390014] sr_class1p5_calib_work: core: Calibration complete: Voltage:Nominal=1250000,Calib=1012840,margin=13000
+<6>[   37.418365] rpmsg_omx rpmsg-omx1: Disconnecting from OMX service at 101
+<7>[   38.959747] p2p0: no IPv6 routers present
+<7>[   41.740966] wlan0: no IPv6 routers present
+<3>[   45.159210] init: untracked pid 1298 exited
+<6>[   47.979187] binder: 387:442 transaction failed 29189, size 100-4
+<6>[   47.979766] binder: 387:442 transaction failed 29189, size 100-4
+<6>[   49.267791] binder: 1378:1386 refcount change on invalid ref 20
+<4>[   50.998870] sr_class1p5_calib_work: iva Stop sampling: Voltage Nominal=950000 samples=12
+<6>[   50.999328] sr_class1p5_calib_work: iva: Calibration complete: Voltage:Nominal=950000,Calib=860920,margin=13000
+<6>[   54.132873] binder: 387:1692 transaction failed 29189, size 168-0
+<6>[   55.991088] max17040 4-0036: online = 1 vcell = 4172500 soc = 95 status = 1 health = 1 temp = 360 charger status = 0
+<6>[   58.866485] fsa9480 4-0025: cable detect change, from 'usb-peripheral' to 'unknown/none'
+<6>[   58.868835] fsa9480 4-0025: nothing attached, keeping ownership of port
+<6>[   58.869384] android_work: sent uevent USB_STATE=DISCONNECTED
+<6>[   58.869842] adb_release
+<6>[   58.870300] adb_open
+<6>[   58.870483] mtp_bind_config
+<6>[   58.870880] adb_bind_config
+<6>[   58.873260] mtp_release
+<6>[   59.886352] max17040 4-0036: online = 1 vcell = 4100000 soc = 95 status = 2 health = 1 temp = 360 charger status = 0
+<6>[   61.714599] fsa9480 4-0025: cable detect change, from 'unknown/none' to 'usb-peripheral'
+<6>[   62.056457] android_work: did not send uevent (0 0   (null))
+<6>[   62.097076] android_work: sent uevent USB_STATE=CONNECTED
+<6>[   62.102111] android_work: sent uevent USB_STATE=DISCONNECTED
+<6>[   62.179260] android_work: sent uevent USB_STATE=CONNECTED
+<6>[   62.606353] android_usb gadget: high speed config #1: android
+<6>[   62.606781] android_work: sent uevent USB_STATE=CONFIGURED
+<6>[   62.636901] mtp_open
+<6>[   62.744720] max17040 4-0036: online = 1 vcell = 4158750 soc = 95 status = 1 health = 1 temp = 360 charger status = 0
+<6>[   64.334930] binder: 387:397 transaction failed 29189, size 168-0
+<3>[   73.354980] init: untracked pid 1825 exited
+<4>[   89.050079] attestation: Unknown symbol checkmate_set_power_mode (err 0)
+<6>[  112.835418] max17040 4-0036: online = 1 vcell = 4187500 soc = 96 status = 1 health = 1 temp = 360 charger status = 0
+<6>[  162.877960] max17040 4-0036: online = 1 vcell = 4190000 soc = 96 status = 1 health = 1 temp = 350 charger status = 0
+<6>[  212.922241] max17040 4-0036: online = 1 vcell = 4190000 soc = 96 status = 1 health = 1 temp = 350 charger status = 0
+<3>[  242.391906] init: untracked pid 2106 exited
+<6>[  248.150054] attestation [pid:2119 attestation_init:124] misc_register returned 0.
+<6>[  248.150451] attestation [pid:2119 init_netfilter:590] Created socket c623b380
+<6>[  248.150817] attestation [pid:2119 init_netfilter:598] Registered netfilter hook: 0
+<6>[  248.151000] attestation [pid:2119 attestation_init:133] init_netfilter returned 0.
+<6>[  262.960571] max17040 4-0036: online = 1 vcell = 4191250 soc = 96 status = 1 health = 1 temp = 350 charger status = 0
+<6>[  281.062438] attestation [pid:96 hook_func:331] is UDP packet: c5fbbf00 in device: c72d2800 wlan0  out device:   (null) <null>
+<6>[  281.062774] attestation [pid:96 hook_func:344] Measurement packet from port dead
+<6>[  281.063140] CM netfilter skb: c5fbbf00: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+<6>[  281.063476] CM netfilter skb: c5fbbf10: 00 00 00 00 00 28 2d c7 00 00 00 00 00 00 00 00  .....(-.........
+<6>[  281.063659] CM netfilter skb: c5fbbf20: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+<6>[  281.063995] CM netfilter skb: c5fbbf30: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+<6>[  281.064361] CM netfilter skb: c5fbbf40: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+<6>[  281.064697] CM netfilter skb: c5fbbf50: 2d 00 00 00 00 00 00 00 0e 00 00 00 00 00 00 00  -...............
+<6>[  281.065032] CM netfilter skb: c5fbbf60: 07 00 00 00 00 00 08 00 00 00 00 00 00 00 00 00  ................
+<6>[  281.065368] CM netfilter skb: c5fbbf70: 00 00 00 00 0a 00 00 00 00 00 00 00 00 00 00 00  ................
+<6>[  281.065551] CM netfilter skb: c5fbbf80: 00 00 00 00 00 00 00 00 00 00 00 00 40 40 6c c4  ............@@l.
+<6>[  281.065734] CM netfilter skb: c5fbbf90: 40 40 6c c4 32 40 6c c4 6d 40 6c c4 a0 40 6c c4  @@l.2@l.m@l..@l.
+<6>[  281.066101] CM netfilter skb: c5fbbfa0: 00 40 6c c4 40 40 6c c4 50 01 00 00 01 00 00 00  .@l.@@l.P.......
+<6>[  281.066436] CM netfilter skb: c5fbbfb0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+<6>[  281.066741] CM netfilter skb: c5fbbfc0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+<6>[  281.067077] CM netfilter skb: c5fbbfd0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+<6>[  281.067413] CM netfilter skb: c5fbbfe0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+<6>[  281.067626] CM netfilter skb: c5fbbff0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+<6>[  281.067962] CM netfilter skb: c5fbc000: 00 00 00 00 01 00 00 00 00 00 00 bf 80 b4 f9 c5  ................
+<6>[  281.068298] CM netfilter skb: c5fbc010: d0 04 82 c0 01 00 00 00 15 00 00 00 a0 a6 20 c1  .............. .
+<6>[  281.068634] CM netfilter skb: c5fbc020: 80 b4 f9 c5 00 c0 fb c5 a0 db c0 c6 01 00 00 00  ................
+<6>[  281.068969] CM netfilter skb: c5fbc030: c0 03 b2 c6 01 00 00 00 94 dd fb c5 e0 dc fb c5  ................
+<6>[  281.069366] CM netfilter skb: c5fbc040: 24 b8 5f c0 00 00 00 00 00 00 00 00 00 00 00 00  $._.............
+<6>[  281.069702] CM netfilter udp: c46c4054: de ad be ef 00 19 04 d1 a0 25 26 00 00 00 00 00  .........%&.....
+<6>[  281.069885] CM netfilter udp: c46c4064: 13 00 00 00 00 02 00 00 00                       .........
+<6>[  281.070220] CM netfilter buf: c46c405c: a0 25 26 00 00 00 00 00 13 00 00 00 00 02 00 00  .%&.............
+<6>[  281.070556] CM netfilter buf: c46c406c: 00                                               .
+<6>[  281.070892] CM netfilter template_packet EthHdr: c46c4032: a0 0b ba e3 5b 25 00 24 d7 f3 8c 18 08 00        ....[%.$......
+<6>[  281.071258] CM netfilter template_packet IPHdr: c46c4040: 45 ff 00 2d 13 36 40 00 0a 11 d8 65 c0 a8 01 6b  E..-.6@....e...k
+<6>[  281.071594] CM netfilter template_packet IPHdr: c46c4050: c0 a8 01 6a                                      ...j
+<6>[  281.071929] CM netfilter template_packet UDPHeader: c46c4054: de ad be ef 00 19 04 d1                          ........
+<6>[  281.072326] CM netfilter template_packet request header: c46c405c: a0 25 26 00 00 00 00 00 13 00 00 00 00 02 00 00  .%&.............
+<6>[  281.072662] CM netfilter template_packet request header: c46c406c: 00                                               .
+<6>[  281.073028] attestation [pid:96 hook_func:432] CM netfilter ntohs(templatePacket->eHdr.Type)=2048/0x800
+<6>[  281.073211] attestation [pid:96 hook_func:433] CM netfilter templatePacket->eHdr.SrcMAC=00:24:d7:f3:8c:18
+<6>[  281.073547] attestation [pid:96 hook_func:434] CM netfilter templatePacket->eHdr.DestMAC=a0:0b:ba:e3:5b:25
+<6>[  281.073883] attestation [pid:96 hook_func:436] CM netfilter templatePacket->ipHdr.IPHdrLen=5/0x5
+<6>[  281.074218] attestation [pid:96 hook_func:437] CM netfilter templatePacket->ipHdr.IPVer=4/0x4
+<6>[  281.074584] attestation [pid:96 hook_func:438] CM netfilter templatePacket->ipHdr.TypeOfService=255/0xff
+<6>[  281.074890] attestation [pid:96 hook_func:439] CM netfilter ntohs(templatePacket->ipHdr.TotalLength)=45/0x2d
+<6>[  281.075103] attestation [pid:96 hook_func:440] CM netfilter ntohs(templatePacket->ipHdr.Identification)=4918/0x1336
+<6>[  281.075408] attestation [pid:96 hook_func:442] CM netfilter templatePacket->ipHdr.FragmentationSummary=64/0x40
+<6>[  281.075744] attestation [pid:96 hook_func:443] CM netfilter templatePacket->ipHdr.FragmentOffset1=0/0x0
+<6>[  281.076110] attestation [pid:96 hook_func:444] CM netfilter templatePacket->ipHdr.MoreFragments=0/0x0
+<6>[  281.076446] attestation [pid:96 hook_func:445] CM netfilter templatePacket->ipHdr.DoNotFragment=1/0x1
+<6>[  281.076782] attestation [pid:96 hook_func:446] CM netfilter templatePacket->ipHdr.FragmentOffset2=0/0x0
+<6>[  281.077148] attestation [pid:96 hook_func:448] CM netfilter templatePacket->ipHdr.TTL=10/0xa
+<6>[  281.077362] attestation [pid:96 hook_func:449] CM netfilter templatePacket->ipHdr.Protocol=17/0x11
+<6>[  281.077667] attestation [pid:96 hook_func:450] CM netfilter ntohs(templatePacket->ipHdr.Checksum)=55397/0xd865
+<6>[  281.078002] attestation [pid:96 hook_func:451] CM netfilter ntohl(templatePacket->ipHdr.SourceAddress)=-1062731413/0xc0a8016b
+<6>[  281.078338] attestation [pid:96 hook_func:452] CM netfilter ntohl(templatePacket->ipHdr.DestinationAddress)=-1062731414/0xc0a8016a
+<6>[  281.078674] attestation [pid:96 hook_func:453] CM netfilter templatePacket->ipHdr.SourceAddress=192.168.1.107
+<6>[  281.079010] attestation [pid:96 hook_func:454] CM netfilter templatePacket->ipHdr.DestinationAddress=192.168.1.106
+<6>[  281.079345] attestation [pid:96 hook_func:456] CM netfilter ntohs(templatePacket->uHdr.Source)=57005/0xdead
+<6>[  281.079681] attestation [pid:96 hook_func:457] CM netfilter ntohs(templatePacket->uHdr.Dest)=48879/0xbeef
+<6>[  281.080017] attestation [pid:96 hook_func:458] CM netfilter ntohs(templatePacket->uHdr.Length)=25/0x19
+<6>[  281.080230] attestation [pid:96 hook_func:459] CM netfilter ntohs(templatePacket->uHdr.Checksum)=1233/0x4d1
+<6>[  281.080566] attestation [pid:96 hook_func:499] SAW THE (null) CONTROL PACKET
+<4>[  281.080902] starting wifi_pm_tasklet
+<6>[  281.081115] attestation [pid:96 SendPacket:73] ipOfClient: 192.168.1.106, ipOfServer: 192.168.1.107, len: 44
+<6>[  281.081451] attestation [pid:96 SendPacket:86] In SendPacket dev=wlan0
+<6>[  281.081787] attestation [pid:96 SendPacket:96]  Checkpoint 0 ETH
+<6>[  281.081970] attestation [pid:96 SendPacket:110]  Checkpoint 1 IP
+<6>[  281.082305] attestation [pid:96 SendPacket:121]  Checkpoint 2 UDP checksum = 0x51ed
+<6>[  281.082489] attestation [pid:96 SendPacket:125]  Checkpoint 3 sk
+<6>[  281.082885] attestation [pid:96 SendPacket:128]  Checkpoint 4 sock_wmalloc  skb: c5fbb180,  dev: c72d2800
+<6>[  281.083221] attestation [pid:96 SendPacket:129] skb = 0xc5fbb180, pktWithHeadersLen = 86, skb room: 192
+<6>[  281.083587] attestation [pid:96 SendPacket:134]  SKB: len:0 head:c5bf2a00 data:c5bf2a00 tail:0xc5bf2a00 end:0xc5bf2ac0 dev:<NULL>
+<6>[  281.083923] attestation [pid:96 SendPacket:140]  Checkpoint 5 skb_reserve: 80/0x50
+<6>[  281.084136] attestation [pid:96 SendPacket:141]  SKB: len:0 head:c5bf2a00 data:c5bf2a50 tail:0xc5bf2a50 end:0xc5bf2ac0 dev:wlan0
+<6>[  281.084472] attestation [pid:96 SendPacket:143]  Checkpoint 6 skb_reset_network_header
+<6>[  281.084869] attestation [pid:96 SendPacket:144]  SKB: len:0 head:c5bf2a00 data:c5bf2a50 tail:0xc5bf2a50 end:0xc5bf2ac0 dev:wlan0
+<6>[  281.085235] attestation [pid:96 SendPacket:152]  Checkpoint 7 dev->header_ops: c0665c20
+<6>[  281.085571] attestation [pid:96 SendPacket:157]  Checkpoint 8 skb_reserve: max(0, 42)
+<6>[  281.085906] attestation [pid:96 SendPacket:158]  SKB: len:0 head:c5bf2a00 data:c5bf2a38 tail:0xc5bf2a38 end:0xc5bf2ac0 dev:wlan0
+<6>[  281.086242] attestation [pid:96 SendPacket:161]  Checkpoint 9 data = skb_put(skb, len): c5bf2a38
+<6>[  281.086456] attestation [pid:96 SendPacket:167]  SKB: len:44 head:c5bf2a00 data:c5bf2a38 tail:0xc5bf2a64 end:0xc5bf2ac0 dev:wlan0
+<6>[  281.086853] attestation [pid:96 SendPacket:168]  Checkpoint 10 skb->csum: 0x399a9bf1
+<6>[  281.087188] attestation [pid:96 SendPacket:171]  Checkpoint 11 skb_push(skb:c5fbb180, sizeof(*uh):8): c5bf2a30
+<6>[  281.087524] attestation [pid:96 SendPacket:172]  SKB: len:52 head:c5bf2a00 data:c5bf2a30 tail:0xc5bf2a64 end:0xc5bf2ac0 dev:wlan0
+<6>[  281.087860] attestation [pid:96 SendPacket:174]  Checkpoint 12 memcpy(uh, &myUDP, sizeof(UDPHeader))
+<6>[  281.088195] attestation [pid:96 SendPacket:176]  Checkpoint 13 skb->csum = csum_partial((char *) uh, sizeof(*uh), skb->csum): 0xb0bfcad4
+<6>[  281.088531] attestation [pid:96 SendPacket:184]  Checkpoint 14 skb->network_header = iph = skb_push(skb, sizeof(*iph)): c5bf2a1c
+<6>[  281.088836] attestation [pid:96 SendPacket:188]  Checkpoint 15 skb->mac_header = skb_push(skb, sizeof(EthHdr)): c5bf2a0e
+<6>[  281.089202] attestation [pid:96 SendPacket:199] eHdr.SrcMAC=a0:0b:ba:e3:5b:25
+<6>[  281.089508] attestation [pid:96 SendPacket:200] eHdr.DestMAC=00:24:d7:f3:8c:18
+<6>[  281.089721] attestation [pid:96 SendPacket:201] ipHdr.SourceAddress=192.168.1.106
+<6>[  281.090057] attestation [pid:96 SendPacket:202] ipHdr.DestinationAddress=192.168.1.107
+<6>[  281.090393] attestation [pid:96 SendPacket:203] uHdr.SourcePort=48879/0xbeef
+<6>[  281.090576] attestation [pid:96 SendPacket:204] uHdr.DestinationPort=57005/0xdead
+<6>[  281.090911] SendPacket packet: 00000000: 00 24 d7 f3 8c 18 a0 0b ba e3 5b 25 08 00 45 ff  .$........[%..E.
+<6>[  281.091247] SendPacket packet: 00000010: 00 48 13 38 00 00 40 11 e2 48 c0 a8 01 6a c0 a8  .H.8..@..H...j..
+<6>[  281.091583] SendPacket packet: 00000020: 01 6b be ef de ad 00 34 51 ed a0 25 26 00 00 00  .k.....4Q..%&...
+<6>[  281.091827] SendPacket packet: 00000030: 00 00 00 00 00 00 02 00 00 00 02 00 03 01 04 00  ................
+<6>[  281.092163] SendPacket packet: 00000040: 00 00 12 00 31 31 3a 31 39 3a 30 78 66 66 66 66  ....11:19:0xffff
+<6>[  281.092498] SendPacket packet: 00000050: 66 66 66 66 3a 00                                ffff:.
+<6>[  281.092895] attestation [pid:96 SendPacket:209]  Checkpoint 16 status = dev_queue_xmit(skb):0x0
+<6>[  281.093231] attestation [pid:96 SendErrorPacket:267] SendErrorPacket: SendPacket succeeded
+<3>[  281.093536] BUG: sleeping function called from invalid context at drivers/mmc/core/core.c:477
+<3>[  281.093872] in_atomic(): 1, irqs_disabled(): 0, pid: 96, name: dhd_dpc
+<4>[  281.094146] Backtrace: 
+<4>[  281.094329] [<c005a604>] (dump_backtrace+0x0/0x10c) from [<c05f639c>] (dump_stack+0x18/0x1c)
+<4>[  281.094482]  r6:fffff68b r5:c07f0080 r4:c6c14000 r3:60000113
+<4>[  281.094940] [<c05f6384>] (dump_stack+0x0/0x1c) from [<c0096e74>] (__might_sleep+0x108/0x128)
+<4>[  281.095123] [<c0096d6c>] (__might_sleep+0x0/0x128) from [<c0412788>] (__mmc_claim_host+0x64/0x194)
+<4>[  281.095306]  r6:c7b7c800 r5:00000040 r4:c7b7c9a4
+<4>[  281.095642] [<c0412724>] (__mmc_claim_host+0x0/0x194) from [<c041bdd4>] (sdio_claim_host+0x2c/0x4c)
+<4>[  281.095825] [<c041bda8>] (sdio_claim_host+0x0/0x4c) from [<c036f9ac>] (sdioh_request_packet+0x29c/0x578)
+<4>[  281.096008] [<c036f710>] (sdioh_request_packet+0x0/0x578) from [<c0370acc>] (sdioh_request_buffer+0x1cc/0x244)
+<4>[  281.096191] [<c0370900>] (sdioh_request_buffer+0x0/0x244) from [<c0369f10>] (bcmsdh_send_buf+0x8c/0xa0)
+<4>[  281.096343] [<c0369e84>] (bcmsdh_send_buf+0x0/0xa0) from [<c0364914>] (dhd_bus_txctl+0x228/0x518)
+<4>[  281.096435]  r7:c0835360 r6:00000040 r5:c72b6780 r4:c72fc000
+<4>[  281.096954] [<c03646ec>] (dhd_bus_txctl+0x0/0x518) from [<c036a120>] (dhdcdc_msg+0x50/0x80)
+<4>[  281.097106] [<c036a0d0>] (dhdcdc_msg+0x0/0x80) from [<c036a438>] (dhd_prot_ioctl+0x270/0x6d8)
+<4>[  281.097198]  r6:c6c15cd4 r5:01d60000 r4:c72d3000 r3:01d60000
+<4>[  281.097686] [<c036a1c8>] (dhd_prot_ioctl+0x0/0x6d8) from [<c036c408>] (dhd_wl_ioctl+0x40/0x6c)
+<4>[  281.097869] [<c036c3c8>] (dhd_wl_ioctl+0x0/0x6c) from [<c0355ac8>] (dhd_ioctl_entry+0x2fc/0x4c8)
+<4>[  281.097961]  r7:c72d3000 r6:c6c14000 r5:c72d2800 r4:00000000
+<4>[  281.098480] [<c03557cc>] (dhd_ioctl_entry+0x0/0x4c8) from [<bf01348c>] (wifi_pm_tasklet_function+0xa4/0xd4 [attestation])
+<4>[  281.098663] [<bf0133e8>] (wifi_pm_tasklet_function+0x0/0xd4 [attestation]) from [<c00acb68>] (tasklet_action+0x140/0x204)
+<4>[  281.098846]  r5:c6c14000 r4:bf0163d8
+<4>[  281.099121] [<c00aca28>] (tasklet_action+0x0/0x204) from [<c00ad17c>] (__do_softirq+0xd4/0x270)
+<4>[  281.099334] [<c00ad0a8>] (__do_softirq+0x0/0x270) from [<c00ad554>] (do_softirq+0x58/0x64)
+<4>[  281.099517] [<c00ad4fc>] (do_softirq+0x0/0x64) from [<c049c2d4>] (netif_rx_ni+0x68/0x84)
+<4>[  281.099609]  r4:c6c14000 r3:00000008
+<4>[  281.099945] [<c049c26c>] (netif_rx_ni+0x0/0x84) from [<c0355254>] (dhd_rx_frame+0x2bc/0x3d8)
+<4>[  281.100036]  r4:c5fbbf00
+<4>[  281.100280] [<c0354f98>] (dhd_rx_frame+0x0/0x3d8) from [<c03639b4>] (dhdsdio_readframes+0x1cdc/0x2838)
+<4>[  281.100433] [<c0361cd8>] (dhdsdio_readframes+0x0/0x2838) from [<c0366874>] (dhd_bus_dpc+0x6bc/0x1104)
+<4>[  281.100616] [<c03661b8>] (dhd_bus_dpc+0x0/0x1104) from [<c0356a60>] (dhd_dpc_thread+0xd8/0x104)
+<4>[  281.100799] [<c0356988>] (dhd_dpc_thread+0x0/0x104) from [<c00a9a64>] (do_exit+0x0/0x734)
+<4>[  281.100952]  r7:00000013 r6:c00a9a64 r5:c0356988 r4:c72d3374
+<3>[  281.101409] BUG: scheduling while atomic: dhd_dpc/96/0x00000102
+<4>[  281.101593] Modules linked in: attestation
+<4>[  281.101837] Backtrace: 
+<4>[  281.102020] [<c005a604>] (dump_backtrace+0x0/0x10c) from [<c05f639c>] (dump_stack+0x18/0x1c)
+<4>[  281.102172]  r6:c6c14000 r5:c6c103c0 r4:00000000 r3:60000113
+<4>[  281.102661] [<c05f6384>] (dump_stack+0x0/0x1c) from [<c05f6778>] (__schedule_bug+0x60/0x70)
+<4>[  281.102783] [<c05f6718>] (__schedule_bug+0x0/0x70) from [<c05fbc64>] (__schedule+0x6d4/0x7a8)
+<4>[  281.102966]  r4:c12026a0 r3:00000000
+<4>[  281.103240] [<c05fb590>] (__schedule+0x0/0x7a8) from [<c05fbe94>] (schedule+0x50/0x68)
+<4>[  281.103424] [<c05fbe44>] (schedule+0x0/0x68) from [<c05fc3f8>] (schedule_timeout+0x1c8/0x318)
+<4>[  281.103607] [<c05fc230>] (schedule_timeout+0x0/0x318) from [<c05fb43c>] (wait_for_common+0xc0/0x168)
+<4>[  281.103790] [<c05fb37c>] (wait_for_common+0x0/0x168) from [<c05fb58c>] (wait_for_completion+0x18/0x1c)
+<4>[  281.103973] [<c05fb574>] (wait_for_completion+0x0/0x1c) from [<c0411ee4>] (mmc_wait_for_req+0x100/0x144)
+<4>[  281.104064] [<c0411de4>] (mmc_wait_for_req+0x0/0x144) from [<c041a628>] (mmc_io_rw_extended+0x194/0x26c)
+<4>[  281.104248]  r6:00000001 r5:00000040 r4:00000100
+<4>[  281.104675] [<c041a494>] (mmc_io_rw_extended+0x0/0x26c) from [<c041b824>] (sdio_io_rw_ext_helper+0x19c/0x1ac)
+<4>[  281.104858] [<c041b688>] (sdio_io_rw_ext_helper+0x0/0x1ac) from [<c041b8bc>] (sdio_memcpy_toio+0x2c/0x34)
+<4>[  281.104949] [<c041b890>] (sdio_memcpy_toio+0x0/0x34) from [<c036fa80>] (sdioh_request_packet+0x370/0x578)
+<4>[  281.105194] [<c036f710>] (sdioh_request_packet+0x0/0x578) from [<c0370acc>] (sdioh_request_buffer+0x1cc/0x244)
+<4>[  281.105346] [<c0370900>] (sdioh_request_buffer+0x0/0x244) from [<c0369f10>] (bcmsdh_send_buf+0x8c/0xa0)
+<4>[  281.105529] [<c0369e84>] (bcmsdh_send_buf+0x0/0xa0) from [<c0364914>] (dhd_bus_txctl+0x228/0x518)
+<4>[  281.105712]  r7:c0835360 r6:00000040 r5:c72b6780 r4:c72fc000
+<4>[  281.106140] [<c03646ec>] (dhd_bus_txctl+0x0/0x518) from [<c036a120>] (dhdcdc_msg+0x50/0x80)
+<4>[  281.106323] [<c036a0d0>] (dhdcdc_msg+0x0/0x80) from [<c036a438>] (dhd_prot_ioctl+0x270/0x6d8)
+<4>[  281.106475]  r6:c6c15cd4 r5:01d60000 r4:c72d3000 r3:01d60000
+<4>[  281.106933] [<c036a1c8>] (dhd_prot_ioctl+0x0/0x6d8) from [<c036c408>] (dhd_wl_ioctl+0x40/0x6c)
+<4>[  281.107116] [<c036c3c8>] (dhd_wl_ioctl+0x0/0x6c) from [<c0355ac8>] (dhd_ioctl_entry+0x2fc/0x4c8)
+<4>[  281.107269]  r7:c72d3000 r6:c6c14000 r5:c72d2800 r4:00000000
+<4>[  281.107757] [<c03557cc>] (dhd_ioctl_entry+0x0/0x4c8) from [<bf01348c>] (wifi_pm_tasklet_function+0xa4/0xd4 [attestation])
+<4>[  281.107940] [<bf0133e8>] (wifi_pm_tasklet_function+0x0/0xd4 [attestation]) from [<c00acb68>] (tasklet_action+0x140/0x204)
+<4>[  281.108123]  r5:c6c14000 r4:bf0163d8
+<4>[  281.108489] [<c00aca28>] (tasklet_action+0x0/0x204) from [<c00ad17c>] (__do_softirq+0xd4/0x270)
+<4>[  281.108612] [<c00ad0a8>] (__do_softirq+0x0/0x270) from [<c00ad554>] (do_softirq+0x58/0x64)
+<4>[  281.108795] [<c00ad4fc>] (do_softirq+0x0/0x64) from [<c049c2d4>] (netif_rx_ni+0x68/0x84)
+<4>[  281.108947]  r4:c6c14000 r3:00000008
+<4>[  281.109222] [<c049c26c>] (netif_rx_ni+0x0/0x84) from [<c0355254>] (dhd_rx_frame+0x2bc/0x3d8)
+<4>[  281.109405]  r4:c5fbbf00
+<4>[  281.109588] [<c0354f98>] (dhd_rx_frame+0x0/0x3d8) from [<c03639b4>] (dhdsdio_readframes+0x1cdc/0x2838)
+<4>[  281.109771] [<c0361cd8>] (dhdsdio_readframes+0x0/0x2838) from [<c0366874>] (dhd_bus_dpc+0x6bc/0x1104)
+<4>[  281.109924] [<c03661b8>] (dhd_bus_dpc+0x0/0x1104) from [<c0356a60>] (dhd_dpc_thread+0xd8/0x104)
+<4>[  281.110046] [<c0356988>] (dhd_dpc_thread+0x0/0x104) from [<c00a9a64>] (do_exit+0x0/0x734)
+<4>[  281.110137]  r7:00000013 r6:c00a9a64 r5:c0356988 r4:c72d3374
+<3>[  281.110687] BUG: scheduling while atomic: dhd_dpc/96/0x00000102
+<4>[  281.110778] Modules linked in: attestation
+<4>[  281.111114] Backtrace: 
+<4>[  281.111297] [<c005a604>] (dump_backtrace+0x0/0x10c) from [<c05f639c>] (dump_stack+0x18/0x1c)
+<4>[  281.111480]  r6:c6c14000 r5:c6c103c0 r4:00000000 r3:60000113
+<4>[  281.111907] [<c05f6384>] (dump_stack+0x0/0x1c) from [<c05f6778>] (__schedule_bug+0x60/0x70)
+<4>[  281.112091] [<c05f6718>] (__schedule_bug+0x0/0x70) from [<c05fbc64>] (__schedule+0x6d4/0x7a8)
+<4>[  281.112274]  r4:c12026a0 r3:00000000
+<4>[  281.112518] [<c05fb590>] (__schedule+0x0/0x7a8) from [<c05fbe94>] (schedule+0x50/0x68)
+<4>[  281.112731] [<c05fbe44>] (schedule+0x0/0x68) from [<c05fc3a4>] (schedule_timeout+0x174/0x318)
+<4>[  281.112823] [<c05fc230>] (schedule_timeout+0x0/0x318) from [<c035352c>] (dhd_os_ioctl_resp_wait+0x8c/0xb4)
+<4>[  281.113006] [<c03534a0>] (dhd_os_ioctl_resp_wait+0x0/0xb4) from [<c0364c58>] (dhd_bus_rxctl+0x54/0x240)
+<4>[  281.113189]  r6:c0835360 r5:c6c00000 r4:c72fc000
+<4>[  281.113525] [<c0364c04>] (dhd_bus_rxctl+0x0/0x240) from [<c036a190>] (dhdcdc_cmplt+0x40/0x78)
+<4>[  281.113708] [<c036a150>] (dhdcdc_cmplt+0x0/0x78) from [<c036a468>] (dhd_prot_ioctl+0x2a0/0x6d8)
+<4>[  281.113861]  r8:00000000 r7:c6c00000 r6:c6c15cd4 r5:c2abaf60 r4:c72d3000
+<4>[  281.114349] r3:00000000
+<4>[  281.114593] [<c036a1c8>] (dhd_prot_ioctl+0x0/0x6d8) from [<c036c408>] (dhd_wl_ioctl+0x40/0x6c)
+<4>[  281.114776] [<c036c3c8>] (dhd_wl_ioctl+0x0/0x6c) from [<c0355ac8>] (dhd_ioctl_entry+0x2fc/0x4c8)
+<4>[  281.114868]  r7:c72d3000 r6:c6c14000 r5:c72d2800 r4:00000000
+<4>[  281.115386] [<c03557cc>] (dhd_ioctl_entry+0x0/0x4c8) from [<bf01348c>] (wifi_pm_tasklet_function+0xa4/0xd4 [attestation])
+<4>[  281.115600] [<bf0133e8>] (wifi_pm_tasklet_function+0x0/0xd4 [attestation]) from [<c00acb68>] (tasklet_action+0x140/0x204)
+<4>[  281.115753]  r5:c6c14000 r4:bf0163d8
+<4>[  281.116058] [<c00aca28>] (tasklet_action+0x0/0x204) from [<c00ad17c>] (__do_softirq+0xd4/0x270)
+<4>[  281.116210] [<c00ad0a8>] (__do_softirq+0x0/0x270) from [<c00ad554>] (do_softirq+0x58/0x64)
+<4>[  281.116394] [<c00ad4fc>] (do_softirq+0x0/0x64) from [<c049c2d4>] (netif_rx_ni+0x68/0x84)
+<4>[  281.116516]  r4:c6c14000 r3:00000008
+<4>[  281.116882] [<c049c26c>] (netif_rx_ni+0x0/0x84) from [<c0355254>] (dhd_rx_frame+0x2bc/0x3d8)
+<4>[  281.116973]  r4:c5fbbf00
+<4>[  281.117248] [<c0354f98>] (dhd_rx_frame+0x0/0x3d8) from [<c03639b4>] (dhdsdio_readframes+0x1cdc/0x2838)
+<4>[  281.117340] [<c0361cd8>] (dhdsdio_readframes+0x0/0x2838) from [<c0366874>] (dhd_bus_dpc+0x6bc/0x1104)
+<4>[  281.117523] [<c03661b8>] (dhd_bus_dpc+0x0/0x1104) from [<c0356a60>] (dhd_dpc_thread+0xd8/0x104)
+<4>[  281.117706] [<c0356988>] (dhd_dpc_thread+0x0/0x104) from [<c00a9a64>] (do_exit+0x0/0x734)
+<4>[  281.117858]  r7:00000013 r6:c00a9a64 r5:c0356988 r4:c72d3374
+<4>[  283.108245] dhd_bus_rxctl: resumed on timeout
+<3>[  283.108612] BUG: sleeping function called from invalid context at drivers/mmc/core/core.c:477
+<3>[  283.108825] in_atomic(): 1, irqs_disabled(): 0, pid: 96, name: dhd_dpc
+<4>[  283.109161] Backtrace: 
+<4>[  283.109527] [<c005a604>] (dump_backtrace+0x0/0x10c) from [<c05f639c>] (dump_stack+0x18/0x1c)
+<4>[  283.109863]  r6:fffff78d r5:c07f0080 r4:c6c14000 r3:60000113
+<4>[  283.110717] [<c05f6384>] (dump_stack+0x0/0x1c) from [<c0096e74>] (__might_sleep+0x108/0x128)
+<4>[  283.111083] [<c0096d6c>] (__might_sleep+0x0/0x128) from [<c0412788>] (__mmc_claim_host+0x64/0x194)
+<4>[  283.111419]  r6:c7b7c800 r5:000000c9 r4:c7b7c9a4
+<4>[  283.112121] [<c0412724>] (__mmc_claim_host+0x0/0x194) from [<c041bdd4>] (sdio_claim_host+0x2c/0x4c)
+<4>[  283.112487] [<c041bda8>] (sdio_claim_host+0x0/0x4c) from [<c03700d0>] (sdioh_request_byte+0x1ec/0x2e8)
+<4>[  283.112854] [<c036fee4>] (sdioh_request_byte+0x0/0x2e8) from [<c03701f8>] (sdioh_cfg_write+0x2c/0x34)
+<4>[  283.113189] [<c03701cc>] (sdioh_cfg_write+0x0/0x34) from [<c036992c>] (bcmsdh_cfg_write+0x44/0xa0)
+<4>[  283.113555] [<c03698e8>] (bcmsdh_cfg_write+0x0/0xa0) from [<c035d338>] (dhdsdio_set_siaddr_window+0x44/0xa4)
+<4>[  283.113861]  r8:c5bf3a00 r7:00007ffc r6:c72fc000 r5:00047ffc r4:c6c1598c
+<4>[  283.114898] [<c035d2f4>] (dhdsdio_set_siaddr_window+0x0/0xa4) from [<c035d3e4>] (dhdsdio_membytes+0x4c/0x1f4)
+<4>[  283.115234]  r6:c6c15a88 r5:00000004 r4:00000004
+<4>[  283.115905] [<c035d398>] (dhdsdio_membytes+0x0/0x1f4) from [<c035d5c0>] (dhdsdio_readshared+0x34/0x13c)
+<4>[  283.116302] [<c035d58c>] (dhdsdio_readshared+0x0/0x13c) from [<c0360f18>] (dhdsdio_checkdied.constprop.9+0x60/0x54c)
+<4>[  283.116638]  r6:c0835360 r5:c5898f00 r4:c72fc000
+<4>[  283.117462] [<c0360eb8>] (dhdsdio_checkdied.constprop.9+0x0/0x54c) from [<c0364d1c>] (dhd_bus_rxctl+0x118/0x240)
+<4>[  283.117675] [<c0364c04>] (dhd_bus_rxctl+0x0/0x240) from [<c036a190>] (dhdcdc_cmplt+0x40/0x78)
+<4>[  283.118011] [<c036a150>] (dhdcdc_cmplt+0x0/0x78) from [<c036a468>] (dhd_prot_ioctl+0x2a0/0x6d8)
+<4>[  283.118408]  r8:00000000 r7:c6c00000 r6:c6c15cd4 r5:c2abaf60 r4:c72d3000
+<4>[  283.119232] r3:00000000
+<4>[  283.119720] [<c036a1c8>] (dhd_prot_ioctl+0x0/0x6d8) from [<c036c408>] (dhd_wl_ioctl+0x40/0x6c)
+<4>[  283.120086] [<c036c3c8>] (dhd_wl_ioctl+0x0/0x6c) from [<c0355ac8>] (dhd_ioctl_entry+0x2fc/0x4c8)
+<4>[  283.120269]  r7:c72d3000 r6:c6c14000 r5:c72d2800 r4:00000000
+<4>[  283.121337] [<c03557cc>] (dhd_ioctl_entry+0x0/0x4c8) from [<bf01348c>] (wifi_pm_tasklet_function+0xa4/0xd4 [attestation])
+<4>[  283.121704] [<bf0133e8>] (wifi_pm_tasklet_function+0x0/0xd4 [attestation]) from [<c00acb68>] (tasklet_action+0x140/0x204)
+<4>[  283.122070]  r5:c6c14000 r4:bf0163d8
+<4>[  283.122619] [<c00aca28>] (tasklet_action+0x0/0x204) from [<c00ad17c>] (__do_softirq+0xd4/0x270)
+<4>[  283.122985] [<c00ad0a8>] (__do_softirq+0x0/0x270) from [<c00ad554>] (do_softirq+0x58/0x64)
+<4>[  283.123321] [<c00ad4fc>] (do_softirq+0x0/0x64) from [<c049c2d4>] (netif_rx_ni+0x68/0x84)
+<4>[  283.123504]  r4:c6c14000 r3:00000008
+<4>[  283.124237] [<c049c26c>] (netif_rx_ni+0x0/0x84) from [<c0355254>] (dhd_rx_frame+0x2bc/0x3d8)
+<4>[  283.124420]  r4:c5fbbf00
+<4>[  283.124938] [<c0354f98>] (dhd_rx_frame+0x0/0x3d8) from [<c03639b4>] (dhdsdio_readframes+0x1cdc/0x2838)
+<4>[  283.125152] [<c0361cd8>] (dhdsdio_readframes+0x0/0x2838) from [<c0366874>] (dhd_bus_dpc+0x6bc/0x1104)
+<4>[  283.125518] [<c03661b8>] (dhd_bus_dpc+0x0/0x1104) from [<c0356a60>] (dhd_dpc_thread+0xd8/0x104)
+<4>[  283.125885] [<c0356988>] (dhd_dpc_thread+0x0/0x104) from [<c00a9a64>] (do_exit+0x0/0x734)
+<4>[  283.126220]  r7:00000013 r6:c00a9a64 r5:c0356988 r4:c72d3374
+<3>[  283.127166] BUG: scheduling while atomic: dhd_dpc/96/0x00000102
+<4>[  283.127471] Modules linked in: attestation
+<4>[  283.127990] Backtrace: 
+<4>[  283.128387] [<c005a604>] (dump_backtrace+0x0/0x10c) from [<c05f639c>] (dump_stack+0x18/0x1c)
+<4>[  283.128723]  r6:c6c14000 r5:c6c103c0 r4:00000000 r3:60000113
+<4>[  283.129730] [<c05f6384>] (dump_stack+0x0/0x1c) from [<c05f6778>] (__schedule_bug+0x60/0x70)
+<4>[  283.129974] [<c05f6718>] (__schedule_bug+0x0/0x70) from [<c05fbc64>] (__schedule+0x6d4/0x7a8)
+<4>[  283.130310]  r4:c12026a0 r3:00000000
+<4>[  283.130798] [<c05fb590>] (__schedule+0x0/0x7a8) from [<c05fbe94>] (schedule+0x50/0x68)
+<4>[  283.131164] [<c05fbe44>] (schedule+0x0/0x68) from [<c05fc3f8>] (schedule_timeout+0x1c8/0x318)
+<4>[  283.131500] [<c05fc230>] (schedule_timeout+0x0/0x318) from [<c05fb43c>] (wait_for_common+0xc0/0x168)
+<4>[  283.131866] [<c05fb37c>] (wait_for_common+0x0/0x168) from [<c05fb58c>] (wait_for_completion+0x18/0x1c)
+<4>[  283.132263] [<c05fb574>] (wait_for_completion+0x0/0x1c) from [<c0411ee4>] (mmc_wait_for_req+0x100/0x144)
+<4>[  283.132446] [<c0411de4>] (mmc_wait_for_req+0x0/0x144) from [<c0411f9c>] (mmc_wait_for_cmd+0x74/0x94)
+<4>[  283.132781]  r6:00000000 r5:c7b7c800 r4:c6c15860
+<4>[  283.133453] [<c0411f28>] (mmc_wait_for_cmd+0x0/0x94) from [<c041a2b0>] (mmc_io_rw_direct_host+0xa8/0x13c)
+<4>[  283.133666]  r6:00000000 r5:00000000 r4:c7b7c800
+<4>[  283.134490] [<c041a208>] (mmc_io_rw_direct_host+0x0/0x13c) from [<c041a47c>] (mmc_io_rw_direct+0x30/0x48)
+<4>[  283.134826]  r6:0001000a r5:000000c9 r4:c6c158f0
+<4>[  283.135528] [<c041a44c>] (mmc_io_rw_direct+0x0/0x48) from [<c041bf48>] (sdio_writeb+0x44/0x64)
+<4>[  283.135894] [<c041bf04>] (sdio_writeb+0x0/0x64) from [<c03700f0>] (sdioh_request_byte+0x20c/0x2e8)
+<4>[  283.136260]  r4:c08ebc80
+<4>[  283.136596] [<c036fee4>] (sdioh_request_byte+0x0/0x2e8) from [<c03701f8>] (sdioh_cfg_write+0x2c/0x34)
+<4>[  283.136932] [<c03701cc>] (sdioh_cfg_write+0x0/0x34) from [<c036992c>] (bcmsdh_cfg_write+0x44/0xa0)
+<4>[  283.137268] [<c03698e8>] (bcmsdh_cfg_write+0x0/0xa0) from [<c035d338>] (dhdsdio_set_siaddr_window+0x44/0xa4)
+<4>[  283.137451]  r8:c5bf3a00 r7:00007ffc r6:c72fc000 r5:00047ffc r4:c6c1598c
+<4>[  283.138641] [<c035d2f4>] (dhdsdio_set_siaddr_window+0x0/0xa4) from [<c035d3e4>] (dhdsdio_membytes+0x4c/0x1f4)
+<4>[  283.138977]  r6:c6c15a88 r5:00000004 r4:00000004
+<4>[  283.139678] [<c035d398>] (dhdsdio_membytes+0x0/0x1f4) from [<c035d5c0>] (dhdsdio_readshared+0x34/0x13c)
+<4>[  283.140045] [<c035d58c>] (dhdsdio_readshared+0x0/0x13c) from [<c0360f18>] (dhdsdio_checkdied.constprop.9+0x60/0x54c)
+<4>[  283.140380]  r6:c0835360 r5:c5898f00 r4:c72fc000
+<4>[  283.141113] [<c0360eb8>] (dhdsdio_checkdied.constprop.9+0x0/0x54c) from [<c0364d1c>] (dhd_bus_rxctl+0x118/0x240)
+<4>[  283.141448] [<c0364c04>] (dhd_bus_rxctl+0x0/0x240) from [<c036a190>] (dhdcdc_cmplt+0x40/0x78)
+<4>[  283.141784] [<c036a150>] (dhdcdc_cmplt+0x0/0x78) from [<c036a468>] (dhd_prot_ioctl+0x2a0/0x6d8)
+<4>[  283.142089]  r8:00000000 r7:c6c00000 r6:c6c15cd4 r5:c2abaf60 r4:c72d3000
+<4>[  283.142944] r3:00000000
+<4>[  283.143585] [<c036a1c8>] (dhd_prot_ioctl+0x0/0x6d8) from [<c036c408>] (dhd_wl_ioctl+0x40/0x6c)
+<4>[  283.143798] [<c036c3c8>] (dhd_wl_ioctl+0x0/0x6c) from [<c0355ac8>] (dhd_ioctl_entry+0x2fc/0x4c8)
+<4>[  283.144104]  r7:c72d3000 r6:c6c14000 r5:c72d2800 r4:00000000
+<4>[  283.145172] [<c03557cc>] (dhd_ioctl_entry+0x0/0x4c8) from [<bf01348c>] (wifi_pm_tasklet_function+0xa4/0xd4 [attestation])
+<4>[  283.145538] [<bf0133e8>] (wifi_pm_tasklet_function+0x0/0xd4 [attestation]) from [<c00acb68>] (tasklet_action+0x140/0x204)
+<4>[  283.145874]  r5:c6c14000 r4:bf0163d8
+<4>[  283.146392] [<c00aca28>] (tasklet_action+0x0/0x204) from [<c00ad17c>] (__do_softirq+0xd4/0x270)
+<4>[  283.146728] [<c00ad0a8>] (__do_softirq+0x0/0x270) from [<c00ad554>] (do_softirq+0x58/0x64)
+<4>[  283.147064] [<c00ad4fc>] (do_softirq+0x0/0x64) from [<c049c2d4>] (netif_rx_ni+0x68/0x84)
+<4>[  283.147308]  r4:c6c14000 r3:00000008
+<4>[  283.147979] [<c049c26c>] (netif_rx_ni+0x0/0x84) from [<c0355254>] (dhd_rx_frame+0x2bc/0x3d8)
+<4>[  283.148162]  r4:c5fbbf00
+<4>[  283.148681] [<c0354f98>] (dhd_rx_frame+0x0/0x3d8) from [<c03639b4>] (dhdsdio_readframes+0x1cdc/0x2838)
+<4>[  283.148895] [<c0361cd8>] (dhdsdio_readframes+0x0/0x2838) from [<c0366874>] (dhd_bus_dpc+0x6bc/0x1104)
+<4>[  283.149261] [<c03661b8>] (dhd_bus_dpc+0x0/0x1104) from [<c0356a60>] (dhd_dpc_thread+0xd8/0x104)
+<4>[  283.149627] [<c0356988>] (dhd_dpc_thread+0x0/0x104) from [<c00a9a64>] (do_exit+0x0/0x734)
+<4>[  283.149932]  r7:00000013 r6:c00a9a64 r5:c0356988 r4:c72d3374
+<3>[  283.150817] BUG: scheduling while atomic: dhd_dpc/96/0x00000102
+<4>[  283.151184] Modules linked in: attestation
+<4>[  283.151702] Backtrace: 
+<4>[  283.152069] [<c005a604>] (dump_backtrace+0x0/0x10c) from [<c05f639c>] (dump_stack+0x18/0x1c)
+<4>[  283.152374]  r6:c6c14000 r5:c6c103c0 r4:00000000 r3:60000113
+<4>[  283.153259] [<c05f6384>] (dump_stack+0x0/0x1c) from [<c05f6778>] (__schedule_bug+0x60/0x70)
+<4>[  283.153472] [<c05f6718>] (__schedule_bug+0x0/0x70) from [<c05fbc64>] (__schedule+0x6d4/0x7a8)
+<4>[  283.153778]  r4:c12026a0 r3:00000000
+<4>[  283.154296] [<c05fb590>] (__schedule+0x0/0x7a8) from [<c05fbe94>] (schedule+0x50/0x68)
+<4>[  283.154632] [<c05fbe44>] (schedule+0x0/0x68) from [<c05fc3f8>] (schedule_timeout+0x1c8/0x318)
+<4>[  283.154998] [<c05fc230>] (schedule_timeout+0x0/0x318) from [<c05fb43c>] (wait_for_common+0xc0/0x168)
+<4>[  283.155364] [<c05fb37c>] (wait_for_common+0x0/0x168) from [<c05fb58c>] (wait_for_completion+0x18/0x1c)
+<4>[  283.155578] [<c05fb574>] (wait_for_completion+0x0/0x1c) from [<c0411ee4>] (mmc_wait_for_req+0x100/0x144)
+<4>[  283.155944] [<c0411de4>] (mmc_wait_for_req+0x0/0x144) from [<c0411f9c>] (mmc_wait_for_cmd+0x74/0x94)
+<4>[  283.156280]  r6:00000000 r5:c7b7c800 r4:c6c15860
+<4>[  283.156982] [<c0411f28>] (mmc_wait_for_cmd+0x0/0x94) from [<c041a2b0>] (mmc_io_rw_direct_host+0xa8/0x13c)
+<4>[  283.157318]  r6:00000000 r5:00000000 r4:c7b7c800
+<4>[  283.158142] [<c041a208>] (mmc_io_rw_direct_host+0x0/0x13c) from [<c041a47c>] (mmc_io_rw_direct+0x30/0x48)
+<4>[  283.158477]  r6:0001000b r5:000000c9 r4:c6c158f0
+<4>[  283.159179] [<c041a44c>] (mmc_io_rw_direct+0x0/0x48) from [<c041bf48>] (sdio_writeb+0x44/0x64)
+<4>[  283.159515] [<c041bf04>] (sdio_writeb+0x0/0x64) from [<c03700f0>] (sdioh_request_byte+0x20c/0x2e8)
+<4>[  283.159851]  r4:c08ebc80
+<4>[  283.160217] [<c036fee4>] (sdioh_request_byte+0x0/0x2e8) from [<c03701f8>] (sdioh_cfg_write+0x2c/0x34)
+<4>[  283.160583] [<c03701cc>] (sdioh_cfg_write+0x0/0x34) from [<c036992c>] (bcmsdh_cfg_write+0x44/0xa0)
+<4>[  283.160766] [<c03698e8>] (bcmsdh_cfg_write+0x0/0xa0) from [<c035d368>] (dhdsdio_set_siaddr_window+0x74/0xa4)
+<4>[  283.161102]  r8:c5bf3a00 r7:00007ffc r6:c72fc000 r5:00047ffc r4:c6c1598c
+<4>[  283.162261] [<c035d2f4>] (dhdsdio_set_siaddr_window+0x0/0xa4) from [<c035d3e4>] (dhdsdio_membytes+0x4c/0x1f4)
+<4>[  283.162597]  r6:c6c15a88 r5:00000004 r4:00000004
+<4>[  283.163330] [<c035d398>] (dhdsdio_membytes+0x0/0x1f4) from [<c035d5c0>] (dhdsdio_readshared+0x34/0x13c)
+<4>[  283.163665] [<c035d58c>] (dhdsdio_readshared+0x0/0x13c) from [<c0360f18>] (dhdsdio_checkdied.constprop.9+0x60/0x54c)
+<4>[  283.164001]  r6:c0835360 r5:c5898f00 r4:c72fc000
+<4>[  283.164703] [<c0360eb8>] (dhdsdio_checkdied.constprop.9+0x0/0x54c) from [<c0364d1c>] (dhd_bus_rxctl+0x118/0x240)
+<4>[  283.165100] [<c0364c04>] (dhd_bus_rxctl+0x0/0x240) from [<c036a190>] (dhdcdc_cmplt+0x40/0x78)
+<4>[  283.165466] [<c036a150>] (dhdcdc_cmplt+0x0/0x78) from [<c036a468>] (dhd_prot_ioctl+0x2a0/0x6d8)
+<4>[  283.165802]  r8:00000000 r7:c6c00000 r6:c6c15cd4 r5:c2abaf60 r4:c72d3000
+<4>[  283.166656] r3:00000000
+<4>[  283.167358] [<c036a1c8>] (dhd_prot_ioctl+0x0/0x6d8) from [<c036c408>] (dhd_wl_ioctl+0x40/0x6c)
+<4>[  283.167572] [<c036c3c8>] (dhd_wl_ioctl+0x0/0x6c) from [<c0355ac8>] (dhd_ioctl_entry+0x2fc/0x4c8)
+<4>[  283.167907]  r7:c72d3000 r6:c6c14000 r5:c72d2800 r4:00000000
+<4>[  283.168975] [<c03557cc>] (dhd_ioctl_entry+0x0/0x4c8) from [<bf01348c>] (wifi_pm_tasklet_function+0xa4/0xd4 [attestation])
+<4>[  283.169372] [<bf0133e8>] (wifi_pm_tasklet_function+0x0/0xd4 [attestation]) from [<c00acb68>] (tasklet_action+0x140/0x204)
+<4>[  283.169708]  r5:c6c14000 r4:bf0163d8
+<4>[  283.170227] [<c00aca28>] (tasklet_action+0x0/0x204) from [<c00ad17c>] (__do_softirq+0xd4/0x270)
+<4>[  283.170562] [<c00ad0a8>] (__do_softirq+0x0/0x270) from [<c00ad554>] (do_softirq+0x58/0x64)
+<4>[  283.170806] [<c00ad4fc>] (do_softirq+0x0/0x64) from [<c049c2d4>] (netif_rx_ni+0x68/0x84)
+<4>[  283.171142]  r4:c6c14000 r3:00000008
+<4>[  283.171691] [<c049c26c>] (netif_rx_ni+0x0/0x84) from [<c0355254>] (dhd_rx_frame+0x2bc/0x3d8)
+<4>[  283.172027]  r4:c5fbbf00
+<4>[  283.172393] [<c0354f98>] (dhd_rx_frame+0x0/0x3d8) from [<c03639b4>] (dhdsdio_readframes+0x1cdc/0x2838)
+<4>[  283.172760] [<c0361cd8>] (dhdsdio_readframes+0x0/0x2838) from [<c0366874>] (dhd_bus_dpc+0x6bc/0x1104)
+<4>[  283.173126] [<c03661b8>] (dhd_bus_dpc+0x0/0x1104) from [<c0356a60>] (dhd_dpc_thread+0xd8/0x104)
+<4>[  283.173461] [<c0356988>] (dhd_dpc_thread+0x0/0x104) from [<c00a9a64>] (do_exit+0x0/0x734)
+<4>[  283.173828]  r7:00000013 r6:c00a9a64 r5:c0356988 r4:c72d3374
+<3>[  283.174743] BUG: scheduling while atomic: dhd_dpc/96/0x00000102
+<4>[  283.175079] Modules linked in: attestation
+<4>[  283.175567] Backtrace: 
+<4>[  283.175964] [<c005a604>] (dump_backtrace+0x0/0x10c) from [<c05f639c>] (dump_stack+0x18/0x1c)
+<4>[  283.176300]  r6:c6c14000 r5:c6c103c0 r4:00000000 r3:60000113
+<4>[  283.177185] [<c05f6384>] (dump_stack+0x0/0x1c) from [<c05f6778>] (__schedule_bug+0x60/0x70)
+<4>[  283.177520] [<c05f6718>] (__schedule_bug+0x0/0x70) from [<c05fbc64>] (__schedule+0x6d4/0x7a8)
+<4>[  283.177856]  r4:c12026a0 r3:00000000
+<4>[  283.178375] [<c05fb590>] (__schedule+0x0/0x7a8) from [<c05fbe94>] (schedule+0x50/0x68)
+<4>[  283.178771] [<c05fbe44>] (schedule+0x0/0x68) from [<c05fc3f8>] (schedule_timeout+0x1c8/0x318)
+<4>[  283.179107] [<c05fc230>] (schedule_timeout+0x0/0x318) from [<c05fb43c>] (wait_for_common+0xc0/0x168)
+<4>[  283.179321] [<c05fb37c>] (wait_for_common+0x0/0x168) from [<c05fb58c>] (wait_for_completion+0x18/0x1c)
+<4>[  283.179656] [<c05fb574>] (wait_for_completion+0x0/0x1c) from [<c0411ee4>] (mmc_wait_for_req+0x100/0x144)
+<4>[  283.180023] [<c0411de4>] (mmc_wait_for_req+0x0/0x144) from [<c0411f9c>] (mmc_wait_for_cmd+0x74/0x94)
+<4>[  283.180328]  r6:00000000 r5:c7b7c800 r4:c6c15860
+<4>[  283.181060] [<c0411f28>] (mmc_wait_for_cmd+0x0/0x94) from [<c041a2b0>] (mmc_io_rw_direct_host+0xa8/0x13c)
+<4>[  283.181396]  r6:00000000 r5:00000000 r4:c7b7c800
+<4>[  283.182189] [<c041a208>] (mmc_io_rw_direct_host+0x0/0x13c) from [<c041a47c>] (mmc_io_rw_direct+0x30/0x48)
+<4>[  283.182373]  r6:0001000c r5:000000c9 r4:c6c158f0
+<4>[  283.183227] [<c041a44c>] (mmc_io_rw_direct+0x0/0x48) from [<c041bf48>] (sdio_writeb+0x44/0x64)
+<4>[  283.183563] [<c041bf04>] (sdio_writeb+0x0/0x64) from [<c03700f0>] (sdioh_request_byte+0x20c/0x2e8)
+<4>[  283.183746]  r4:c08ebc80
+<4>[  283.184234] [<c036fee4>] (sdioh_request_byte+0x0/0x2e8) from [<c03701f8>] (sdioh_cfg_write+0x2c/0x34)
+<4>[  283.184417] [<c03701cc>] (sdioh_cfg_write+0x0/0x34) from [<c036992c>] (bcmsdh_cfg_write+0x44/0xa0)
+<4>[  283.184753] [<c03698e8>] (bcmsdh_cfg_write+0x0/0xa0) from [<c035d390>] (dhdsdio_set_siaddr_window+0x9c/0xa4)
+<4>[  283.185119]  r8:c5bf3a00 r7:00007ffc r6:c72fc000 r5:00047ffc r4:c6c1598c
+<4>[  283.186340] [<c035d2f4>] (dhdsdio_set_siaddr_window+0x0/0xa4) from [<c035d3e4>] (dhdsdio_membytes+0x4c/0x1f4)
+<4>[  283.186676]  r6:c6c15a88 r5:00000004 r4:00000004
+<4>[  283.187377] [<c035d398>] (dhdsdio_membytes+0x0/0x1f4) from [<c035d5c0>] (dhdsdio_readshared+0x34/0x13c)
+<4>[  283.187744] [<c035d58c>] (dhdsdio_readshared+0x0/0x13c) from [<c0360f18>] (dhdsdio_checkdied.constprop.9+0x60/0x54c)
+<4>[  283.188049]  r6:c0835360 r5:c5898f00 r4:c72fc000
+<4>[  283.188720] [<c0360eb8>] (dhdsdio_checkdied.constprop.9+0x0/0x54c) from [<c0364d1c>] (dhd_bus_rxctl+0x118/0x240)
+<4>[  283.189086] [<c0364c04>] (dhd_bus_rxctl+0x0/0x240) from [<c036a190>] (dhdcdc_cmplt+0x40/0x78)
+<4>[  283.189422] [<c036a150>] (dhdcdc_cmplt+0x0/0x78) from [<c036a468>] (dhd_prot_ioctl+0x2a0/0x6d8)
+<4>[  283.189727]  r8:00000000 r7:c6c00000 r6:c6c15cd4 r5:c2abaf60 r4:c72d3000
+<4>[  283.190551] r3:00000000
+<4>[  283.191131] [<c036a1c8>] (dhd_prot_ioctl+0x0/0x6d8) from [<c036c408>] (dhd_wl_ioctl+0x40/0x6c)
+<4>[  283.191497] [<c036c3c8>] (dhd_wl_ioctl+0x0/0x6c) from [<c0355ac8>] (dhd_ioctl_entry+0x2fc/0x4c8)
+<4>[  283.191833]  r7:c72d3000 r6:c6c14000 r5:c72d2800 r4:00000000
+<4>[  283.192687] [<c03557cc>] (dhd_ioctl_entry+0x0/0x4c8) from [<bf01348c>] (wifi_pm_tasklet_function+0xa4/0xd4 [attestation])
+<4>[  283.192932] [<bf0133e8>] (wifi_pm_tasklet_function+0x0/0xd4 [attestation]) from [<c00acb68>] (tasklet_action+0x140/0x204)
+<4>[  283.193298]  r5:c6c14000 r4:bf0163d8
+<4>[  283.193969] [<c00aca28>] (tasklet_action+0x0/0x204) from [<c00ad17c>] (__do_softirq+0xd4/0x270)
+<4>[  283.194366] [<c00ad0a8>] (__do_softirq+0x0/0x270) from [<c00ad554>] (do_softirq+0x58/0x64)
+<4>[  283.194580] [<c00ad4fc>] (do_softirq+0x0/0x64) from [<c049c2d4>] (netif_rx_ni+0x68/0x84)
+<4>[  283.194885]  r4:c6c14000 r3:00000008
+<4>[  283.195434] [<c049c26c>] (netif_rx_ni+0x0/0x84) from [<c0355254>] (dhd_rx_frame+0x2bc/0x3d8)
+<4>[  283.195770]  r4:c5fbbf00
+<4>[  283.196136] [<c0354f98>] (dhd_rx_frame+0x0/0x3d8) from [<c03639b4>] (dhdsdio_readframes+0x1cdc/0x2838)
+<4>[  283.196502] [<c0361cd8>] (dhdsdio_readframes+0x0/0x2838) from [<c0366874>] (dhd_bus_dpc+0x6bc/0x1104)
+<4>[  283.196838] [<c03661b8>] (dhd_bus_dpc+0x0/0x1104) from [<c0356a60>] (dhd_dpc_thread+0xd8/0x104)
+<4>[  283.197204] [<c0356988>] (dhd_dpc_thread+0x0/0x104) from [<c00a9a64>] (do_exit+0x0/0x734)
+<4>[  283.197387]  r7:00000013 r6:c00a9a64 r5:c0356988 r4:c72d3374
+<3>[  283.198516] BUG: scheduling while atomic: dhd_dpc/96/0x00000102
+<4>[  283.198699] Modules linked in: attestation
+<4>[  283.199310] Backtrace: 
+<4>[  283.199676] [<c005a604>] (dump_backtrace+0x0/0x10c) from [<c05f639c>] (dump_stack+0x18/0x1c)
+<4>[  283.200042]  r6:c6c14000 r5:c6c103c0 r4:00000000 r3:60000113
+<4>[  283.200897] [<c05f6384>] (dump_stack+0x0/0x1c) from [<c05f6778>] (__schedule_bug+0x60/0x70)
+<4>[  283.201263] [<c05f6718>] (__schedule_bug+0x0/0x70) from [<c05fbc64>] (__schedule+0x6d4/0x7a8)
+<4>[  283.201599]  r4:c12026a0 r3:00000000
+<4>[  283.202148] [<c05fb590>] (__schedule+0x0/0x7a8) from [<c05fbe94>] (schedule+0x50/0x68)
+<4>[  283.202484] [<c05fbe44>] (schedule+0x0/0x68) from [<c05fc3f8>] (schedule_timeout+0x1c8/0x318)
+<4>[  283.202819] [<c05fc230>] (schedule_timeout+0x0/0x318) from [<c05fb43c>] (wait_for_common+0xc0/0x168)
+<4>[  283.203033] [<c05fb37c>] (wait_for_common+0x0/0x168) from [<c05fb58c>] (wait_for_completion+0x18/0x1c)
+<4>[  283.203369] [<c05fb574>] (wait_for_completion+0x0/0x1c) from [<c0411ee4>] (mmc_wait_for_req+0x100/0x144)
+<4>[  283.203765] [<c0411de4>] (mmc_wait_for_req+0x0/0x144) from [<c041a628>] (mmc_io_rw_extended+0x194/0x26c)
+<4>[  283.204071]  r6:00000001 r5:00000004 r4:00000200
+<4>[  283.204803] [<c041a494>] (mmc_io_rw_extended+0x0/0x26c) from [<c041b824>] (sdio_io_rw_ext_helper+0x19c/0x1ac)
+<4>[  283.205139] [<c041b688>] (sdio_io_rw_ext_helper+0x0/0x1ac) from [<c041b950>] (sdio_memcpy_fromio+0x24/0x2c)
+<4>[  283.205505] [<c041b92c>] (sdio_memcpy_fromio+0x0/0x2c) from [<c036faac>] (sdioh_request_packet+0x39c/0x578)
+<4>[  283.205871] [<c036f710>] (sdioh_request_packet+0x0/0x578) from [<c0370b14>] (sdioh_request_buffer+0x214/0x244)
+<4>[  283.206207] [<c0370900>] (sdioh_request_buffer+0x0/0x244) from [<c0369f80>] (bcmsdh_rwdata+0x5c/0x6c)
+<4>[  283.206542] [<c0369f24>] (bcmsdh_rwdata+0x0/0x6c) from [<c035d420>] (dhdsdio_membytes+0x88/0x1f4)
+<4>[  283.206756]  r5:00000004 r4:00000004
+<4>[  283.207397] [<c035d398>] (dhdsdio_membytes+0x0/0x1f4) from [<c035d5c0>] (dhdsdio_readshared+0x34/0x13c)
+<4>[  283.207763] [<c035d58c>] (dhdsdio_readshared+0x0/0x13c) from [<c0360f18>] (dhdsdio_checkdied.constprop.9+0x60/0x54c)
+<4>[  283.207977]  r6:c0835360 r5:c5898f00 r4:c72fc000
+<4>[  283.208831] [<c0360eb8>] (dhdsdio_checkdied.constprop.9+0x0/0x54c) from [<c0364d1c>] (dhd_bus_rxctl+0x118/0x240)
+<4>[  283.209167] [<c0364c04>] (dhd_bus_rxctl+0x0/0x240) from [<c036a190>] (dhdcdc_cmplt+0x40/0x78)
+<4>[  283.209533] [<c036a150>] (dhdcdc_cmplt+0x0/0x78) from [<c036a468>] (dhd_prot_ioctl+0x2a0/0x6d8)
+<4>[  283.209747]  r8:00000000 r7:c6c00000 r6:c6c15cd4 r5:c2abaf60 r4:c72d3000
+<4>[  283.210754] r3:00000000
+<4>[  283.211273] [<c036a1c8>] (dhd_prot_ioctl+0x0/0x6d8) from [<c036c408>] (dhd_wl_ioctl+0x40/0x6c)
+<4>[  283.211608] [<c036c3c8>] (dhd_wl_ioctl+0x0/0x6c) from [<c0355ac8>] (dhd_ioctl_entry+0x2fc/0x4c8)
+<4>[  283.211944]  r7:c72d3000 r6:c6c14000 r5:c72d2800 r4:00000000
+<4>[  283.212829] [<c03557cc>] (dhd_ioctl_entry+0x0/0x4c8) from [<bf01348c>] (wifi_pm_tasklet_function+0xa4/0xd4 [attestation])
+<4>[  283.213226] [<bf0133e8>] (wifi_pm_tasklet_function+0x0/0xd4 [attestation]) from [<c00acb68>] (tasklet_action+0x140/0x204)
+<4>[  283.213562]  r5:c6c14000 r4:bf0163d8
+<4>[  283.214111] [<c00aca28>] (tasklet_action+0x0/0x204) from [<c00ad17c>] (__do_softirq+0xd4/0x270)
+<4>[  283.214447] [<c00ad0a8>] (__do_softirq+0x0/0x270) from [<c00ad554>] (do_softirq+0x58/0x64)
+<4>[  283.214782] [<c00ad4fc>] (do_softirq+0x0/0x64) from [<c049c2d4>] (netif_rx_ni+0x68/0x84)
+<4>[  283.215148]  r4:c6c14000 r3:00000008
+<4>[  283.215698] [<c049c26c>] (netif_rx_ni+0x0/0x84) from [<c0355254>] (dhd_rx_frame+0x2bc/0x3d8)
+<4>[  283.216033]  r4:c5fbbf00
+<4>[  283.216400] [<c0354f98>] (dhd_rx_frame+0x0/0x3d8) from [<c03639b4>] (dhdsdio_readframes+0x1cdc/0x2838)
+<4>[  283.216735] [<c0361cd8>] (dhdsdio_readframes+0x0/0x2838) from [<c0366874>] (dhd_bus_dpc+0x6bc/0x1104)
+<4>[  283.217071] [<c03661b8>] (dhd_bus_dpc+0x0/0x1104) from [<c0356a60>] (dhd_dpc_thread+0xd8/0x104)
+<4>[  283.217285] [<c0356988>] (dhd_dpc_thread+0x0/0x104) from [<c00a9a64>] (do_exit+0x0/0x734)
+<4>[  283.217651]  r7:00000013 r6:c00a9a64 r5:c0356988 r4:c72d3374
+<3>[  283.218505] BUG: scheduling while atomic: dhd_dpc/96/0x00000102
+<4>[  283.218688] Modules linked in: attestation
+<4>[  283.219238] Backtrace: 
+<4>[  283.219726] [<c005a604>] (dump_backtrace+0x0/0x10c) from [<c05f639c>] (dump_stack+0x18/0x1c)
+<4>[  283.219909]  r6:c6c14000 r5:c6c103c0 r4:00000000 r3:60000113
+<4>[  283.220916] [<c05f6384>] (dump_stack+0x0/0x1c) from [<c05f6778>] (__schedule_bug+0x60/0x70)
+<4>[  283.221252] [<c05f6718>] (__schedule_bug+0x0/0x70) from [<c05fbc64>] (__schedule+0x6d4/0x7a8)
+<4>[  283.221435]  r4:c12026a0 r3:00000000
+<4>[  283.222106] [<c05fb590>] (__schedule+0x0/0x7a8) from [<c05fbe94>] (schedule+0x50/0x68)
+<4>[  283.222320] [<c05fbe44>] (schedule+0x0/0x68) from [<c05fc3f8>] (schedule_timeout+0x1c8/0x318)
+<4>[  283.222656] [<c05fc230>] (schedule_timeout+0x0/0x318) from [<c05fb43c>] (wait_for_common+0xc0/0x168)
+<4>[  283.223052] [<c05fb37c>] (wait_for_common+0x0/0x168) from [<c05fb58c>] (wait_for_completion+0x18/0x1c)
+<4>[  283.223388] [<c05fb574>] (wait_for_completion+0x0/0x1c) from [<c0411ee4>] (mmc_wait_for_req+0x100/0x144)
+<4>[  283.223785] [<c0411de4>] (mmc_wait_for_req+0x0/0x144) from [<c0411f9c>] (mmc_wait_for_cmd+0x74/0x94)
+<4>[  283.224121]  r6:00000000 r5:c7b7c800 r4:c6c15860
+<4>[  283.224822] [<c0411f28>] (mmc_wait_for_cmd+0x0/0x94) from [<c041a2b0>] (mmc_io_rw_direct_host+0xa8/0x13c)
+<4>[  283.225158]  r6:00000000 r5:00000000 r4:c7b7c800
+<4>[  283.225891] [<c041a208>] (mmc_io_rw_direct_host+0x0/0x13c) from [<c041a47c>] (mmc_io_rw_direct+0x30/0x48)
+<4>[  283.226226]  r6:0001000a r5:000000c9 r4:c6c158f0
+<4>[  283.226959] [<c041a44c>] (mmc_io_rw_direct+0x0/0x48) from [<c041bf48>] (sdio_writeb+0x44/0x64)
+<4>[  283.227355] [<c041bf04>] (sdio_writeb+0x0/0x64) from [<c03700f0>] (sdioh_request_byte+0x20c/0x2e8)
+<4>[  283.227691]  r4:c08ebc80
+<4>[  283.228027] [<c036fee4>] (sdioh_request_byte+0x0/0x2e8) from [<c03701f8>] (sdioh_cfg_write+0x2c/0x34)
+<4>[  283.228393] [<c03701cc>] (sdioh_cfg_write+0x0/0x34) from [<c036992c>] (bcmsdh_cfg_write+0x44/0xa0)
+<4>[  283.228729] [<c03698e8>] (bcmsdh_cfg_write+0x0/0xa0) from [<c035d338>] (dhdsdio_set_siaddr_window+0x44/0xa4)
+<4>[  283.229064]  r8:00000000 r7:00007ffc r6:c72fc000 r5:18000000 r4:c6c1598c
+<4>[  283.230072] [<c035d2f4>] (dhdsdio_set_siaddr_window+0x0/0xa4) from [<c035d448>] (dhdsdio_membytes+0xb0/0x1f4)
+<4>[  283.230407]  r6:c0835360 r5:00000000 r4:00000004
+<4>[  283.231262] [<c035d398>] (dhdsdio_membytes+0x0/0x1f4) from [<c035d5c0>] (dhdsdio_readshared+0x34/0x13c)
+<4>[  283.231445] [<c035d58c>] (dhdsdio_readshared+0x0/0x13c) from [<c0360f18>] (dhdsdio_checkdied.constprop.9+0x60/0x54c)
+<4>[  283.231781]  r6:c0835360 r5:c5898f00 r4:c72fc000
+<4>[  283.232574] [<c0360eb8>] (dhdsdio_checkdied.constprop.9+0x0/0x54c) from [<c0364d1c>] (dhd_bus_rxctl+0x118/0x240)
+<4>[  283.232910] [<c0364c04>] (dhd_bus_rxctl+0x0/0x240) from [<c036a190>] (dhdcdc_cmplt+0x40/0x78)
+<4>[  283.233123] [<c036a150>] (dhdcdc_cmplt+0x0/0x78) from [<c036a468>] (dhd_prot_ioctl+0x2a0/0x6d8)
+<4>[  283.233489]  r8:00000000 r7:c6c00000 r6:c6c15cd4 r5:c2abaf60 r4:c72d3000
+<4>[  283.234466] r3:00000000
+<4>[  283.235015] [<c036a1c8>] (dhd_prot_ioctl+0x0/0x6d8) from [<c036c408>] (dhd_wl_ioctl+0x40/0x6c)
+<4>[  283.235382] [<c036c3c8>] (dhd_wl_ioctl+0x0/0x6c) from [<c0355ac8>] (dhd_ioctl_entry+0x2fc/0x4c8)
+<4>[  283.235717]  r7:c72d3000 r6:c6c14000 r5:c72d2800 r4:00000000
+<4>[  283.236602] [<c03557cc>] (dhd_ioctl_entry+0x0/0x4c8) from [<bf01348c>] (wifi_pm_tasklet_function+0xa4/0xd4 [attestation])
+<4>[  283.236999] [<bf0133e8>] (wifi_pm_tasklet_function+0x0/0xd4 [attestation]) from [<c00acb68>] (tasklet_action+0x140/0x204)
+<4>[  283.237335]  r5:c6c14000 r4:bf0163d8
+<4>[  283.237854] [<c00aca28>] (tasklet_action+0x0/0x204) from [<c00ad17c>] (__do_softirq+0xd4/0x270)
+<4>[  283.238189] [<c00ad0a8>] (__do_softirq+0x0/0x270) from [<c00ad554>] (do_softirq+0x58/0x64)
+<4>[  283.238525] [<c00ad4fc>] (do_softirq+0x0/0x64) from [<c049c2d4>] (netif_rx_ni+0x68/0x84)
+<4>[  283.238891]  r4:c6c14000 r3:00000008
+<4>[  283.239410] [<c049c26c>] (netif_rx_ni+0x0/0x84) from [<c0355254>] (dhd_rx_frame+0x2bc/0x3d8)
+<4>[  283.239746]  r4:c5fbbf00
+<4>[  283.240142] [<c0354f98>] (dhd_rx_frame+0x0/0x3d8) from [<c03639b4>] (dhdsdio_readframes+0x1cdc/0x2838)
+<4>[  283.240478] [<c0361cd8>] (dhdsdio_readframes+0x0/0x2838) from [<c0366874>] (dhd_bus_dpc+0x6bc/0x1104)
+<4>[  283.240722] [<c03661b8>] (dhd_bus_dpc+0x0/0x1104) from [<c0356a60>] (dhd_dpc_thread+0xd8/0x104)
+<4>[  283.241119] [<c0356988>] (dhd_dpc_thread+0x0/0x104) from [<c00a9a64>] (do_exit+0x0/0x734)
+<4>[  283.241424]  r7:00000013 r6:c00a9a64 r5:c0356988 r4:c72d3374
+<3>[  283.242309] BUG: scheduling while atomic: dhd_dpc/96/0x00000102
+<4>[  283.242645] Modules linked in: attestation
+<4>[  283.243194] Backtrace: 
+<4>[  283.243682] [<c005a604>] (dump_backtrace+0x0/0x10c) from [<c05f639c>] (dump_stack+0x18/0x1c)
+<4>[  283.243865]  r6:c6c14000 r5:c6c103c0 r4:00000000 r3:60000113
+<4>[  283.244873] [<c05f6384>] (dump_stack+0x0/0x1c) from [<c05f6778>] (__schedule_bug+0x60/0x70)
+<4>[  283.245239] [<c05f6718>] (__schedule_bug+0x0/0x70) from [<c05fbc64>] (__schedule+0x6d4/0x7a8)
+<4>[  283.245422]  r4:c12026a0 r3:00000000
+<4>[  283.246093] [<c05fb590>] (__schedule+0x0/0x7a8) from [<c05fbe94>] (schedule+0x50/0x68)
+<4>[  283.246276] [<c05fbe44>] (schedule+0x0/0x68) from [<c05fc3f8>] (schedule_timeout+0x1c8/0x318)
+<4>[  283.246643] [<c05fc230>] (schedule_timeout+0x0/0x318) from [<c05fb43c>] (wait_for_common+0xc0/0x168)
+<4>[  283.247009] [<c05fb37c>] (wait_for_common+0x0/0x168) from [<c05fb58c>] (wait_for_completion+0x18/0x1c)
+<4>[  283.247375] [<c05fb574>] (wait_for_completion+0x0/0x1c) from [<c0411ee4>] (mmc_wait_for_req+0x100/0x144)
+<4>[  283.247741] [<c0411de4>] (mmc_wait_for_req+0x0/0x144) from [<c0411f9c>] (mmc_wait_for_cmd+0x74/0x94)
+<4>[  283.247924]  r6:00000000 r5:c7b7c800 r4:c6c15860
+<4>[  283.248779] [<c0411f28>] (mmc_wait_for_cmd+0x0/0x94) from [<c041a2b0>] (mmc_io_rw_direct_host+0xa8/0x13c)
+<4>[  283.249145]  r6:00000000 r5:00000000 r4:c7b7c800
+<4>[  283.249847] [<c041a208>] (mmc_io_rw_direct_host+0x0/0x13c) from [<c041a47c>] (mmc_io_rw_direct+0x30/0x48)
+<4>[  283.250183]  r6:0001000b r5:000000c9 r4:c6c158f0
+<4>[  283.250915] [<c041a44c>] (mmc_io_rw_direct+0x0/0x48) from [<c041bf48>] (sdio_writeb+0x44/0x64)
+<4>[  283.251281] [<c041bf04>] (sdio_writeb+0x0/0x64) from [<c03700f0>] (sdioh_request_byte+0x20c/0x2e8)
+<4>[  283.251586]  r4:c08ebc80
+<4>[  283.251953] [<c036fee4>] (sdioh_request_byte+0x0/0x2e8) from [<c03701f8>] (sdioh_cfg_write+0x2c/0x34)
+<4>[  283.252288] [<c03701cc>] (sdioh_cfg_write+0x0/0x34) from [<c036992c>] (bcmsdh_cfg_write+0x44/0xa0)
+<4>[  283.252655] [<c03698e8>] (bcmsdh_cfg_write+0x0/0xa0) from [<c035d368>] (dhdsdio_set_siaddr_window+0x74/0xa4)
+<4>[  283.252990]  r8:00000000 r7:00007ffc r6:c72fc000 r5:18000000 r4:c6c1598c
+<4>[  283.253997] [<c035d2f4>] (dhdsdio_set_siaddr_window+0x0/0xa4) from [<c035d448>] (dhdsdio_membytes+0xb0/0x1f4)
+<4>[  283.254333]  r6:c0835360 r5:00000000 r4:00000004
+<4>[  283.255035] [<c035d398>] (dhdsdio_membytes+0x0/0x1f4) from [<c035d5c0>] (dhdsdio_readshared+0x34/0x13c)
+<4>[  283.255371] [<c035d58c>] (dhdsdio_readshared+0x0/0x13c) from [<c0360f18>] (dhdsdio_checkdied.constprop.9+0x60/0x54c)
+<4>[  283.255737]  r6:c0835360 r5:c5898f00 r4:c72fc000
+<4>[  283.256561] [<c0360eb8>] (dhdsdio_checkdied.constprop.9+0x0/0x54c) from [<c0364d1c>] (dhd_bus_rxctl+0x118/0x240)
+<4>[  283.256958] [<c0364c04>] (dhd_bus_rxctl+0x0/0x240) from [<c036a190>] (dhdcdc_cmplt+0x40/0x78)
+<4>[  283.257171] [<c036a150>] (dhdcdc_cmplt+0x0/0x78) from [<c036a468>] (dhd_prot_ioctl+0x2a0/0x6d8)
+<4>[  283.257507]  r8:00000000 r7:c6c00000 r6:c6c15cd4 r5:c2abaf60 r4:c72d3000
+<4>[  283.258514] r3:00000000
+<4>[  283.259033] [<c036a1c8>] (dhd_prot_ioctl+0x0/0x6d8) from [<c036c408>] (dhd_wl_ioctl+0x40/0x6c)
+<4>[  283.259399] [<c036c3c8>] (dhd_wl_ioctl+0x0/0x6c) from [<c0355ac8>] (dhd_ioctl_entry+0x2fc/0x4c8)
+<4>[  283.259582]  r7:c72d3000 r6:c6c14000 r5:c72d2800 r4:00000000
+<4>[  283.260650] [<c03557cc>] (dhd_ioctl_entry+0x0/0x4c8) from [<bf01348c>] (wifi_pm_tasklet_function+0xa4/0xd4 [attestation])
+<4>[  283.261016] [<bf0133e8>] (wifi_pm_tasklet_function+0x0/0xd4 [attestation]) from [<c00acb68>] (tasklet_action+0x140/0x204)
+<4>[  283.261383]  r5:c6c14000 r4:bf0163d8
+<4>[  283.261932] [<c00aca28>] (tasklet_action+0x0/0x204) from [<c00ad17c>] (__do_softirq+0xd4/0x270)
+<4>[  283.262298] [<c00ad0a8>] (__do_softirq+0x0/0x270) from [<c00ad554>] (do_softirq+0x58/0x64)
+<4>[  283.262634] [<c00ad4fc>] (do_softirq+0x0/0x64) from [<c049c2d4>] (netif_rx_ni+0x68/0x84)
+<4>[  283.262817]  r4:c6c14000 r3:00000008
+<4>[  283.263488] [<c049c26c>] (netif_rx_ni+0x0/0x84) from [<c0355254>] (dhd_rx_frame+0x2bc/0x3d8)
+<4>[  283.263671]  r4:c5fbbf00
+<4>[  283.264007] [<c0354f98>] (dhd_rx_frame+0x0/0x3d8) from [<c03639b4>] (dhdsdio_readframes+0x1cdc/0x2838)
+<4>[  283.264343] [<c0361cd8>] (dhdsdio_readframes+0x0/0x2838) from [<c0366874>] (dhd_bus_dpc+0x6bc/0x1104)
+<4>[  283.264587] [<c03661b8>] (dhd_bus_dpc+0x0/0x1104) from [<c0356a60>] (dhd_dpc_thread+0xd8/0x104)
+<4>[  283.264953] [<c0356988>] (dhd_dpc_thread+0x0/0x104) from [<c00a9a64>] (do_exit+0x0/0x734)
+<4>[  283.265289]  r7:00000013 r6:c00a9a64 r5:c0356988 r4:c72d3374
+<3>[  283.266174] BUG: scheduling while atomic: dhd_dpc/96/0x00000102
+<4>[  283.266540] Modules linked in: attestation
+<4>[  283.267059] Backtrace: 
+<4>[  283.267425] [<c005a604>] (dump_backtrace+0x0/0x10c) from [<c05f639c>] (dump_stack+0x18/0x1c)
+<4>[  283.267761]  r6:c6c14000 r5:c6c103c0 r4:00000000 r3:60000113
+<4>[  283.268737] [<c05f6384>] (dump_stack+0x0/0x1c) from [<c05f6778>] (__schedule_bug+0x60/0x70)
+<4>[  283.268981] [<c05f6718>] (__schedule_bug+0x0/0x70) from [<c05fbc64>] (__schedule+0x6d4/0x7a8)
+<4>[  283.269287]  r4:c12026a0 r3:00000000
+<4>[  283.269989] [<c05fb590>] (__schedule+0x0/0x7a8) from [<c05fbe94>] (schedule+0x50/0x68)
+<4>[  283.270172] [<c05fbe44>] (schedule+0x0/0x68) from [<c05fc3f8>] (schedule_timeout+0x1c8/0x318)
+<4>[  283.270538] [<c05fc230>] (schedule_timeout+0x0/0x318) from [<c05fb43c>] (wait_for_common+0xc0/0x168)
+<4>[  283.270874] [<c05fb37c>] (wait_for_common+0x0/0x168) from [<c05fb58c>] (wait_for_completion+0x18/0x1c)
+<4>[  283.271240] [<c05fb574>] (wait_for_completion+0x0/0x1c) from [<c0411ee4>] (mmc_wait_for_req+0x100/0x144)
+<4>[  283.271453] [<c0411de4>] (mmc_wait_for_req+0x0/0x144) from [<c0411f9c>] (mmc_wait_for_cmd+0x74/0x94)
+<4>[  283.271759]  r6:00000000 r5:c7b7c800 r4:c6c15860
+<4>[  283.272674] [<c0411f28>] (mmc_wait_for_cmd+0x0/0x94) from [<c041a2b0>] (mmc_io_rw_direct_host+0xa8/0x13c)
+<4>[  283.273010]  r6:00000000 r5:00000000 r4:c7b7c800
+<4>[  283.273681] [<c041a208>] (mmc_io_rw_direct_host+0x0/0x13c) from [<c041a47c>] (mmc_io_rw_direct+0x30/0x48)
+<4>[  283.274047]  r6:0001000c r5:000000c9 r4:c6c158f0
+<4>[  283.274719] [<c041a44c>] (mmc_io_rw_direct+0x0/0x48) from [<c041bf48>] (sdio_writeb+0x44/0x64)
+<4>[  283.275085] [<c041bf04>] (sdio_writeb+0x0/0x64) from [<c03700f0>] (sdioh_request_byte+0x20c/0x2e8)
+<4>[  283.275421]  r4:c08ebc80
+<4>[  283.275787] [<c036fee4>] (sdioh_request_byte+0x0/0x2e8) from [<c03701f8>] (sdioh_cfg_write+0x2c/0x34)
+<4>[  283.276123] [<c03701cc>] (sdioh_cfg_write+0x0/0x34) from [<c036992c>] (bcmsdh_cfg_write+0x44/0xa0)
+<4>[  283.276489] [<c03698e8>] (bcmsdh_cfg_write+0x0/0xa0) from [<c035d390>] (dhdsdio_set_siaddr_window+0x9c/0xa4)
+<4>[  283.276672]  r8:00000000 r7:00007ffc r6:c72fc000 r5:18000000 r4:c6c1598c
+<4>[  283.277893] [<c035d2f4>] (dhdsdio_set_siaddr_window+0x0/0xa4) from [<c035d448>] (dhdsdio_membytes+0xb0/0x1f4)
+<4>[  283.278228]  r6:c0835360 r5:00000000 r4:00000004
+<4>[  283.278900] [<c035d398>] (dhdsdio_membytes+0x0/0x1f4) from [<c035d5c0>] (dhdsdio_readshared+0x34/0x13c)
+<4>[  283.279235] [<c035d58c>] (dhdsdio_readshared+0x0/0x13c) from [<c0360f18>] (dhdsdio_checkdied.constprop.9+0x60/0x54c)
+<4>[  283.279571]  r6:c0835360 r5:c5898f00 r4:c72fc000
+<4>[  283.280426] [<c0360eb8>] (dhdsdio_checkdied.constprop.9+0x0/0x54c) from [<c0364d1c>] (dhd_bus_rxctl+0x118/0x240)
+<4>[  283.280639] [<c0364c04>] (dhd_bus_rxctl+0x0/0x240) from [<c036a190>] (dhdcdc_cmplt+0x40/0x78)
+<4>[  283.280975] [<c036a150>] (dhdcdc_cmplt+0x0/0x78) from [<c036a468>] (dhd_prot_ioctl+0x2a0/0x6d8)
+<4>[  283.281311]  r8:00000000 r7:c6c00000 r6:c6c15cd4 r5:c2abaf60 r4:c72d3000
+<4>[  283.282318] r3:00000000
+<4>[  283.282836] [<c036a1c8>] (dhd_prot_ioctl+0x0/0x6d8) from [<c036c408>] (dhd_wl_ioctl+0x40/0x6c)
+<4>[  283.283172] [<c036c3c8>] (dhd_wl_ioctl+0x0/0x6c) from [<c0355ac8>] (dhd_ioctl_entry+0x2fc/0x4c8)
+<4>[  283.283355]  r7:c72d3000 r6:c6c14000 r5:c72d2800 r4:00000000
+<4>[  283.284393] [<c03557cc>] (dhd_ioctl_entry+0x0/0x4c8) from [<bf01348c>] (wifi_pm_tasklet_function+0xa4/0xd4 [attestation])
+<4>[  283.284759] [<bf0133e8>] (wifi_pm_tasklet_function+0x0/0xd4 [attestation]) from [<c00acb68>] (tasklet_action+0x140/0x204)
+<4>[  283.285095]  r5:c6c14000 r4:bf0163d8
+<4>[  283.285614] [<c00aca28>] (tasklet_action+0x0/0x204) from [<c00ad17c>] (__do_softirq+0xd4/0x270)
+<4>[  283.285980] [<c00ad0a8>] (__do_softirq+0x0/0x270) from [<c00ad554>] (do_softirq+0x58/0x64)
+<4>[  283.286376] [<c00ad4fc>] (do_softirq+0x0/0x64) from [<c049c2d4>] (netif_rx_ni+0x68/0x84)
+<4>[  283.286560]  r4:c6c14000 r3:00000008
+<4>[  283.287231] [<c049c26c>] (netif_rx_ni+0x0/0x84) from [<c0355254>] (dhd_rx_frame+0x2bc/0x3d8)
+<4>[  283.287414]  r4:c5fbbf00
+<4>[  283.287963] [<c0354f98>] (dhd_rx_frame+0x0/0x3d8) from [<c03639b4>] (dhdsdio_readframes+0x1cdc/0x2838)
+<4>[  283.288177] [<c0361cd8>] (dhdsdio_readframes+0x0/0x2838) from [<c0366874>] (dhd_bus_dpc+0x6bc/0x1104)
+<4>[  283.288543] [<c03661b8>] (dhd_bus_dpc+0x0/0x1104) from [<c0356a60>] (dhd_dpc_thread+0xd8/0x104)
+<4>[  283.288879] [<c0356988>] (dhd_dpc_thread+0x0/0x104) from [<c00a9a64>] (do_exit+0x0/0x734)
+<4>[  283.289215]  r7:00000013 r6:c00a9a64 r5:c0356988 r4:c72d3374
+<3>[  283.290130] BUG: scheduling while atomic: dhd_dpc/96/0x00000102
+<4>[  283.290496] Modules linked in: attestation
+<4>[  283.291015] Backtrace: 
+<4>[  283.291381] [<c005a604>] (dump_backtrace+0x0/0x10c) from [<c05f639c>] (dump_stack+0x18/0x1c)
+<4>[  283.291717]  r6:c6c14000 r5:c6c103c0 r4:00000000 r3:60000113
+<4>[  283.292724] [<c05f6384>] (dump_stack+0x0/0x1c) from [<c05f6778>] (__schedule_bug+0x60/0x70)
+<4>[  283.292938] [<c05f6718>] (__schedule_bug+0x0/0x70) from [<c05fbc64>] (__schedule+0x6d4/0x7a8)
+<4>[  283.293273]  r4:c12026a0 r3:00000000
+<4>[  283.293823] [<c05fb590>] (__schedule+0x0/0x7a8) from [<c05fbe94>] (schedule+0x50/0x68)
+<4>[  283.294189] [<c05fbe44>] (schedule+0x0/0x68) from [<c05fc3f8>] (schedule_timeout+0x1c8/0x318)
+<4>[  283.294525] [<c05fc230>] (schedule_timeout+0x0/0x318) from [<c05fb43c>] (wait_for_common+0xc0/0x168)
+<4>[  283.294891] [<c05fb37c>] (wait_for_common+0x0/0x168) from [<c05fb58c>] (wait_for_completion+0x18/0x1c)
+<4>[  283.295227] [<c05fb574>] (wait_for_completion+0x0/0x1c) from [<c0411ee4>] (mmc_wait_for_req+0x100/0x144)
+<4>[  283.295440] [<c0411de4>] (mmc_wait_for_req+0x0/0x144) from [<c0411f9c>] (mmc_wait_for_cmd+0x74/0x94)
+<4>[  283.295806]  r6:00000000 r5:c7b7c800 r4:c6c15860
+<4>[  283.296630] [<c0411f28>] (mmc_wait_for_cmd+0x0/0x94) from [<c041a2b0>] (mmc_io_rw_direct_host+0xa8/0x13c)
+<4>[  283.296844]  r6:00000000 r5:00000000 r4:c7b7c800
+<4>[  283.297668] [<c041a208>] (mmc_io_rw_direct_host+0x0/0x13c) from [<c041a47c>] (mmc_io_rw_direct+0x30/0x48)
+<4>[  283.297973]  r6:0001000a r5:000000c9 r4:c6c158f0
+<4>[  283.298675] [<c041a44c>] (mmc_io_rw_direct+0x0/0x48) from [<c041bf48>] (sdio_writeb+0x44/0x64)
+<4>[  283.299011] [<c041bf04>] (sdio_writeb+0x0/0x64) from [<c03700f0>] (sdioh_request_byte+0x20c/0x2e8)
+<4>[  283.299346]  r4:c08ebc80
+<4>[  283.299713] [<c036fee4>] (sdioh_request_byte+0x0/0x2e8) from [<c03701f8>] (sdioh_cfg_write+0x2c/0x34)
+<4>[  283.300048] [<c03701cc>] (sdioh_cfg_write+0x0/0x34) from [<c036992c>] (bcmsdh_cfg_write+0x44/0xa0)
+<4>[  283.300262] [<c03698e8>] (bcmsdh_cfg_write+0x0/0xa0) from [<c035d338>] (dhdsdio_set_siaddr_window+0x44/0xa4)
+<4>[  283.300598]  r8:c5bf3a00 r7:000029a0 r6:c72fc000 r5:000029a0 r4:c6c1598c
+<4>[  283.301849] [<c035d2f4>] (dhdsdio_set_siaddr_window+0x0/0xa4) from [<c035d3e4>] (dhdsdio_membytes+0x4c/0x1f4)
+<4>[  283.302185]  r6:c6c15a88 r5:00000020 r4:00000020
+<4>[  283.302886] [<c035d398>] (dhdsdio_membytes+0x0/0x1f4) from [<c035d630>] (dhdsdio_readshared+0xa4/0x13c)
+<4>[  283.303253] [<c035d58c>] (dhdsdio_readshared+0x0/0x13c) from [<c0360f18>] (dhdsdio_checkdied.constprop.9+0x60/0x54c)
+<4>[  283.303619]  r6:c0835360 r5:c5898f00 r4:c72fc000
+<4>[  283.304290] [<c0360eb8>] (dhdsdio_checkdied.constprop.9+0x0/0x54c) from [<c0364d1c>] (dhd_bus_rxctl+0x118/0x240)
+<4>[  283.304656] [<c0364c04>] (dhd_bus_rxctl+0x0/0x240) from [<c036a190>] (dhdcdc_cmplt+0x40/0x78)
+<4>[  283.305023] [<c036a150>] (dhdcdc_cmplt+0x0/0x78) from [<c036a468>] (dhd_prot_ioctl+0x2a0/0x6d8)
+<4>[  283.305389]  r8:00000000 r7:c6c00000 r6:c6c15cd4 r5:c2abaf60 r4:c72d3000
+<4>[  283.306243] r3:00000000
+<4>[  283.306945] [<c036a1c8>] (dhd_prot_ioctl+0x0/0x6d8) from [<c036c408>] (dhd_wl_ioctl+0x40/0x6c)
+<4>[  283.307189] [<c036c3c8>] (dhd_wl_ioctl+0x0/0x6c) from [<c0355ac8>] (dhd_ioctl_entry+0x2fc/0x4c8)
+<4>[  283.307525]  r7:c72d3000 r6:c6c14000 r5:c72d2800 r4:00000000
+<4>[  283.308563] [<c03557cc>] (dhd_ioctl_entry+0x0/0x4c8) from [<bf01348c>] (wifi_pm_tasklet_function+0xa4/0xd4 [attestation])
+<4>[  283.308959] [<bf0133e8>] (wifi_pm_tasklet_function+0x0/0xd4 [attestation]) from [<c00acb68>] (tasklet_action+0x140/0x204)
+<4>[  283.309326]  r5:c6c14000 r4:bf0163d8
+<4>[  283.309844] [<c00aca28>] (tasklet_action+0x0/0x204) from [<c00ad17c>] (__do_softirq+0xd4/0x270)
+<4>[  283.310211] [<c00ad0a8>] (__do_softirq+0x0/0x270) from [<c00ad554>] (do_softirq+0x58/0x64)
+<4>[  283.310394] [<c00ad4fc>] (do_softirq+0x0/0x64) from [<c049c2d4>] (netif_rx_ni+0x68/0x84)
+<4>[  283.310729]  r4:c6c14000 r3:00000008
+<4>[  283.311431] [<c049c26c>] (netif_rx_ni+0x0/0x84) from [<c0355254>] (dhd_rx_frame+0x2bc/0x3d8)
+<4>[  283.311645]  r4:c5fbbf00
+<4>[  283.311981] [<c0354f98>] (dhd_rx_frame+0x0/0x3d8) from [<c03639b4>] (dhdsdio_readframes+0x1cdc/0x2838)
+<4>[  283.312347] [<c0361cd8>] (dhdsdio_readframes+0x0/0x2838) from [<c0366874>] (dhd_bus_dpc+0x6bc/0x1104)
+<4>[  283.312683] [<c03661b8>] (dhd_bus_dpc+0x0/0x1104) from [<c0356a60>] (dhd_dpc_thread+0xd8/0x104)
+<4>[  283.313079] [<c0356988>] (dhd_dpc_thread+0x0/0x104) from [<c00a9a64>] (do_exit+0x0/0x734)
+<4>[  283.313415]  r7:00000013 r6:c00a9a64 r5:c0356988 r4:c72d3374
+<3>[  283.314300] BUG: scheduling while atomic: dhd_dpc/96/0x00000102
+<4>[  283.314636] Modules linked in: attestation
+<4>[  283.315124] Backtrace: 
+<4>[  283.315490] [<c005a604>] (dump_backtrace+0x0/0x10c) from [<c05f639c>] (dump_stack+0x18/0x1c)
+<4>[  283.315826]  r6:c6c14000 r5:c6c103c0 r4:00000000 r3:60000113
+<4>[  283.316680] [<c05f6384>] (dump_stack+0x0/0x1c) from [<c05f6778>] (__schedule_bug+0x60/0x70)
+<4>[  283.317047] [<c05f6718>] (__schedule_bug+0x0/0x70) from [<c05fbc64>] (__schedule+0x6d4/0x7a8)
+<4>[  283.317352]  r4:c12026a0 r3:00000000
+<4>[  283.317932] [<c05fb590>] (__schedule+0x0/0x7a8) from [<c05fbe94>] (schedule+0x50/0x68)
+<4>[  283.318267] [<c05fbe44>] (schedule+0x0/0x68) from [<c05fc3f8>] (schedule_timeout+0x1c8/0x318)
+<4>[  283.318603] [<c05fc230>] (schedule_timeout+0x0/0x318) from [<c05fb43c>] (wait_for_common+0xc0/0x168)
+<4>[  283.318969] [<c05fb37c>] (wait_for_common+0x0/0x168) from [<c05fb58c>] (wait_for_completion+0x18/0x1c)
+<4>[  283.319213] [<c05fb574>] (wait_for_completion+0x0/0x1c) from [<c0411ee4>] (mmc_wait_for_req+0x100/0x144)
+<4>[  283.319580] [<c0411de4>] (mmc_wait_for_req+0x0/0x144) from [<c0411f9c>] (mmc_wait_for_cmd+0x74/0x94)
+<4>[  283.319915]  r6:00000000 r5:c7b7c800 r4:c6c15860
+<4>[  283.320648] [<c0411f28>] (mmc_wait_for_cmd+0x0/0x94) from [<c041a2b0>] (mmc_io_rw_direct_host+0xa8/0x13c)
+<4>[  283.320983]  r6:00000000 r5:00000000 r4:c7b7c800
+<4>[  283.321838] [<c041a208>] (mmc_io_rw_direct_host+0x0/0x13c) from [<c041a47c>] (mmc_io_rw_direct+0x30/0x48)
+<4>[  283.322174]  r6:0001000b r5:000000c9 r4:c6c158f0
+<4>[  283.322875] [<c041a44c>] (mmc_io_rw_direct+0x0/0x48) from [<c041bf48>] (sdio_writeb+0x44/0x64)
+<4>[  283.323242] [<c041bf04>] (sdio_writeb+0x0/0x64) from [<c03700f0>] (sdioh_request_byte+0x20c/0x2e8)
+<4>[  283.323547]  r4:c08ebc80
+<4>[  283.323944] [<c036fee4>] (sdioh_request_byte+0x0/0x2e8) from [<c03701f8>] (sdioh_cfg_write+0x2c/0x34)
+<4>[  283.324340] [<c03701cc>] (sdioh_cfg_write+0x0/0x34) from [<c036992c>] (bcmsdh_cfg_write+0x44/0xa0)
+<4>[  283.324554] [<c03698e8>] (bcmsdh_cfg_write+0x0/0xa0) from [<c035d368>] (dhdsdio_set_siaddr_window+0x74/0xa4)
+<4>[  283.324890]  r8:c5bf3a00 r7:000029a0 r6:c72fc000 r5:000029a0 r4:c6c1598c
+<4>[  283.326049] [<c035d2f4>] (dhdsdio_set_siaddr_window+0x0/0xa4) from [<c035d3e4>] (dhdsdio_membytes+0x4c/0x1f4)
+<4>[  283.326385]  r6:c6c15a88 r5:00000020 r4:00000020
+<4>[  283.327117] [<c035d398>] (dhdsdio_membytes+0x0/0x1f4) from [<c035d630>] (dhdsdio_readshared+0xa4/0x13c)
+<4>[  283.327484] [<c035d58c>] (dhdsdio_readshared+0x0/0x13c) from [<c0360f18>] (dhdsdio_checkdied.constprop.9+0x60/0x54c)
+<4>[  283.327850]  r6:c0835360 r5:c5898f00 r4:c72fc000
+<4>[  283.328582] [<c0360eb8>] (dhdsdio_checkdied.constprop.9+0x0/0x54c) from [<c0364d1c>] (dhd_bus_rxctl+0x118/0x240)
+<4>[  283.328918] [<c0364c04>] (dhd_bus_rxctl+0x0/0x240) from [<c036a190>] (dhdcdc_cmplt+0x40/0x78)
+<4>[  283.329254] [<c036a150>] (dhdcdc_cmplt+0x0/0x78) from [<c036a468>] (dhd_prot_ioctl+0x2a0/0x6d8)
+<4>[  283.329589]  r8:00000000 r7:c6c00000 r6:c6c15cd4 r5:c2abaf60 r4:c72d3000
+<4>[  283.330413] r3:00000000
+<4>[  283.331024] [<c036a1c8>] (dhd_prot_ioctl+0x0/0x6d8) from [<c036c408>] (dhd_wl_ioctl+0x40/0x6c)
+<4>[  283.331237] [<c036c3c8>] (dhd_wl_ioctl+0x0/0x6c) from [<c0355ac8>] (dhd_ioctl_entry+0x2fc/0x4c8)
+<4>[  283.331573]  r7:c72d3000 r6:c6c14000 r5:c72d2800 r4:00000000
+<4>[  283.332641] [<c03557cc>] (dhd_ioctl_entry+0x0/0x4c8) from [<bf01348c>] (wifi_pm_tasklet_function+0xa4/0xd4 [attestation])
+<4>[  283.333007] [<bf0133e8>] (wifi_pm_tasklet_function+0x0/0xd4 [attestation]) from [<c00acb68>] (tasklet_action+0x140/0x204)
+<4>[  283.333343]  r5:c6c14000 r4:bf0163d8
+<4>[  283.333892] [<c00aca28>] (tasklet_action+0x0/0x204) from [<c00ad17c>] (__do_softirq+0xd4/0x270)
+<4>[  283.334228] [<c00ad0a8>] (__do_softirq+0x0/0x270) from [<c00ad554>] (do_softirq+0x58/0x64)
+<4>[  283.334442] [<c00ad4fc>] (do_softirq+0x0/0x64) from [<c049c2d4>] (netif_rx_ni+0x68/0x84)
+<4>[  283.334808]  r4:c6c14000 r3:00000008
+<4>[  283.335327] [<c049c26c>] (netif_rx_ni+0x0/0x84) from [<c0355254>] (dhd_rx_frame+0x2bc/0x3d8)
+<4>[  283.335632]  r4:c5fbbf00
+<4>[  283.336029] [<c0354f98>] (dhd_rx_frame+0x0/0x3d8) from [<c03639b4>] (dhdsdio_readframes+0x1cdc/0x2838)
+<4>[  283.336395] [<c0361cd8>] (dhdsdio_readframes+0x0/0x2838) from [<c0366874>] (dhd_bus_dpc+0x6bc/0x1104)
+<4>[  283.336761] [<c03661b8>] (dhd_bus_dpc+0x0/0x1104) from [<c0356a60>] (dhd_dpc_thread+0xd8/0x104)
+<4>[  283.337097] [<c0356988>] (dhd_dpc_thread+0x0/0x104) from [<c00a9a64>] (do_exit+0x0/0x734)
+<4>[  283.337432]  r7:00000013 r6:c00a9a64 r5:c0356988 r4:c72d3374
+<3>[  283.338317] BUG: scheduling while atomic: dhd_dpc/96/0x00000102
+<4>[  283.338623] Modules linked in: attestation
+<4>[  283.339111] Backtrace: 
+<4>[  283.339477] [<c005a604>] (dump_backtrace+0x0/0x10c) from [<c05f639c>] (dump_stack+0x18/0x1c)
+<4>[  283.339813]  r6:c6c14000 r5:c6c103c0 r4:00000000 r3:60000113
+<4>[  283.340728] [<c05f6384>] (dump_stack+0x0/0x1c) from [<c05f6778>] (__schedule_bug+0x60/0x70)
+<4>[  283.341064] [<c05f6718>] (__schedule_bug+0x0/0x70) from [<c05fbc64>] (__schedule+0x6d4/0x7a8)
+<4>[  283.341400]  r4:c12026a0 r3:00000000
+<4>[  283.341918] [<c05fb590>] (__schedule+0x0/0x7a8) from [<c05fbe94>] (schedule+0x50/0x68)
+<4>[  283.342285] [<c05fbe44>] (schedule+0x0/0x68) from [<c05fc3f8>] (schedule_timeout+0x1c8/0x318)
+<4>[  283.342681] [<c05fc230>] (schedule_timeout+0x0/0x318) from [<c05fb43c>] (wait_for_common+0xc0/0x168)
+<4>[  283.342895] [<c05fb37c>] (wait_for_common+0x0/0x168) from [<c05fb58c>] (wait_for_completion+0x18/0x1c)
+<4>[  283.343261] [<c05fb574>] (wait_for_completion+0x0/0x1c) from [<c0411ee4>] (mmc_wait_for_req+0x100/0x144)
+<4>[  283.343597] [<c0411de4>] (mmc_wait_for_req+0x0/0x144) from [<c0411f9c>] (mmc_wait_for_cmd+0x74/0x94)
+<4>[  283.343963]  r6:00000000 r5:c7b7c800 r4:c6c15860
+<4>[  283.344696] [<c0411f28>] (mmc_wait_for_cmd+0x0/0x94) from [<c041a2b0>] (mmc_io_rw_direct_host+0xa8/0x13c)
+<4>[  283.345031]  r6:00000000 r5:00000000 r4:c7b7c800
+<4>[  283.345916] [<c041a208>] (mmc_io_rw_direct_host+0x0/0x13c) from [<c041a47c>] (mmc_io_rw_direct+0x30/0x48)
+<4>[  283.346099]  r6:0001000c r5:000000c9 r4:c6c158f0
+<4>[  283.346923] [<c041a44c>] (mmc_io_rw_direct+0x0/0x48) from [<c041bf48>] (sdio_writeb+0x44/0x64)
+<4>[  283.347290] [<c041bf04>] (sdio_writeb+0x0/0x64) from [<c03700f0>] (sdioh_request_byte+0x20c/0x2e8)
+<4>[  283.347473]  r4:c08ebc80
+<4>[  283.347961] [<c036fee4>] (sdioh_request_byte+0x0/0x2e8) from [<c03701f8>] (sdioh_cfg_write+0x2c/0x34)
+<4>[  283.348175] [<c03701cc>] (sdioh_cfg_write+0x0/0x34) from [<c036992c>] (bcmsdh_cfg_write+0x44/0xa0)
+<4>[  283.348510] [<c03698e8>] (bcmsdh_cfg_write+0x0/0xa0) from [<c035d390>] (dhdsdio_set_siaddr_window+0x9c/0xa4)
+<4>[  283.348815]  r8:c5bf3a00 r7:000029a0 r6:c72fc000 r5:000029a0 r4:c6c1598c
+<4>[  283.350036] [<c035d2f4>] (dhdsdio_set_siaddr_window+0x0/0xa4) from [<c035d3e4>] (dhdsdio_membytes+0x4c/0x1f4)
+<4>[  283.350402]  r6:c6c15a88 r5:00000020 r4:00000020
+<4>[  283.351074] [<c035d398>] (dhdsdio_membytes+0x0/0x1f4) from [<c035d630>] (dhdsdio_readshared+0xa4/0x13c)
+<4>[  283.351440] [<c035d58c>] (dhdsdio_readshared+0x0/0x13c) from [<c0360f18>] (dhdsdio_checkdied.constprop.9+0x60/0x54c)
+<4>[  283.351806]  r6:c0835360 r5:c5898f00 r4:c72fc000
+<4>[  283.352478] [<c0360eb8>] (dhdsdio_checkdied.constprop.9+0x0/0x54c) from [<c0364d1c>] (dhd_bus_rxctl+0x118/0x240)
+<4>[  283.352844] [<c0364c04>] (dhd_bus_rxctl+0x0/0x240) from [<c036a190>] (dhdcdc_cmplt+0x40/0x78)
+<4>[  283.353179] [<c036a150>] (dhdcdc_cmplt+0x0/0x78) from [<c036a468>] (dhd_prot_ioctl+0x2a0/0x6d8)
+<4>[  283.353515]  r8:00000000 r7:c6c00000 r6:c6c15cd4 r5:c2abaf60 r4:c72d3000
+<4>[  283.354370] r3:00000000
+<4>[  283.354888] [<c036a1c8>] (dhd_prot_ioctl+0x0/0x6d8) from [<c036c408>] (dhd_wl_ioctl+0x40/0x6c)
+<4>[  283.355224] [<c036c3c8>] (dhd_wl_ioctl+0x0/0x6c) from [<c0355ac8>] (dhd_ioctl_entry+0x2fc/0x4c8)
+<4>[  283.355560]  r7:c72d3000 r6:c6c14000 r5:c72d2800 r4:00000000
+<4>[  283.356506] [<c03557cc>] (dhd_ioctl_entry+0x0/0x4c8) from [<bf01348c>] (wifi_pm_tasklet_function+0xa4/0xd4 [attestation])
+<4>[  283.356872] [<bf0133e8>] (wifi_pm_tasklet_function+0x0/0xd4 [attestation]) from [<c00acb68>] (tasklet_action+0x140/0x204)
+<4>[  283.357208]  r5:c6c14000 r4:bf0163d8
+<4>[  283.357879] [<c00aca28>] (tasklet_action+0x0/0x204) from [<c00ad17c>] (__do_softirq+0xd4/0x270)
+<4>[  283.358276] [<c00ad0a8>] (__do_softirq+0x0/0x270) from [<c00ad554>] (do_softirq+0x58/0x64)
+<4>[  283.358489] [<c00ad4fc>] (do_softirq+0x0/0x64) from [<c049c2d4>] (netif_rx_ni+0x68/0x84)
+<4>[  283.358825]  r4:c6c14000 r3:00000008
+<4>[  283.359344] [<c049c26c>] (netif_rx_ni+0x0/0x84) from [<c0355254>] (dhd_rx_frame+0x2bc/0x3d8)
+<4>[  283.359649]  r4:c5fbbf00
+<4>[  283.360046] [<c0354f98>] (dhd_rx_frame+0x0/0x3d8) from [<c03639b4>] (dhdsdio_readframes+0x1cdc/0x2838)
+<4>[  283.360382] [<c0361cd8>] (dhdsdio_readframes+0x0/0x2838) from [<c0366874>] (dhd_bus_dpc+0x6bc/0x1104)
+<4>[  283.360717] [<c03661b8>] (dhd_bus_dpc+0x0/0x1104) from [<c0356a60>] (dhd_dpc_thread+0xd8/0x104)
+<4>[  283.361083] [<c0356988>] (dhd_dpc_thread+0x0/0x104) from [<c00a9a64>] (do_exit+0x0/0x734)
+<4>[  283.361267]  r7:00000013 r6:c00a9a64 r5:c0356988 r4:c72d3374
+<3>[  283.362304] BUG: scheduling while atomic: dhd_dpc/96/0x00000102
+<4>[  283.362518] Modules linked in: attestation
+<4>[  283.363189] Backtrace: 
+<4>[  283.363555] [<c005a604>] (dump_backtrace+0x0/0x10c) from [<c05f639c>] (dump_stack+0x18/0x1c)
+<4>[  283.363891]  r6:c6c14000 r5:c6c103c0 r4:00000000 r3:60000113
+<4>[  283.364715] [<c05f6384>] (dump_stack+0x0/0x1c) from [<c05f6778>] (__schedule_bug+0x60/0x70)
+<4>[  283.365112] [<c05f6718>] (__schedule_bug+0x0/0x70) from [<c05fbc64>] (__schedule+0x6d4/0x7a8)
+<4>[  283.365447]  r4:c12026a0 r3:00000000
+<4>[  283.365966] [<c05fb590>] (__schedule+0x0/0x7a8) from [<c05fbe94>] (schedule+0x50/0x68)
+<4>[  283.366333] [<c05fbe44>] (schedule+0x0/0x68) from [<c05fc3f8>] (schedule_timeout+0x1c8/0x318)
+<4>[  283.366699] [<c05fc230>] (schedule_timeout+0x0/0x318) from [<c05fb43c>] (wait_for_common+0xc0/0x168)
+<4>[  283.366912] [<c05fb37c>] (wait_for_common+0x0/0x168) from [<c05fb58c>] (wait_for_completion+0x18/0x1c)
+<4>[  283.367248] [<c05fb574>] (wait_for_completion+0x0/0x1c) from [<c0411ee4>] (mmc_wait_for_req+0x100/0x144)
+<4>[  283.367584] [<c0411de4>] (mmc_wait_for_req+0x0/0x144) from [<c041a628>] (mmc_io_rw_extended+0x194/0x26c)
+<4>[  283.367950]  r6:00000001 r5:00000020 r4:00000200
+<4>[  283.368682] [<c041a494>] (mmc_io_rw_extended+0x0/0x26c) from [<c041b824>] (sdio_io_rw_ext_helper+0x19c/0x1ac)
+<4>[  283.369049] [<c041b688>] (sdio_io_rw_ext_helper+0x0/0x1ac) from [<c041b950>] (sdio_memcpy_fromio+0x24/0x2c)
+<4>[  283.369384] [<c041b92c>] (sdio_memcpy_fromio+0x0/0x2c) from [<c036faac>] (sdioh_request_packet+0x39c/0x578)
+<4>[  283.369750] [<c036f710>] (sdioh_request_packet+0x0/0x578) from [<c0370b14>] (sdioh_request_buffer+0x214/0x244)
+<4>[  283.370117] [<c0370900>] (sdioh_request_buffer+0x0/0x244) from [<c0369f80>] (bcmsdh_rwdata+0x5c/0x6c)
+<4>[  283.370452] [<c0369f24>] (bcmsdh_rwdata+0x0/0x6c) from [<c035d420>] (dhdsdio_membytes+0x88/0x1f4)
+<4>[  283.370635]  r5:00000020 r4:00000020
+<4>[  283.371276] [<c035d398>] (dhdsdio_membytes+0x0/0x1f4) from [<c035d630>] (dhdsdio_readshared+0xa4/0x13c)
+<4>[  283.371582] [<c035d58c>] (dhdsdio_readshared+0x0/0x13c) from [<c0360f18>] (dhdsdio_checkdied.constprop.9+0x60/0x54c)
+<4>[  283.371795]  r6:c0835360 r5:c5898f00 r4:c72fc000
+<4>[  283.372650] [<c0360eb8>] (dhdsdio_checkdied.constprop.9+0x0/0x54c) from [<c0364d1c>] (dhd_bus_rxctl+0x118/0x240)
+<4>[  283.373016] [<c0364c04>] (dhd_bus_rxctl+0x0/0x240) from [<c036a190>] (dhdcdc_cmplt+0x40/0x78)
+<4>[  283.373382] [<c036a150>] (dhdcdc_cmplt+0x0/0x78) from [<c036a468>] (dhd_prot_ioctl+0x2a0/0x6d8)
+<4>[  283.373565]  r8:00000000 r7:c6c00000 r6:c6c15cd4 r5:c2abaf60 r4:c72d3000
+<4>[  283.374633] r3:00000000
+<4>[  283.375152] [<c036a1c8>] (dhd_prot_ioctl+0x0/0x6d8) from [<c036c408>] (dhd_wl_ioctl+0x40/0x6c)
+<4>[  283.375518] [<c036c3c8>] (dhd_wl_ioctl+0x0/0x6c) from [<c0355ac8>] (dhd_ioctl_entry+0x2fc/0x4c8)
+<4>[  283.375885]  r7:c72d3000 r6:c6c14000 r5:c72d2800 r4:00000000
+<4>[  283.376770] [<c03557cc>] (dhd_ioctl_entry+0x0/0x4c8) from [<bf01348c>] (wifi_pm_tasklet_function+0xa4/0xd4 [attestation])
+<4>[  283.377166] [<bf0133e8>] (wifi_pm_tasklet_function+0x0/0xd4 [attestation]) from [<c00acb68>] (tasklet_action+0x140/0x204)
+<4>[  283.377502]  r5:c6c14000 r4:bf0163d8
+<4>[  283.378051] [<c00aca28>] (tasklet_action+0x0/0x204) from [<c00ad17c>] (__do_softirq+0xd4/0x270)
+<4>[  283.378417] [<c00ad0a8>] (__do_softirq+0x0/0x270) from [<c00ad554>] (do_softirq+0x58/0x64)
+<4>[  283.378784] [<c00ad4fc>] (do_softirq+0x0/0x64) from [<c049c2d4>] (netif_rx_ni+0x68/0x84)
+<4>[  283.379119]  r4:c6c14000 r3:00000008
+<4>[  283.379669] [<c049c26c>] (netif_rx_ni+0x0/0x84) from [<c0355254>] (dhd_rx_frame+0x2bc/0x3d8)
+<4>[  283.379974]  r4:c5fbbf00
+<4>[  283.380340] [<c0354f98>] (dhd_rx_frame+0x0/0x3d8) from [<c03639b4>] (dhdsdio_readframes+0x1cdc/0x2838)
+<4>[  283.380676] [<c0361cd8>] (dhdsdio_readframes+0x0/0x2838) from [<c0366874>] (dhd_bus_dpc+0x6bc/0x1104)
+<4>[  283.381042] [<c03661b8>] (dhd_bus_dpc+0x0/0x1104) from [<c0356a60>] (dhd_dpc_thread+0xd8/0x104)
+<4>[  283.381256] [<c0356988>] (dhd_dpc_thread+0x0/0x104) from [<c00a9a64>] (do_exit+0x0/0x734)
+<4>[  283.381622]  r7:00000013 r6:c00a9a64 r5:c0356988 r4:c72d3374
+<3>[  283.382659] BUG: scheduling while atomic: dhd_dpc/96/0x00000102
+<4>[  283.382873] Modules linked in: attestation
+<4>[  283.383361] Backtrace: 
+<4>[  283.383850] [<c005a604>] (dump_backtrace+0x0/0x10c) from [<c05f639c>] (dump_stack+0x18/0x1c)
+<4>[  283.384033]  r6:c6c14000 r5:c6c103c0 r4:00000000 r3:60000113
+<4>[  283.385040] [<c05f6384>] (dump_stack+0x0/0x1c) from [<c05f6778>] (__schedule_bug+0x60/0x70)
+<4>[  283.385406] [<c05f6718>] (__schedule_bug+0x0/0x70) from [<c05fbc64>] (__schedule+0x6d4/0x7a8)
+<4>[  283.385620]  r4:c12026a0 r3:00000000
+<4>[  283.386322] [<c05fb590>] (__schedule+0x0/0x7a8) from [<c05fbe94>] (schedule+0x50/0x68)
+<4>[  283.386535] [<c05fbe44>] (schedule+0x0/0x68) from [<c05fc3f8>] (schedule_timeout+0x1c8/0x318)
+<4>[  283.386901] [<c05fc230>] (schedule_timeout+0x0/0x318) from [<c05fb43c>] (wait_for_common+0xc0/0x168)
+<4>[  283.387268] [<c05fb37c>] (wait_for_common+0x0/0x168) from [<c05fb58c>] (wait_for_completion+0x18/0x1c)
+<4>[  283.387634] [<c05fb574>] (wait_for_completion+0x0/0x1c) from [<c0411ee4>] (mmc_wait_for_req+0x100/0x144)
+<4>[  283.388000] [<c0411de4>] (mmc_wait_for_req+0x0/0x144) from [<c0411f9c>] (mmc_wait_for_cmd+0x74/0x94)
+<4>[  283.388214]  r6:00000000 r5:c7b7c800 r4:c6c15860
+<4>[  283.389068] [<c0411f28>] (mmc_wait_for_cmd+0x0/0x94) from [<c041a2b0>] (mmc_io_rw_direct_host+0xa8/0x13c)
+<4>[  283.389465]  r6:00000000 r5:00000000 r4:c7b7c800
+<4>[  283.390197] [<c041a208>] (mmc_io_rw_direct_host+0x0/0x13c) from [<c041a47c>] (mmc_io_rw_direct+0x30/0x48)
+<4>[  283.390533]  r6:0001000a r5:000000c9 r4:c6c158f0
+<4>[  283.391265] [<c041a44c>] (mmc_io_rw_direct+0x0/0x48) from [<c041bf48>] (sdio_writeb+0x44/0x64)
+<4>[  283.391632] [<c041bf04>] (sdio_writeb+0x0/0x64) from [<c03700f0>] (sdioh_request_byte+0x20c/0x2e8)
+<4>[  283.391967]  r4:c08ebc80
+<4>[  283.392333] [<c036fee4>] (sdioh_request_byte+0x0/0x2e8) from [<c03701f8>] (sdioh_cfg_write+0x2c/0x34)
+<4>[  283.392669] [<c03701cc>] (sdioh_cfg_write+0x0/0x34) from [<c036992c>] (bcmsdh_cfg_write+0x44/0xa0)
+<4>[  283.393035] [<c03698e8>] (bcmsdh_cfg_write+0x0/0xa0) from [<c035d338>] (dhdsdio_set_siaddr_window+0x44/0xa4)
+<4>[  283.393371]  r8:00000000 r7:000029a0 r6:c72fc000 r5:18000000 r4:c6c1598c
+<4>[  283.394409] [<c035d2f4>] (dhdsdio_set_siaddr_window+0x0/0xa4) from [<c035d448>] (dhdsdio_membytes+0xb0/0x1f4)
+<4>[  283.394714]  r6:c0835360 r5:00000000 r4:00000020
+<4>[  283.395629] [<c035d398>] (dhdsdio_membytes+0x0/0x1f4) from [<c035d630>] (dhdsdio_readshared+0xa4/0x13c)
+<4>[  283.395812] [<c035d58c>] (dhdsdio_readshared+0x0/0x13c) from [<c0360f18>] (dhdsdio_checkdied.constprop.9+0x60/0x54c)
+<4>[  283.396148]  r6:c0835360 r5:c5898f00 r4:c72fc000
+<4>[  283.397003] [<c0360eb8>] (dhdsdio_checkdied.constprop.9+0x0/0x54c) from [<c0364d1c>] (dhd_bus_rxctl+0x118/0x240)
+<4>[  283.397399] [<c0364c04>] (dhd_bus_rxctl+0x0/0x240) from [<c036a190>] (dhdcdc_cmplt+0x40/0x78)
+<4>[  283.397613] [<c036a150>] (dhdcdc_cmplt+0x0/0x78) from [<c036a468>] (dhd_prot_ioctl+0x2a0/0x6d8)
+<4>[  283.397949]  r8:00000000 r7:c6c00000 r6:c6c15cd4 r5:c2abaf60 r4:c72d3000
+<4>[  283.398986] r3:00000000
+<4>[  283.399505] [<c036a1c8>] (dhd_prot_ioctl+0x0/0x6d8) from [<c036c408>] (dhd_wl_ioctl+0x40/0x6c)
+<4>[  283.399841] [<c036c3c8>] (dhd_wl_ioctl+0x0/0x6c) from [<c0355ac8>] (dhd_ioctl_entry+0x2fc/0x4c8)
+<4>[  283.400177]  r7:c72d3000 r6:c6c14000 r5:c72d2800 r4:00000000
+<4>[  283.401092] [<c03557cc>] (dhd_ioctl_entry+0x0/0x4c8) from [<bf01348c>] (wifi_pm_tasklet_function+0xa4/0xd4 [attestation])
+<4>[  283.401458] [<bf0133e8>] (wifi_pm_tasklet_function+0x0/0xd4 [attestation]) from [<c00acb68>] (tasklet_action+0x140/0x204)
+<4>[  283.401824]  r5:c6c14000 r4:bf0163d8
+<4>[  283.402374] [<c00aca28>] (tasklet_action+0x0/0x204) from [<c00ad17c>] (__do_softirq+0xd4/0x270)
+<4>[  283.402709] [<c00ad0a8>] (__do_softirq+0x0/0x270) from [<c00ad554>] (do_softirq+0x58/0x64)
+<4>[  283.403045] [<c00ad4fc>] (do_softirq+0x0/0x64) from [<c049c2d4>] (netif_rx_ni+0x68/0x84)
+<4>[  283.403381]  r4:c6c14000 r3:00000008
+<4>[  283.403900] [<c049c26c>] (netif_rx_ni+0x0/0x84) from [<c0355254>] (dhd_rx_frame+0x2bc/0x3d8)
+<4>[  283.404205]  r4:c5fbbf00
+<4>[  283.404571] [<c0354f98>] (dhd_rx_frame+0x0/0x3d8) from [<c03639b4>] (dhdsdio_readframes+0x1cdc/0x2838)
+<4>[  283.404907] [<c0361cd8>] (dhdsdio_readframes+0x0/0x2838) from [<c0366874>] (dhd_bus_dpc+0x6bc/0x1104)
+<4>[  283.405151] [<c03661b8>] (dhd_bus_dpc+0x0/0x1104) from [<c0356a60>] (dhd_dpc_thread+0xd8/0x104)
+<4>[  283.405487] [<c0356988>] (dhd_dpc_thread+0x0/0x104) from [<c00a9a64>] (do_exit+0x0/0x734)
+<4>[  283.405822]  r7:00000013 r6:c00a9a64 r5:c0356988 r4:c72d3374
+<3>[  283.406707] BUG: scheduling while atomic: dhd_dpc/96/0x00000102
+<4>[  283.407043] Modules linked in: attestation
+<4>[  283.407562] Backtrace: 
+<4>[  283.408081] [<c005a604>] (dump_backtrace+0x0/0x10c) from [<c05f639c>] (dump_stack+0x18/0x1c)
+<4>[  283.408264]  r6:c6c14000 r5:c6c103c0 r4:00000000 r3:60000113
+<4>[  283.409271] [<c05f6384>] (dump_stack+0x0/0x1c) from [<c05f6778>] (__schedule_bug+0x60/0x70)
+<4>[  283.409637] [<c05f6718>] (__schedule_bug+0x0/0x70) from [<c05fbc64>] (__schedule+0x6d4/0x7a8)
+<4>[  283.409851]  r4:c12026a0 r3:00000000
+<4>[  283.410552] [<c05fb590>] (__schedule+0x0/0x7a8) from [<c05fbe94>] (schedule+0x50/0x68)
+<4>[  283.410736] [<c05fbe44>] (schedule+0x0/0x68) from [<c05fc3f8>] (schedule_timeout+0x1c8/0x318)
+<4>[  283.411071] [<c05fc230>] (schedule_timeout+0x0/0x318) from [<c05fb43c>] (wait_for_common+0xc0/0x168)
+<4>[  283.411407] [<c05fb37c>] (wait_for_common+0x0/0x168) from [<c05fb58c>] (wait_for_completion+0x18/0x1c)
+<4>[  283.411773] [<c05fb574>] (wait_for_completion+0x0/0x1c) from [<c0411ee4>] (mmc_wait_for_req+0x100/0x144)
+<4>[  283.412109] [<c0411de4>] (mmc_wait_for_req+0x0/0x144) from [<c0411f9c>] (mmc_wait_for_cmd+0x74/0x94)
+<4>[  283.412322]  r6:00000000 r5:c7b7c800 r4:c6c15860
+<4>[  283.413238] [<c0411f28>] (mmc_wait_for_cmd+0x0/0x94) from [<c041a2b0>] (mmc_io_rw_direct_host+0xa8/0x13c)
+<4>[  283.413574]  r6:00000000 r5:00000000 r4:c7b7c800
+<4>[  283.414337] [<c041a208>] (mmc_io_rw_direct_host+0x0/0x13c) from [<c041a47c>] (mmc_io_rw_direct+0x30/0x48)
+<4>[  283.414672]  r6:0001000b r5:000000c9 r4:c6c158f0
+<4>[  283.415344] [<c041a44c>] (mmc_io_rw_direct+0x0/0x48) from [<c041bf48>] (sdio_writeb+0x44/0x64)
+<4>[  283.415710] [<c041bf04>] (sdio_writeb+0x0/0x64) from [<c03700f0>] (sdioh_request_byte+0x20c/0x2e8)
+<4>[  283.416046]  r4:c08ebc80
+<4>[  283.416381] [<c036fee4>] (sdioh_request_byte+0x0/0x2e8) from [<c03701f8>] (sdioh_cfg_write+0x2c/0x34)
+<4>[  283.416717] [<c03701cc>] (sdioh_cfg_write+0x0/0x34) from [<c036992c>] (bcmsdh_cfg_write+0x44/0xa0)
+<4>[  283.417053] [<c03698e8>] (bcmsdh_cfg_write+0x0/0xa0) from [<c035d368>] (dhdsdio_set_siaddr_window+0x74/0xa4)
+<4>[  283.417388]  r8:00000000 r7:000029a0 r6:c72fc000 r5:18000000 r4:c6c1598c
+<4>[  283.418457] [<c035d2f4>] (dhdsdio_set_siaddr_window+0x0/0xa4) from [<c035d448>] (dhdsdio_membytes+0xb0/0x1f4)
+<4>[  283.418792]  r6:c0835360 r5:00000000 r4:00000020
+<4>[  283.419464] [<c035d398>] (dhdsdio_membytes+0x0/0x1f4) from [<c035d630>] (dhdsdio_readshared+0xa4/0x13c)
+<4>[  283.419830] [<c035d58c>] (dhdsdio_readshared+0x0/0x13c) from [<c0360f18>] (dhdsdio_checkdied.constprop.9+0x60/0x54c)
+<4>[  283.420166]  r6:c0835360 r5:c5898f00 r4:c72fc000
+<4>[  283.421020] [<c0360eb8>] (dhdsdio_checkdied.constprop.9+0x0/0x54c) from [<c0364d1c>] (dhd_bus_rxctl+0x118/0x240)
+<4>[  283.421386] [<c0364c04>] (dhd_bus_rxctl+0x0/0x240) from [<c036a190>] (dhdcdc_cmplt+0x40/0x78)
+<4>[  283.421600] [<c036a150>] (dhdcdc_cmplt+0x0/0x78) from [<c036a468>] (dhd_prot_ioctl+0x2a0/0x6d8)
+<4>[  283.421966]  r8:00000000 r7:c6c00000 r6:c6c15cd4 r5:c2abaf60 r4:c72d3000
+<4>[  283.422973] r3:00000000
+<4>[  283.423522] [<c036a1c8>] (dhd_prot_ioctl+0x0/0x6d8) from [<c036c408>] (dhd_wl_ioctl+0x40/0x6c)
+<4>[  283.423858] [<c036c3c8>] (dhd_wl_ioctl+0x0/0x6c) from [<c0355ac8>] (dhd_ioctl_entry+0x2fc/0x4c8)
+<4>[  283.424041]  r7:c72d3000 r6:c6c14000 r5:c72d2800 r4:00000000
+<4>[  283.425079] [<c03557cc>] (dhd_ioctl_entry+0x0/0x4c8) from [<bf01348c>] (wifi_pm_tasklet_function+0xa4/0xd4 [attestation])
+<4>[  283.425445] [<bf0133e8>] (wifi_pm_tasklet_function+0x0/0xd4 [attestation]) from [<c00acb68>] (tasklet_action+0x140/0x204)
+<4>[  283.425781]  r5:c6c14000 r4:bf0163d8
+<4>[  283.426269] [<c00aca28>] (tasklet_action+0x0/0x204) from [<c00ad17c>] (__do_softirq+0xd4/0x270)
+<4>[  283.426635] [<c00ad0a8>] (__do_softirq+0x0/0x270) from [<c00ad554>] (do_softirq+0x58/0x64)
+<4>[  283.427001] [<c00ad4fc>] (do_softirq+0x0/0x64) from [<c049c2d4>] (netif_rx_ni+0x68/0x84)
+<4>[  283.427185]  r4:c6c14000 r3:00000008
+<4>[  283.427825] [<c049c26c>] (netif_rx_ni+0x0/0x84) from [<c0355254>] (dhd_rx_frame+0x2bc/0x3d8)
+<4>[  283.428009]  r4:c5fbbf00
+<4>[  283.428558] [<c0354f98>] (dhd_rx_frame+0x0/0x3d8) from [<c03639b4>] (dhdsdio_readframes+0x1cdc/0x2838)
+<4>[  283.428894] [<c0361cd8>] (dhdsdio_readframes+0x0/0x2838) from [<c0366874>] (dhd_bus_dpc+0x6bc/0x1104)
+<4>[  283.429107] [<c03661b8>] (dhd_bus_dpc+0x0/0x1104) from [<c0356a60>] (dhd_dpc_thread+0xd8/0x104)
+<4>[  283.429443] [<c0356988>] (dhd_dpc_thread+0x0/0x104) from [<c00a9a64>] (do_exit+0x0/0x734)
+<4>[  283.429779]  r7:00000013 r6:c00a9a64 r5:c0356988 r4:c72d3374
+<3>[  283.430664] BUG: scheduling while atomic: dhd_dpc/96/0x00000102
+<4>[  283.430999] Modules linked in: attestation
+<4>[  283.431518] Backtrace: 
+<4>[  283.431915] [<c005a604>] (dump_backtrace+0x0/0x10c) from [<c05f639c>] (dump_stack+0x18/0x1c)
+<4>[  283.432220]  r6:c6c14000 r5:c6c103c0 r4:00000000 r3:60000113
+<4>[  283.433197] [<c05f6384>] (dump_stack+0x0/0x1c) from [<c05f6778>] (__schedule_bug+0x60/0x70)
+<4>[  283.433410] [<c05f6718>] (__schedule_bug+0x0/0x70) from [<c05fbc64>] (__schedule+0x6d4/0x7a8)
+<4>[  283.433746]  r4:c12026a0 r3:00000000
+<4>[  283.434295] [<c05fb590>] (__schedule+0x0/0x7a8) from [<c05fbe94>] (schedule+0x50/0x68)
+<4>[  283.434661] [<c05fbe44>] (schedule+0x0/0x68) from [<c05fc3f8>] (schedule_timeout+0x1c8/0x318)
+<4>[  283.435028] [<c05fc230>] (schedule_timeout+0x0/0x318) from [<c05fb43c>] (wait_for_common+0xc0/0x168)
+<4>[  283.435363] [<c05fb37c>] (wait_for_common+0x0/0x168) from [<c05fb58c>] (wait_for_completion+0x18/0x1c)
+<4>[  283.435729] [<c05fb574>] (wait_for_completion+0x0/0x1c) from [<c0411ee4>] (mmc_wait_for_req+0x100/0x144)
+<4>[  283.435943] [<c0411de4>] (mmc_wait_for_req+0x0/0x144) from [<c0411f9c>] (mmc_wait_for_cmd+0x74/0x94)
+<4>[  283.436340]  r6:00000000 r5:c7b7c800 r4:c6c15860
+<4>[  283.437164] [<c0411f28>] (mmc_wait_for_cmd+0x0/0x94) from [<c041a2b0>] (mmc_io_rw_direct_host+0xa8/0x13c)
+<4>[  283.437500]  r6:00000000 r5:00000000 r4:c7b7c800
+<4>[  283.438232] [<c041a208>] (mmc_io_rw_direct_host+0x0/0x13c) from [<c041a47c>] (mmc_io_rw_direct+0x30/0x48)
+<4>[  283.438568]  r6:0001000c r5:000000c9 r4:c6c158f0
+<4>[  283.439270] [<c041a44c>] (mmc_io_rw_direct+0x0/0x48) from [<c041bf48>] (sdio_writeb+0x44/0x64)
+<4>[  283.439636] [<c041bf04>] (sdio_writeb+0x0/0x64) from [<c03700f0>] (sdioh_request_byte+0x20c/0x2e8)
+<4>[  283.439971]  r4:c08ebc80
+<4>[  283.440338] [<c036fee4>] (sdioh_request_byte+0x0/0x2e8) from [<c03701f8>] (sdioh_cfg_write+0x2c/0x34)
+<4>[  283.440704] [<c03701cc>] (sdioh_cfg_write+0x0/0x34) from [<c036992c>] (bcmsdh_cfg_write+0x44/0xa0)
+<4>[  283.441070] [<c03698e8>] (bcmsdh_cfg_write+0x0/0xa0) from [<c035d390>] (dhdsdio_set_siaddr_window+0x9c/0xa4)
+<4>[  283.441284]  r8:00000000 r7:000029a0 r6:c72fc000 r5:18000000 r4:c6c1598c
+<4>[  283.442474] [<c035d2f4>] (dhdsdio_set_siaddr_window+0x0/0xa4) from [<c035d448>] (dhdsdio_membytes+0xb0/0x1f4)
+<4>[  283.442840]  r6:c0835360 r5:00000000 r4:00000020
+<4>[  283.443572] [<c035d398>] (dhdsdio_membytes+0x0/0x1f4) from [<c035d630>] (dhdsdio_readshared+0xa4/0x13c)
+<4>[  283.443908] [<c035d58c>] (dhdsdio_readshared+0x0/0x13c) from [<c0360f18>] (dhdsdio_checkdied.constprop.9+0x60/0x54c)
+<4>[  283.444305]  r6:c0835360 r5:c5898f00 r4:c72fc000
+<4>[  283.444976] [<c0360eb8>] (dhdsdio_checkdied.constprop.9+0x0/0x54c) from [<c0364d1c>] (dhd_bus_rxctl+0x118/0x240)
+<4>[  283.445190] [<c0364c04>] (dhd_bus_rxctl+0x0/0x240) from [<c036a190>] (dhdcdc_cmplt+0x40/0x78)
+<4>[  283.445526] [<c036a150>] (dhdcdc_cmplt+0x0/0x78) from [<c036a468>] (dhd_prot_ioctl+0x2a0/0x6d8)
+<4>[  283.445861]  r8:00000000 r7:c6c00000 r6:c6c15cd4 r5:c2abaf60 r4:c72d3000
+<4>[  283.446868] r3:00000000
+<4>[  283.447418] [<c036a1c8>] (dhd_prot_ioctl+0x0/0x6d8) from [<c036c408>] (dhd_wl_ioctl+0x40/0x6c)
+<4>[  283.447753] [<c036c3c8>] (dhd_wl_ioctl+0x0/0x6c) from [<c0355ac8>] (dhd_ioctl_entry+0x2fc/0x4c8)
+<4>[  283.447967]  r7:c72d3000 r6:c6c14000 r5:c72d2800 r4:00000000
+<4>[  283.449005] [<c03557cc>] (dhd_ioctl_entry+0x0/0x4c8) from [<bf01348c>] (wifi_pm_tasklet_function+0xa4/0xd4 [attestation])
+<4>[  283.449401] [<bf0133e8>] (wifi_pm_tasklet_function+0x0/0xd4 [attestation]) from [<c00acb68>] (tasklet_action+0x140/0x204)
+<4>[  283.449707]  r5:c6c14000 r4:bf0163d8
+<4>[  283.450256] [<c00aca28>] (tasklet_action+0x0/0x204) from [<c00ad17c>] (__do_softirq+0xd4/0x270)
+<4>[  283.450592] [<c00ad0a8>] (__do_softirq+0x0/0x270) from [<c00ad554>] (do_softirq+0x58/0x64)
+<4>[  283.450988] [<c00ad4fc>] (do_softirq+0x0/0x64) from [<c049c2d4>] (netif_rx_ni+0x68/0x84)
+<4>[  283.451202]  r4:c6c14000 r3:00000008
+<4>[  283.451721] [<c049c26c>] (netif_rx_ni+0x0/0x84) from [<c0355254>] (dhd_rx_frame+0x2bc/0x3d8)
+<4>[  283.451934]  r4:c5fbbf00
+<4>[  283.452423] [<c0354f98>] (dhd_rx_frame+0x0/0x3d8) from [<c03639b4>] (dhdsdio_readframes+0x1cdc/0x2838)
+<4>[  283.452636] [<c0361cd8>] (dhdsdio_readframes+0x0/0x2838) from [<c0366874>] (dhd_bus_dpc+0x6bc/0x1104)
+<4>[  283.452972] [<c03661b8>] (dhd_bus_dpc+0x0/0x1104) from [<c0356a60>] (dhd_dpc_thread+0xd8/0x104)
+<4>[  283.453338] [<c0356988>] (dhd_dpc_thread+0x0/0x104) from [<c00a9a64>] (do_exit+0x0/0x734)
+<4>[  283.453674]  r7:00000013 r6:c00a9a64 r5:c0356988 r4:c72d3374
+<4>[  283.454559] dhd_bus_rxctl: rxcnt_timeout=1
+<4>[  283.454895] checkmate_set_power_mode_internal: Error ndo_do_ioctl: -22

@@ -1,0 +1,10 @@
+PREPARE:
+
+1.) Create symbolic links trunk/ndk and trunk/sdk which link to your local copy of the latest Android NDK and SDK respectively.
+2.) cd trunk && ./prepare.sh 
+3.) make -j 4 -- will build everything
+4.) copy the file to the SVMP build.
+    - create symbolic link trunk/SVMP which points to the root of your SVMP build directory
+    - cp trunk/out/Debug/fbstream-pvx  trunk/SVMP/out/target/product/svmp/system/bin/
+
+# Then consult SVMP documentation on how to build an image that can be imported into your VM.

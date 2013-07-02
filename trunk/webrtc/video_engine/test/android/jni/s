@@ -1,0 +1,236 @@
+------------------------------------------------------------------------
+r4126 | andrew@webrtc.org | 2013-05-28 20:38:02 -0400 (Tue, 28 May 2013) | 5 lines
+
+Rename voice_engine_core -> voice_engine and move targets to voice_engine.gyp.
+
+R=kjellander@webrtc.org
+
+Review URL: https://webrtc-codereview.appspot.com/1574004
+------------------------------------------------------------------------
+r4114 | fischman@webrtc.org | 2013-05-28 01:49:43 -0400 (Tue, 28 May 2013) | 7 lines
+
+Remove libvpx_intrinsics_sse4_1.a in Android.mk since this target is no longer generated in libvpx
+
+R=fischman@webrtc.org
+
+Review URL: https://webrtc-codereview.appspot.com/1569004
+
+Patch from Jeremy Mao <yujie.mao@intel.com>.
+------------------------------------------------------------------------
+r4053 | fischman@webrtc.org | 2013-05-17 01:41:07 -0400 (Fri, 17 May 2013) | 13 lines
+
+Enable WebRTC demo application on x86 Android
+
+Steps to build the demo application for x86 Android:
+source build/android/envsetup.sh --target-arch=x86
+gclient runhooks
+ninja -C out/Debug
+cd webrtc/video_engine/test/android
+ndk-build APP_ABI=x86
+ant debug
+
+R=fischman@webrtc.org, leozwang@webrtc.org
+
+Review URL: https://webrtc-codereview.appspot.com/1478004
+------------------------------------------------------------------------
+r3928 | andrew@webrtc.org | 2013-04-30 19:43:26 -0400 (Tue, 30 Apr 2013) | 7 lines
+
+Consolidate common_audio into a single target.
+
+In principle should reduce gyp processing time, but the difference was not measurable. In any case, it's a good simplification that aligns with having a single common_video target.
+
+R=bjornv@webrtc.org, kma@webrtc.org, tina.legrand@webrtc.org
+
+Review URL: https://webrtc-codereview.appspot.com/1375004
+------------------------------------------------------------------------
+r3788 | pwestin@webrtc.org | 2013-04-08 19:25:25 -0400 (Mon, 08 Apr 2013) | 2 lines
+
+Remove the old unused udp_transport
+Review URL: https://webrtc-codereview.appspot.com/1272009
+------------------------------------------------------------------------
+r3712 | pwestin@webrtc.org | 2013-03-22 15:21:27 -0400 (Fri, 22 Mar 2013) | 2 lines
+
+Move the VIE tests to use external transport instead of the built in udp transport
+Review URL: https://webrtc-codereview.appspot.com/1216010
+------------------------------------------------------------------------
+r3528 | stefan@webrtc.org | 2013-02-18 09:40:18 -0500 (Mon, 18 Feb 2013) | 3 lines
+
+Refactoring temporal layers implementation and adding VideoCodecMode for easier control of codec settings.
+
+Review URL: https://webrtc-codereview.appspot.com/1105007
+------------------------------------------------------------------------
+r3505 | andrew@webrtc.org | 2013-02-12 14:35:18 -0500 (Tue, 12 Feb 2013) | 6 lines
+
+Sync libvpx and its gyp wrapper from Chromium.
+
+TBR=kjellander
+BUG=webrtc:1213
+
+Review URL: https://webrtc-codereview.appspot.com/1096007
+------------------------------------------------------------------------
+r3497 | kjellander@webrtc.org | 2013-02-11 12:43:19 -0500 (Mon, 11 Feb 2013) | 33 lines
+
+Android NDK build tools
+
+This CL enables building with Android NDK in the way that Chromium buildbots do it.
+
+== Overview ==
+* Add Android dependencies to DEPS (SDK, NDK, Android test runner). This also makes it possible to use Android's build/android/run_tests.py script to execute tests on Android devices.
+* Add a Python script to build the WebRTC Video demo for Android using ndk-build and Ant. This is designed as an annotation script for Buildbots but is also fine to run locally.
+* Update Android.mk so it works with the compiler output from a build performed by build/android/buildbot/bb_run_bot.py (which is how Chrome buildbots build).
+
+== Syncing Android dependencies ==
+To get the dependencies added in DEPS synced out, you must change the last line
+of your .gclient file to look like this:
+];target_os = ["android"]
+
+That will append another variable to the .gclient file that causes these
+dependencies to be synced during gclient sync.
+If you want to get additional platform-specific dependencies in the same
+checkout, add them to the list too, e.g. target_os = ["android", "unix"].
+
+== Android.mk ==
+The fix in Android.mk is needed since Chrome is building using build/android/buildbot/bb_run_bot.py, which only output the libraries into out/Debug. With the change it works for both that and a normal build (which copies the library files from out/Debug/obj.target/subpath to out/Debug anyway as a part of the build).
+
+== svn:ignore ==
+NOTICE: Before submitting, the following directories should be added to svn:ignore in third_party to avoid them from being removed and re-synced for every build:
+* android_testrunner
+* android_tools
+* WebKit
+This has to be done in a manual SVN commit since it's not possible to include in a git-svn CL (and I don't want to migrate this to a SVN CL).
+
+BUG=none
+TEST=local builds
+
+Review URL: https://webrtc-codereview.appspot.com/1024009
+------------------------------------------------------------------------
+r3264 | hclam@chromium.org | 2012-12-11 17:27:55 -0500 (Tue, 11 Dec 2012) | 4 lines
+
+Use TRACE_EVENT to track time spent in VP8 encoding
+
+Using the TRACE_EVENT macro to log VP8 encoding events.
+Review URL: https://webrtc-codereview.appspot.com/968011
+------------------------------------------------------------------------
+r3233 | dwkang@webrtc.org | 2012-12-04 01:38:19 -0500 (Tue, 04 Dec 2012) | 10 lines
+
+First pass of MediaCodecDecoder which uses Android MediaCodec API.
+
+Background:
+As of now, MediaCodec API is the only public interface which enables us
+to access low level HW resource in Android. ViEMediaCodecDecoder will be
+used for further experiments/exploration.
+
+TODO:
+  To fix known issues. (detaching thread from VM and frequent GC)
+Review URL: https://webrtc-codereview.appspot.com/933033
+------------------------------------------------------------------------
+r3201 | fischman@webrtc.org | 2012-11-29 13:06:00 -0500 (Thu, 29 Nov 2012) | 6 lines
+
+Enable building WebRTCDemo apk using Release webrtc libs, take 2.
+
+Now passing BUILDTYPE=Release to both the make that builds the libs and the
+ndk-build that builds the app makes the app use non-Debug libs.
+
+Review URL: https://webrtc-codereview.appspot.com/966029
+------------------------------------------------------------------------
+r3191 | fischman@webrtc.org | 2012-11-28 20:18:04 -0500 (Wed, 28 Nov 2012) | 8 lines
+
+Revert 3190 - Enable building WebRTCDemo apk using Release webrtc libs.
+
+Now passing BUILDTYPE=Release to both the make that builds the libs and the
+ndk-build that builds the app makes the app use non-Debug libs.
+
+TBR=leozwang@webrtc.org,
+
+Review URL: https://webrtc-codereview.appspot.com/968010
+------------------------------------------------------------------------
+r3190 | fischman@webrtc.org | 2012-11-28 20:09:44 -0500 (Wed, 28 Nov 2012) | 6 lines
+
+Enable building WebRTCDemo apk using Release webrtc libs.
+
+Now passing BUILDTYPE=Release to both the make that builds the libs and the
+ndk-build that builds the app makes the app use non-Debug libs.
+
+Review URL: https://webrtc-codereview.appspot.com/972007
+------------------------------------------------------------------------
+r3141 | leozwang@webrtc.org | 2012-11-20 23:10:16 -0500 (Tue, 20 Nov 2012) | 18 lines
+
+Reorganize gyp for Android
+
+BUG=1120
+TEST=trybot, local test on xoom and nexus
+
+Message:
+It turned out the last CL can only build neon code that
+caused problem on Xoom.
+
+Description:
+In order to support audo-cpu-detection, I split files into two gypi files, one
+contains non-neon code, antoher one ONLY contains neon specific code, so I can
+apply different flags to them. Also created two build targets for each of them
+
+We build for linux as before.
+
+Tested on xoom and nexus S.
+Review URL: https://webrtc-codereview.appspot.com/930024
+------------------------------------------------------------------------
+r3091 | leozwang@webrtc.org | 2012-11-13 18:36:41 -0500 (Tue, 13 Nov 2012) | 4 lines
+
+Add libpaced_sender to Android makefile
+
+TBR=mflodman
+Review URL: https://webrtc-codereview.appspot.com/965022
+------------------------------------------------------------------------
+r3022 | leozwang@webrtc.org | 2012-10-30 15:04:58 -0400 (Tue, 30 Oct 2012) | 5 lines
+
+Check if opus exists when build test app on Android
+
+BUG=None
+TEST=trybots
+Review URL: https://webrtc-codereview.appspot.com/933011
+------------------------------------------------------------------------
+r3012 | leozwang@webrtc.org | 2012-10-27 13:46:55 -0400 (Sat, 27 Oct 2012) | 5 lines
+
+Enable Opus
+
+BUG=webrtc issue 992
+TEST=trybots
+Review URL: https://webrtc-codereview.appspot.com/942004
+------------------------------------------------------------------------
+r2983 | mikhal@webrtc.org | 2012-10-24 14:33:04 -0400 (Wed, 24 Oct 2012) | 3 lines
+
+Switching to I420VideoFrame
+
+Review URL: https://webrtc-codereview.appspot.com/922004
+------------------------------------------------------------------------
+r2968 | leozwang@webrtc.org | 2012-10-22 18:05:25 -0400 (Mon, 22 Oct 2012) | 4 lines
+
+Change android NDK library path
+
+TBR=wu
+Review URL: https://webrtc-codereview.appspot.com/926004
+------------------------------------------------------------------------
+r2963 | andrew@webrtc.org | 2012-10-22 14:19:23 -0400 (Mon, 22 Oct 2012) | 5 lines
+
+Move src/ -> webrtc/
+
+TBR=niklas.enbom@webrtc.org
+
+Review URL: https://webrtc-codereview.appspot.com/915006
+------------------------------------------------------------------------
+r2870 | leozwang@webrtc.org | 2012-10-04 11:59:11 -0400 (Thu, 04 Oct 2012) | 5 lines
+
+Make Android.mk to be able to inclucde subfolder makefiles
+
+BUG=None
+TEST=trybot
+Review URL: https://webrtc-codereview.appspot.com/868006
+------------------------------------------------------------------------
+r2862 | leozwang@webrtc.org | 2012-10-02 16:13:56 -0400 (Tue, 02 Oct 2012) | 5 lines
+
+Move video android test to test folder
+
+BUG=N/A
+TEST=local test
+Review URL: https://webrtc-codereview.appspot.com/863005
+------------------------------------------------------------------------
