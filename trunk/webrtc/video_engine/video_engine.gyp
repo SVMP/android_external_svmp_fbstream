@@ -23,7 +23,7 @@
       'conditions': [
         ['OS=="android"', {
           'includes': [
-            'test/android/android_video_demo.gypi',
+            #'test/android/android_video_demo.gypi',
           ],
         }],
       ],
