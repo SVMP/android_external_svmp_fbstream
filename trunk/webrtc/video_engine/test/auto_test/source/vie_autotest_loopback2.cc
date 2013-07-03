@@ -522,6 +522,12 @@ int VideoEngineSampleCode(void* w1, void* w2, int *Argc, char ***Argv)
     	return -1;
     }
 
+    error = ptrViEBase->StartReceive(videoChannel);
+    if (error == -1)
+    {
+    	printf("ERROR in ViENetwork::StartReceive\n");
+    	return -1;
+    }
 
     error = ptrViEBase->StartSend(videoChannel);
     if (error == -1)

@@ -418,8 +418,11 @@ void JNICALL AndroidNativeOpenGl2Channel::DrawNativeStatic(
   renderChannel->DrawNative();
 }
 
+/* Upstream BUG 1616 */
 void AndroidNativeOpenGl2Channel::DrawNative() {
-  _openGLRenderer.Render(_bufferToRender);
+	_renderCritSect.Enter();
+	_openGLRenderer.Render(_bufferToRender);
+	_renderCritSect.Leave();
 }
 
 /*
