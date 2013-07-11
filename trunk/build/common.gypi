@@ -1202,6 +1202,7 @@
              # gyp.
 	     'android_ndk_root%': '<!(cd <(DEPTH) && pwd -P)/third_party/android_tools/ndk/',
 	     'android_sdk_root%': '<!(cd <(DEPTH) && pwd -P)/third_party/android_tools/sdk/',
+	     'android_build_root%': '<!(cd <(DEPTH) && pwd -P)/third_party/android_tools/aosp/',
              'android_host_arch%': '<!(uname -m)',
              # Android API-level of the SDK used for compilation.
              'android_sdk_version%': '17',
@@ -1209,6 +1210,7 @@
           # Copy conditionally-set variables out one scope.
           'android_ndk_root%': '<(android_ndk_root)',
           'android_sdk_root%': '<(android_sdk_root)',
+          'android_build_root%': '<(android_build_root)',
           'android_sdk_version%': '<(android_sdk_version)',
           'android_stlport_root': '<(android_ndk_root)/sources/cxx-stl/stlport',
 
@@ -1250,6 +1252,7 @@
         'android_ndk_root%': '<(android_ndk_root)',
         'android_ndk_sysroot': '<(android_ndk_sysroot)',
         'android_sdk_root%': '<(android_sdk_root)',
+        'android_build_root%': '<(android_build_root)',
         'android_sdk_version%': '<(android_sdk_version)',
         'android_toolchain%': '<(android_toolchain)',
 

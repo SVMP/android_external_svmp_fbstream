@@ -10,7 +10,7 @@
   'targets': [
     {
     
-      'target_name': 'vie_auto_test',
+      'target_name': 'fbstream_webrtc',
       'type': 'executable',
       'dependencies': [
         '<(webrtc_root)/system_wrappers/source/system_wrappers.gyp:system_wrappers',
@@ -75,7 +75,7 @@
  	# original code:
         #'source/vie_autotest_loopback.cc',
         # SVMP code below:
-        'source/vie_autotest_loopback2.cc',
+	'source/vie_svmp_fbstream.cc',
  	# original code:
         #'source/vie_autotest_main.cc',
         # SVMP code below:
@@ -107,6 +107,9 @@
           'libraries': [
             '-lGLESv2',
             '-llog',
+          ],
+	  'include_dirs': [
+		  '<(android_build_root)/system/core/include',
           ],
         }],
         ['OS=="linux"', {

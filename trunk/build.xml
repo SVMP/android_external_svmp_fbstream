@@ -1,0 +1,61 @@
+<project name="protocol" default="dist" basedir=".">
+    <description>
+        simple example build file
+    </description>
+  <!-- set global properties for this build -->
+  <property name="src" location="src"/>
+  <property name="build" location="build"/>
+  <property name="build2" location="build2"/>
+  <property name="dist"  location="dist"/>
+  <property name="fbstream"  location="out/Debug/fbstream_webrtc" />
+  <property name="vm" value="mm160771-pc.mitre.org" />
+
+  <target name="init">
+	  <!-- Create the time stamp -->
+	  <tstamp/>
+	  <!--disconnect-->
+	  <exec  executable="adb">
+		  <arg value="disconnect" />
+		  <arg value="${vm}" />
+	  </exec>
+	   <!--connect-->
+	  <exec failonerror="true" executable="adb">
+		  <arg value="connect" />
+		  <arg value="${vm}" />
+	  </exec>
+  </target>
+
+  <target name="compile" depends="init"
+	  description="compile the source " >
+	  <exec executable="bash" newenvironment="false" dir="./">
+		  <arg value="./build.sh" />
+	  </exec>
+
+  </target>
+  <target name="strip" depends="compile"
+	  description="strip the executable" >
+	  <exec executable="strip" newenvironment="false" dir="./">
+		  <arg value="${fbstream}" />
+	  </exec>
+  </target>
+  <target name="dist" depends="strip"
+	  description="deploy the file" >
+	  <!-- Create the distribution directory -->
+	  <!-- copy the input jar -->
+	  <echo message="adb push ${fbstream} /system/bin/"/>
+	  <exec executable="adb">
+		  <arg value="push" />
+		  <arg value="${fbstream}" />
+		  <arg value="/system/bin/" />
+	  </exec>
+	  
+  </target>
+
+  <target name="clean"
+        description="clean up" >
+    <!-- Delete the ${build} and ${dist} directory trees -->
+    <delete dir="${build}"/>
+    <delete dir="${build2}"/>
+    <delete dir="${dist}"/>
+  </target>
+</project>
