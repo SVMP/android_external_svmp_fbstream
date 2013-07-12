@@ -18,4 +18,5 @@ Build Steps:
 7.  ./build.sh
 8.  strip out/Debug/fbstream_webrtc
 9.  cp out/Debug/fbstream_webrtc $SVMP_ROOT/out/target/product/svmp/system/bin/
-10. Rebuild the SVMP system disk image a 2nd time so fbstream_webrtc gets included in /system/bin
+10. rm $SVMP_ROOT/out/target/product/svmp/system/bin/*.[img, vdi, vmdk]
+11. Rebuild the SVMP system disk image a 2nd time so fbstream_webrtc gets included in /system/bin
