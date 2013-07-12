@@ -1,0 +1,21 @@
+Building
+========
+
+Prerequisites:
+
+* Latest Android SDK installed in $ANDROID_SDK
+* Latest Android NDK install in $ANDROID_NDK
+* The SVMP VM instance checked out and built in $SVMP_ROOT
+
+Build Steps:
+
+1.  cd $SVMP_ROOT/externals/svmp/fbstream
+2.  git submodule init ; git submodule update
+3.  ln -s $ANDROID_SDK trunk/third_party/android_tools/sdk
+4.  ln -s $ANDROID_NDK trunk/third_party/android_tools/ndk
+5.  ln -s $SVMP_ROOT trunk/third_party/android_tools/aosp
+6.  cd trunk
+7.  ./build.sh
+8.  strip out/Debug/fbstream_webrtc
+9.  cp out/Debug/fbstream_webrtc $SVMP_ROOT/out/target/product/svmp/system/bin/
+10. Rebuild the SVMP system disk image a 2nd time so fbstream_webrtc gets included in /system/bin
