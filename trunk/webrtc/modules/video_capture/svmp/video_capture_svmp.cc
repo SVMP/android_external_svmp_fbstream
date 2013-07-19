@@ -644,13 +644,13 @@ bool VideoCaptureModuleV4L2::CaptureThread(void* obj)
 }
 bool VideoCaptureModuleV4L2::CaptureProcess()
 {
-    //int retVal = 0;
-    /*fd_set rSet;
-    struct timeval timeout;*/
+    int retVal = 0;
+    fd_set rSet;
+    struct timeval timeout;
 
     _captureCritSect->Enter();
 
- /*   FD_ZERO(&rSet);
+    FD_ZERO(&rSet);
     FD_SET(_deviceFd, &rSet);
     timeout.tv_sec = 1;
     timeout.tv_usec = 0;
@@ -673,7 +673,7 @@ bool VideoCaptureModuleV4L2::CaptureProcess()
         // not event on camera handle
         _captureCritSect->Leave();
         return true;
-    }*/
+    }
 
     if (_captureStarted)
     {

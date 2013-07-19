@@ -8,6 +8,7 @@
   <property name="build2" location="build2"/>
   <property name="dist"  location="dist"/>
   <property name="fbstream"  location="out/Debug/fbstream_webrtc" />
+  <!--<property name="fbstream-debug"  location="out/Debug/fbstream_webrtc-debug" />-->
   <property name="vm" value="mm160771-pc.mitre.org" />
 
   <target name="init">
@@ -34,22 +35,50 @@
   </target>
   <target name="strip" depends="compile"
 	  description="strip the executable" >
+	  <exec executable="cp" newenvironment="false" dir="./">
+		  <arg value="${fbstream}" />
+		  <arg value="${fbstream}-dbg" />
+	  </exec>
 	  <exec executable="strip" newenvironment="false" dir="./">
 		  <arg value="${fbstream}" />
 	  </exec>
   </target>
+
   <target name="dist" depends="strip"
 	  description="deploy the file" >
 	  <!-- Create the distribution directory -->
 	  <!-- copy the input jar -->
 	  <echo message="adb push ${fbstream} /system/bin/"/>
 	  <exec executable="adb">
+		  <arg value="-s"/>
+		  <arg value="${vm}:5555"/>
 		  <arg value="push" />
 		  <arg value="${fbstream}" />
 		  <arg value="/system/bin/" />
 	  </exec>
 	  
   </target>
+  <!--<target name="strip2" depends="compile"-->
+	  <!--description="strip the executable" >-->
+	  <!--<exec executable="strip" newenvironment="false" dir="./">-->
+		  <!--<arg value="${fbstream-debug}" />-->
+	  <!--</exec>-->
+  <!--</target>-->
+
+  <!--<target name="dist2" depends="strip2"-->
+	  <!--description="deploy the file" >-->
+	  <!--[> Create the distribution directory <]-->
+	  <!--[> copy the input jar <]-->
+	  <!--<echo message="adb push ${fbstream-debug} /system/bin/"/>-->
+	  <!--<exec executable="adb">-->
+		  <!--<arg value="-s"/>-->
+		  <!--<arg value="${vm}:5555"/>-->
+		  <!--<arg value="push" />-->
+		  <!--<arg value="${fbstream-debug}" />-->
+		  <!--<arg value="/system/bin/" />-->
+	  <!--</exec>-->
+	  
+  <!--</target>-->
 
   <target name="clean"
         description="clean up" >

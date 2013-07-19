@@ -151,25 +151,31 @@ static int cleanup(struct complete_stream *str){
 }
 
 int initVideo(struct complete_stream *str) {
+
+//	printf("!!!\n");
+//	printf("DEBUG: Start video streamer to %s:%d\n",str->init.IP,str->init.vidport);
+//	printf("!!!\n");
+//
+//	return 0;
+
 	int error = 0;
-	webrtc::VideoEngine* ptrViE = NULL; 
-	ptrViE = webrtc::VideoEngine::Create();
-	str->ptrViE = ptrViE;
-	if (ptrViE == NULL)
+	//webrtc::VideoEngine* ptrViE = NULL;
+	str->ptrViE = webrtc::VideoEngine::Create();
+	if (str->ptrViE == NULL)
 	{
 		printf("ERROR in VideoEngine::Create\n");
 		return -1;
 	}
 
 #ifdef DEBUG_FBSTREAM
-	error = ptrViE->SetTraceFilter(webrtc::kTraceAll);
+	error = str->ptrViE->SetTraceFilter(webrtc::kTraceAll);
 	if (error == -1)
 	{
 		printf("ERROR in VideoEngine::SetTraceFilter\n");
 		return -1;
 	}
 #else
-	error = ptrViE->SetTraceFilter(webrtc::kTraceError);
+	error = str->ptrViE->SetTraceFilter(webrtc::kTraceError);
 	if (error == -1)
 	{
 		printf("ERROR in VideoEngine::SetTraceFilter\n");
@@ -178,7 +184,7 @@ int initVideo(struct complete_stream *str) {
 #endif
 
 	std::string trace_file = ViETest::GetResultOutputPath() + "fbstream_webrtc_trace.txt";
-	error = ptrViE->SetTraceFile(trace_file.c_str());
+	error = str->ptrViE->SetTraceFile(trace_file.c_str());
 	if (error == -1)
 	{
 		printf("ERROR in VideoEngine::SetTraceFile\n");
@@ -188,32 +194,31 @@ int initVideo(struct complete_stream *str) {
 	//
 	// Init VideoEngine and create a channel
 	//
-	webrtc::ViEBase* ptrViEBase = webrtc::ViEBase::GetInterface(ptrViE);
-	str->ptrViEBase = ptrViEBase;
-	if (ptrViEBase == NULL)
+	//webrtc::ViEBase* ptrViEBase 
+	str->ptrViEBase	= webrtc::ViEBase::GetInterface(str->ptrViE);
+	if (str->ptrViEBase == NULL)
 	{
 		printf("ERROR in ViEBase::GetInterface\n");
 		return -1;
 	}
 
-	error = ptrViEBase->Init();
+	error = str->ptrViEBase->Init();
 	if (error == -1)
 	{
 		printf("ERROR in ViEBase::Init\n");
 		return -1;
 	}
 
-	webrtc::ViERTP_RTCP* ptrViERtpRtcp =
-		webrtc::ViERTP_RTCP::GetInterface(ptrViE);
-	str->ptrViERtpRtcp=ptrViERtpRtcp;
-	if (ptrViERtpRtcp == NULL)
+//	webrtc::ViERTP_RTCP* ptrViERtpRtcp =
+	str->ptrViERtpRtcp=webrtc::ViERTP_RTCP::GetInterface(str->ptrViE);
+	if (str->ptrViERtpRtcp == NULL)
 	{
 		printf("ERROR in ViERTP_RTCP::GetInterface\n");
 		return -1;
 	}
 
-	int videoChannel = -1;
-	error = ptrViEBase->CreateChannel(videoChannel);
+	str->videoChannel = -1;
+	error = str->ptrViEBase->CreateChannel(str->videoChannel);
 	if (error == -1)
 	{
 		printf("ERROR in ViEBase::CreateChannel\n");
@@ -223,10 +228,9 @@ int initVideo(struct complete_stream *str) {
 	//
 	// List available capture devices, allocate and connect.
 	//
-	webrtc::ViECapture* ptrViECapture =
-		webrtc::ViECapture::GetInterface(ptrViE);
-	str->ptrViECapture=ptrViECapture;
-	if (ptrViEBase == NULL)
+	//webrtc::ViECapture* ptrViECapture =
+	str->ptrViECapture = webrtc::ViECapture::GetInterface(str->ptrViE);
+	if (str->ptrViEBase == NULL)
 	{
 		printf("ERROR in ViECapture::GetInterface\n");
 		return -1;
@@ -242,13 +246,13 @@ int initVideo(struct complete_stream *str) {
 	printf("Available capture devices:\n");
 	int captureIdx = 0;
 	for (captureIdx = 0;
-			captureIdx < ptrViECapture->NumberOfCaptureDevices();
+			captureIdx < str->ptrViECapture->NumberOfCaptureDevices();
 			captureIdx++)
 	{
 		memset(deviceName, 0, KMaxDeviceNameLength);
 		memset(uniqueId, 0, KMaxUniqueIdLength);
 
-		error = ptrViECapture->GetCaptureDevice(captureIdx, deviceName,
+		error = str->ptrViECapture->GetCaptureDevice(captureIdx, deviceName,
 				KMaxDeviceNameLength, uniqueId,
 				KMaxUniqueIdLength);
 		if (error == -1)
@@ -272,7 +276,7 @@ int initVideo(struct complete_stream *str) {
 	captureIdx = captureIdx - 1; // Compensate for idx start at 1.
 #endif
 	// Get the name of the device.
-	error = ptrViECapture->GetCaptureDevice(captureIdx, deviceName,
+	error = str->ptrViECapture->GetCaptureDevice(captureIdx, deviceName,
 			KMaxDeviceNameLength, uniqueId,
 			KMaxUniqueIdLength);
 	if (error == -1)
@@ -281,16 +285,16 @@ int initVideo(struct complete_stream *str) {
 		return -1;
 	}
 
-	int captureId = 0;
-	error = ptrViECapture->AllocateCaptureDevice(uniqueId, KMaxUniqueIdLength,
-			captureId);
+	str->captureId = 0;
+	error = str->ptrViECapture->AllocateCaptureDevice(uniqueId, KMaxUniqueIdLength,
+			str->captureId);
 	if (error == -1)
 	{
 		printf("ERROR in ViECapture::AllocateCaptureDevice\n");
 		return -1;
 	}
 
-	error = ptrViECapture->ConnectCaptureDevice(captureId, videoChannel);
+	error = str->ptrViECapture->ConnectCaptureDevice(str->captureId, str->videoChannel);
 	if (error == -1)
 	{
 		printf("ERROR in ViECapture::ConnectCaptureDevice\n");
@@ -300,7 +304,7 @@ int initVideo(struct complete_stream *str) {
 	//webrtc::VideoCaptureCapability cap;
 
 
-	error = ptrViECapture->StartCapture(captureId);
+	error = str->ptrViECapture->StartCapture(str->captureId);
 	if (error == -1)
 	{
 		printf("ERROR in ViECapture::StartCapture\n");
@@ -311,7 +315,7 @@ int initVideo(struct complete_stream *str) {
 	// RTP/RTCP settings
 	//
 
-	error = ptrViERtpRtcp->SetRTCPStatus(videoChannel,
+	error = str->ptrViERtpRtcp->SetRTCPStatus(str->videoChannel,
 			webrtc::kRtcpCompound_RFC4585);
 	if (error == -1)
 	{
@@ -319,15 +323,15 @@ int initVideo(struct complete_stream *str) {
 		return -1;
 	}
 
-	error = ptrViERtpRtcp->SetKeyFrameRequestMethod(
-			videoChannel, webrtc::kViEKeyFrameRequestPliRtcp);
+	error = str->ptrViERtpRtcp->SetKeyFrameRequestMethod(
+			str->videoChannel, webrtc::kViEKeyFrameRequestPliRtcp);
 	if (error == -1)
 	{
 		printf("ERROR in ViERTP_RTCP::SetKeyFrameRequestMethod\n");
 		return -1;
 	}
 
-	error = ptrViERtpRtcp->SetRembStatus(videoChannel, true, true);
+	error = str->ptrViERtpRtcp->SetRembStatus(str->videoChannel, true, true);
 	if (error == -1)
 	{
 		printf("ERROR in ViERTP_RTCP::SetTMMBRStatus\n");
@@ -336,7 +340,7 @@ int initVideo(struct complete_stream *str) {
 
 	// Setting SSRC manually (arbitrary value), as otherwise we will get a clash
 	// (loopback), and a new SSRC will be set, which will reset the receiver.
-	error = ptrViERtpRtcp->SetLocalSSRC(videoChannel, 0x01234567);
+	error = str->ptrViERtpRtcp->SetLocalSSRC(str->videoChannel, 0x01234567);
 	if (error == -1)
 	{
 		printf("ERROR in ViERTP_RTCP::SetLocalSSRC\n");
@@ -348,9 +352,9 @@ int initVideo(struct complete_stream *str) {
 	//
 	// Setup codecs
 	//
-	webrtc::ViECodec* ptrViECodec = webrtc::ViECodec::GetInterface(ptrViE);
-	str->ptrViECodec = ptrViECodec;
-	if (ptrViECodec == NULL)
+	//webrtc::ViECodec* ptrViECodec =
+	str->ptrViECodec = webrtc::ViECodec::GetInterface(str->ptrViE);
+	if (str->ptrViECodec == NULL)
 	{
 		printf("ERROR in ViECodec::GetInterface\n");
 		return -1;
@@ -361,9 +365,9 @@ int initVideo(struct complete_stream *str) {
 	webrtc::VideoCodec videoCodec;
 	memset(&videoCodec, 0, sizeof(webrtc::VideoCodec));
 	int codecIdx = 0;
-	for (codecIdx = 0; codecIdx < ptrViECodec->NumberOfCodecs(); codecIdx++)
+	for (codecIdx = 0; codecIdx < str->ptrViECodec->NumberOfCodecs(); codecIdx++)
 	{
-		error = ptrViECodec->GetCodec(codecIdx, videoCodec);
+		error = str->ptrViECodec->GetCodec(codecIdx, videoCodec);
 		if (error == -1)
 		{
 			printf("ERROR in ViECodec::GetCodec\n");
@@ -377,7 +381,7 @@ int initVideo(struct complete_stream *str) {
 			videoCodec.height = 144;
 		}
 
-		error = ptrViECodec->SetReceiveCodec(videoChannel, videoCodec);
+		error = str->ptrViECodec->SetReceiveCodec(str->videoChannel, videoCodec);
 		if (error == -1)
 		{
 			printf("ERROR in ViECodec::SetReceiveCodec\n");
@@ -389,7 +393,7 @@ int initVideo(struct complete_stream *str) {
 			printf("\t %d. %s\n", codecIdx + 1, videoCodec.plName);
 		}
 	}
-	printf("%d. VP8 over Generic.\n", ptrViECodec->NumberOfCodecs() + 1);
+	printf("%d. VP8 over Generic.\n", str->ptrViECodec->NumberOfCodecs() + 1);
 
 	printf("Choose codec: ");
 #ifdef WEBRTC_ANDROID
@@ -405,9 +409,9 @@ int initVideo(struct complete_stream *str) {
 	codecIdx = codecIdx - 1; // Compensate for idx start at 1.
 #endif
 	// VP8 over generic transport gets this special one.
-	if (codecIdx == ptrViECodec->NumberOfCodecs()) {
-		for (codecIdx = 0; codecIdx < ptrViECodec->NumberOfCodecs(); ++codecIdx) {
-			error = ptrViECodec->GetCodec(codecIdx, videoCodec);
+	if (codecIdx == str->ptrViECodec->NumberOfCodecs()) {
+		for (codecIdx = 0; codecIdx < str->ptrViECodec->NumberOfCodecs(); ++codecIdx) {
+			error = str->ptrViECodec->GetCodec(codecIdx, videoCodec);
 			assert(error != -1);
 			if (videoCodec.codecType == webrtc::kVideoCodecVP8)
 				break;
@@ -419,17 +423,16 @@ int initVideo(struct complete_stream *str) {
 		strcpy(videoCodec.plName, "VP8-GENERIC");
 		uint8_t pl_type = 127;
 		videoCodec.plType = pl_type;
-		webrtc::ViEExternalCodec* external_codec = webrtc::ViEExternalCodec
-			::GetInterface(ptrViE);
+		webrtc::ViEExternalCodec* external_codec = webrtc::ViEExternalCodec::GetInterface(str->ptrViE);
 		assert(external_codec != NULL);
-		error = external_codec->RegisterExternalSendCodec(videoChannel, pl_type,
+		error = external_codec->RegisterExternalSendCodec(str->videoChannel, pl_type,
 				webrtc::VP8Encoder::Create(), false);
 		assert(error != -1);
-		error = external_codec->RegisterExternalReceiveCodec(videoChannel,
+		error = external_codec->RegisterExternalReceiveCodec(str->videoChannel,
 				pl_type, webrtc::VP8Decoder::Create(), false);
 		assert(error != -1);
 	} else {
-		error = ptrViECodec->GetCodec(codecIdx, videoCodec);
+		error = str->ptrViECodec->GetCodec(codecIdx, videoCodec);
 		if (error == -1) {
 			printf("ERROR in ViECodec::GetCodec\n");
 			return -1;
@@ -497,7 +500,9 @@ int initVideo(struct complete_stream *str) {
 	std::cout << "Choose number of temporal layers (1 to 4).";
 	std::cout << "Press enter for default: \n";
 	//std::getline(std::cin, str);
-	int numTemporalLayers = 1; //atoi(str.c_str());
+	// set to 4 temp.
+//	int numTemporalLayers = 1; //atoi(str.c_str());
+	int numTemporalLayers = 4; //atoi(str.c_str());
 	if(numTemporalLayers != 0)
 	{
 		videoCodec.codecSpecific.VP8.numberOfTemporalLayers = numTemporalLayers;
@@ -507,16 +512,18 @@ int initVideo(struct complete_stream *str) {
 	//    std::cout << std::endl;
 	//    std::cout << "Choose start rate (in kbps). Press enter for default:  ";
 	//std::getline(std::cin, str);
-	int startRate = 0;
+	//int startRate = 0;
+	// apyles set to 200
+	int startRate= 200;
 	if(startRate != 0)
 	{
 		videoCodec.startBitrate=startRate;
 
 	}
 
-	error = ptrViECodec->SetSendCodec(videoChannel, videoCodec);
+	error = str->ptrViECodec->SetSendCodec(str->videoChannel, videoCodec);
 	assert(error != -1);
-	error = ptrViECodec->SetReceiveCodec(videoChannel, videoCodec);
+	error = str->ptrViECodec->SetReceiveCodec(str->videoChannel, videoCodec);
 	assert(error != -1);
 
 	//
@@ -539,7 +546,7 @@ int initVideo(struct complete_stream *str) {
 			break;
 
 		case 1: // FEC only
-			error = ptrViERtpRtcp->SetFECStatus(videoChannel,
+			error = str->ptrViERtpRtcp->SetFECStatus(str->videoChannel,
 					true,
 					VCM_RED_PAYLOAD_TYPE,
 					VCM_ULPFEC_PAYLOAD_TYPE);
@@ -547,13 +554,13 @@ int initVideo(struct complete_stream *str) {
 			break;
 
 		case 2: // Nack only
-			error = ptrViERtpRtcp->SetNACKStatus(videoChannel, true);
+			error = str->ptrViERtpRtcp->SetNACKStatus(str->videoChannel, true);
 
 			break;
 
 		case 3: // Hybrid NAck and FEC
-			error = ptrViERtpRtcp->SetHybridNACKFECStatus(
-					videoChannel,
+			error = str->ptrViERtpRtcp->SetHybridNACKFECStatus(
+					str->videoChannel,
 					true,
 					VCM_RED_PAYLOAD_TYPE,
 					VCM_ULPFEC_PAYLOAD_TYPE);
@@ -572,12 +579,12 @@ int initVideo(struct complete_stream *str) {
 	//std::getline(std::cin, str);
 	int buffering_delay = 0; // atoi(str.c_str());
 	if (buffering_delay != 0) {
-		error = ptrViERtpRtcp->SetSenderBufferingMode(videoChannel,
+		error = str->ptrViERtpRtcp->SetSenderBufferingMode(str->videoChannel,
 				buffering_delay);
 		if (error < 0)
 			printf("ERROR in ViERTP_RTCP::SetSenderBufferingMode\n");
 
-		error = ptrViERtpRtcp->SetReceiverBufferingMode(videoChannel,
+		error = str->ptrViERtpRtcp->SetReceiverBufferingMode(str->videoChannel,
 				buffering_delay);
 		if (error < 0)
 			printf("ERROR in ViERTP_RTCP::SetReceiverBufferingMode\n");
@@ -586,10 +593,8 @@ int initVideo(struct complete_stream *str) {
 	//
 	// Address settings
 	//
-	webrtc::ViENetwork* ptrViENetwork =
-		webrtc::ViENetwork::GetInterface(ptrViE);
-	str->ptrViENetwork = ptrViENetwork;
-	if (ptrViENetwork == NULL)
+	str->ptrViENetwork = webrtc::ViENetwork::GetInterface(str->ptrViE);
+	if (str->ptrViENetwork == NULL)
 	{
 		printf("ERROR in ViENetwork::GetInterface\n");
 		return -1;
@@ -597,9 +602,9 @@ int initVideo(struct complete_stream *str) {
 
 	// Setup transport.
 	//TbExternalTransport* extTransport = NULL;
-	webrtc::test::VideoChannelTransport* video_channel_transport = NULL;
+	//webrtc::test::VideoChannelTransport* video_channel_transport = NULL;
 
-	video_channel_transport = new webrtc::test::VideoChannelTransport(ptrViENetwork, videoChannel);
+	str->video_channel_transport = new webrtc::test::VideoChannelTransport(str->ptrViENetwork, str->videoChannel);
 
 	//const char* ipAddress = "192.168.42.129";
 	//std::cout << "Enter dest. IP: \n";
@@ -623,21 +628,21 @@ int initVideo(struct complete_stream *str) {
 	std::cout << std::endl;
 
 	//error = video_channel_transport->SetSendDestination(argv[1], rtpPort);
-	error = video_channel_transport->SetSendDestination(str->init.IP, str->init.vidport);
+	error = str->video_channel_transport->SetSendDestination(str->init.IP, str->init.vidport);
 	if (error == -1)
 	{
 		printf("ERROR in SetSendDestination\n");
 		return -1;
 	}
 
-	error = ptrViEBase->StartReceive(videoChannel);
+	error = str->ptrViEBase->StartReceive(str->videoChannel);
 	if (error == -1)
 	{
 		printf("ERROR in ViENetwork::StartReceive\n");
 		return -1;
 	}
 
-	error = ptrViEBase->StartSend(videoChannel);
+	error = str->ptrViEBase->StartSend(str->videoChannel);
 	if (error == -1)
 	{
 		printf("ERROR in ViENetwork::StartSend\n");
